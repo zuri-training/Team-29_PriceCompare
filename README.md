@@ -7,7 +7,7 @@ Project Name: Haggle Version 1.0
 ## To contribute :
 
 ```
-- Clone the repository: git clone
+- Clone the repository: git clone # https://github.com/zuri-training/Price-Compare-Team-29.git #
 
 - NOTE : Don't push to the main branch
 
