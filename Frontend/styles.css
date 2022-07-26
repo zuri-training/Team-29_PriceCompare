@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+}
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.flexboxitem{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.flexboxitem1{
+    background-color: rgb(2, 2, 2);
+    color: white;
+    padding: 15px;
+}
+.flexboxitem2{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    
+}
+.flexboxitem3{
+    background-color: white;
+}
+.flexboxitem4{
+    background-color: white;
+}
+.flexboxitem5{
+    background-color: grey;
+    color: white;
+}
+.flexboxitem6{
+    background-color: grey;
+}
+.flexboxitem7{
+    background-color: rgb(37, 35, 35);
+    color: white;
+}
+.flexboxitem8{
+    background-color: grey;
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.bodybox1{
+    background-color: grey;
+    margin: 20px;
+    width: 30%;
+    height: 300px;
+}
+.bodybox2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: grey;
+    color: white;
+    margin: 20px;
+    width: 60%;
+    height: 300px;
+}
+.innerbodybox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    border: 1px solid white;
+    width: 80%;
+    margin: 50px 10px;
+}
+.innerbodybox1{
+    background-color: rgb(2, 2, 2);
+    border: 1px solid rgb(2, 2, 2);
+    width: 30%;
+    height: 50px;
+}
+.innerbodybox2{
+    background-color: grey;
+    text-align: center;
+    margin-top: 30px;
+}
+.shape{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.rectangle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.circle{
+    background-color: grey;
+    width: 50%;
+    height: 100px;
+    border-radius: 50%;
+}
+.letters{
+    margin-top: 10px;
+}
