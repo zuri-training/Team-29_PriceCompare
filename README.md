@@ -1,3 +1,4 @@
+![1_YZsKvpTcsdxPM_Wk5cmqCQ](https://user-images.githubusercontent.com/68462223/181128477-b047f53f-53fe-4670-8151-db077265c1de.png)
 # Price-Compare-Team-29
 
 Project Name: Haggle Version 1.0 
@@ -49,3 +50,4 @@ Project Name: Haggle Version 1.0
     # git pull upstream branchname
 
 ```
+![1_YZsKvpTcsdxPM_Wk5cmqCQ](https://user-images.githubusercontent.com/68462223/181128523-edb0d236-def0-4b75-8bc4-ba2e90bde408.png)
