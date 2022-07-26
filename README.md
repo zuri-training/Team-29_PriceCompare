@@ -1,6 +1,5 @@
 # Price-Compare-Team-29
 
-Software Name: Haggle
-Software Version: 1.0 
+Project Name: Haggle Version 1.0 
 
-Software Summary 🧠
+Project Summary
