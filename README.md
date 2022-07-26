@@ -14,6 +14,10 @@ Project Name: Haggle Version 1.0
 
 - NOTE : Don't push to the main branch
 
+- Open your code editor
+
+- Run your terminal
+
 - Create a branch: git branch branchname
 
 - To confirm branch creation: git branch --v
