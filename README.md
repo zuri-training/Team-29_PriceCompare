@@ -10,7 +10,8 @@ Project Name: Haggle Version 1.0
 
 - Create a Fork of this repository
 
-- Clone the forked repository: git clone repo clone link
+- Clone the forked repository
+     # git clone repo clone link
 
 - NOTE : Don't push to the main branch
 
@@ -18,13 +19,17 @@ Project Name: Haggle Version 1.0
 
 - Run your terminal
 
-- Add Upstream: # git remote add upstream https://github.com/zuri-training/Price-Compare-Team-29.git
+- Add Upstream
+    # git remote add upstream https://github.com/zuri-training/Price-Compare-Team-29.git
 
-- Create a branch: git branch branchname
+- Create a branch
+    # git branch branchname
 
-- To confirm branch creation: git branch --v
+- To confirm branch creation
+    # git branch --v
 
-- Switch to the branch: git checkout branchname
+- Switch to the branch
+    # git checkout branchname
 
 - Make your changes.
 
@@ -36,11 +41,11 @@ Project Name: Haggle Version 1.0
     # git pull upstream branchname
 
 - Push to the branch you’re working on
-    #git push origin branchname
+    # git push origin branchname
     
 - Come to Github and Create a new pull request. Add a description of what you have done.
 
 - Update your local folder/branch with new changes from all collaborators. 
-  #git pull upstream branchname
+    # git pull upstream branchname
 
 ```
