@@ -4,6 +4,34 @@
 Project Name: Haggle Version 1.0 
 
 ## Project Summary
+s is a platform that allows schools in a certain locality to list the directory of people owing them so as to avoid debtors applying to other schools with pending debts. The website will also enable schools to keep the debt summary (amount that has been paid and collected) and track debts of various students and also give the debtors access to challenge information put up by the schools. -Team 36
+
+## Table of Contents
+
+## About the Project
+
+## Technologies Used
+* __Design__<br/>
+        ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+* __Frontend__<br/>
+      ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+      ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+      ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+* __Backend__<br/>
+        ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+        ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+
+* __Database__<br/>
+        ![PostgreSQL](https://img.shields.io/badge/Postgre-SQL-brightgreen)
+
+* __API__<br/>
+        ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
+
+* __Project Management and Version Control__<br/>
+        ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
 
 ## To contribute:
 
