@@ -11,11 +11,11 @@ Project Summary
 
 - Create a branch and switch to it ` git checkout -b (branchname)` *Dont include brackets*
 
-- After finishing your tasks, push to your branch 
-
+- After finishing your tasks, push to your branch using
 ```
 git add .
 git commit -m " The task you did "
 git push branchname 
+```
 
 ```
