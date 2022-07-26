@@ -1,2 +1,6 @@
 # Price-Compare-Team-29
-A platform that compares prices across multiple platforms
+
+Software Name: Haggle
+Software Version: 1.0 
+
+Software Summary 🧠
