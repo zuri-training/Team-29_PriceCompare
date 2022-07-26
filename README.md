@@ -1,14 +1,11 @@
 
-# Price-Compare-Team-29
 
-Project Name: Haggle Version 1.0 
+# Haggle Version 1.0 
 
 ## Project Summary
-s is a platform that allows schools in a certain locality to list the directory of people owing them so as to avoid debtors applying to other schools with pending debts. The website will also enable schools to keep the debt summary (amount that has been paid and collected) and track debts of various students and also give the debtors access to challenge information put up by the schools. -Team 36
 
 ## Table of Contents
-
-## About the Project
+   Loading
 
 ## Technologies Used
 * __Design__<br/>
