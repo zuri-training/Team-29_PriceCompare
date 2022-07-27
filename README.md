@@ -75,6 +75,7 @@
     # git pull upstream branchname
 
 
+![1_YZsKvpTcsdxPM_Wk5cmqCQ](https://user-images.githubusercontent.com/68462223/181198777-e9f8b219-36ed-4c2a-b583-73728753a61a.png)
 
 
 ```
