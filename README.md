@@ -21,7 +21,7 @@
         ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 
 * __Database__<br/>
-        ![PostgreSQL](https://img.shields.io/badge/Postgre-SQL-brightgreen)
+        ![PostgreSQL](https://img.shields.io/badge/POSTGRE-SQL-brightgreen)
 
 * __API__<br/>
         ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
