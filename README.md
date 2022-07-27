@@ -74,7 +74,7 @@
 - Update your local folder/branch with new changes from all collaborators. 
     # git pull upstream branchname
 
-![1_YZsKvpTcsdxPM_Wk5cmqCQ](https://user-images.githubusercontent.com/68462223/181128523-edb0d236-def0-4b75-8bc4-ba2e90bde408.png)
+
 
 
 ```
