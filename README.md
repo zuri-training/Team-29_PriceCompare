@@ -83,7 +83,7 @@
 
 ## Environment Setup
 
-Follow these commands to run the proect on your local machine :
+Follow these commands to run the project on your local machine :
 
 Clone the project 
 ```
