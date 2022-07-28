@@ -85,6 +85,8 @@
 
 Follow these commands to run the project on your local machine :
 
+Open your terminal
+
 Clone the project 
 ```
 git clone https://github.com/zuri-training/price_compare_team_27.git 
@@ -93,7 +95,7 @@ git clone https://github.com/zuri-training/price_compare_team_27.git
 Enter the project directory 
 
 ```
-cd price_compare_team_27
+cd priceCompare
 ```
 
 Create a virtual env
@@ -105,7 +107,7 @@ python -m venv env
 Activate your env(for windows)
 
 ```
-./env/Scripts/activate 	 
+env\Scripts\activate.bat	 
 ```
 (for linux or mac)
 
