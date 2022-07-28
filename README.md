@@ -81,3 +81,60 @@
 ```
 ![1_YZsKvpTcsdxPM_Wk5cmqCQ](https://user-images.githubusercontent.com/68462223/181199113-5bbc9b79-41d1-44a8-975a-4ce1d5519288.png)
 
+## Environment Setup
+
+Follow these commands to run the proect on your local machine :
+
+Clone the project 
+```
+git clone https://github.com/zuri-training/price_compare_team_27.git 
+```
+
+Enter the project directory 
+
+```
+cd price_compare_team_27
+```
+
+Create a virtual env
+
+```
+python -m venv env 
+```
+
+Activate your env(for windows)
+
+```
+./env/Scripts/activate 	 
+```
+(for linux or mac)
+
+```
+source env/bin/activate 
+``` 
+
+Install Project Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+Make Migrations
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Create Superuser
+
+```
+python manage.py createsuperuser
+```
+
+Run the server
+
+```
+python manage.py runserver
+```
+
