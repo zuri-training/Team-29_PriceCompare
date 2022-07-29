@@ -4,7 +4,11 @@
 
 
 ## Table of Contents
-   Loading..
+   - About Project
+   - Technologies Used
+   - Environment Setup
+   - Contributors
+   - How To Contribute
    
 ## About Project
  Haggle is a price comparison web application that allows users to compare prices of products from different e-commerce merchants. Users can compare prices, make comments under products/prices, share products directly to their social media platforms and also share via emails to third parties. Also, users interested in purchasing any of the products will be redirected to the purchase page of the selected merchant via the ref link, available on the product page of every product. Haggle will be accessible to both authenticated and unauthenticated users, but with the authenticated users having full access to the platform.
