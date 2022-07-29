@@ -4,7 +4,7 @@
 
 
 ## Table of Contents
-   # About Project
+   - About Project
    - Technologies Used
    - Environment Setup
    - Contributors
