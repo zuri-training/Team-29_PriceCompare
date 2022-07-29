@@ -121,36 +121,36 @@ python manage.py runserver
 
 ## Project Team
 
-Designers                                               Github Usernames
- - Ogechim Wodi (OG)                                        Ogecheem
- - Ajayi Oluwaseun Irewole                                  ireSeun
- - Omojowo Busola                                           omojowobusola
- - Claire Gbobie                                            Gbobieclaire
- - Priscilla Onifade                                        PriscillaOore
- - Ernest Emediong                                          EmediongErnest
- - Samir Areh                                               mistadane
- - Stephen Okesola                                          Stefan1100
- - Roqeebah	Akesire                                         Ro-qeebah
- - Okolo Faith                                              okolofaith
- - Tega Eghosa                                              snrchieftegz
+### Designers--------------------------Github Usernames
+ - Ogechim Wodi (OG)--------------------Ogecheem
+ - Ajayi Oluwaseun Irewole--------------ireSeun
+ - Omojowo Busola-----------------------omojowobusola
+ - Claire Gbobie------------------------Gbobieclaire
+ - Priscilla Onifade--------------------PriscillaOore
+ - Ernest Emediong----------------------EmediongErnest
+ - Samir Areh---------------------------mistadane
+ - Stephen Okesola----------------------Stefan1100
+ - Roqeebah	Akesire---------------------Ro-qeebah
+ - Okolo Faith--------------------------okolofaith
+ - Tega Eghosa--------------------------snrchieftegz
 
 
-Developers                                               
- - Amafaye Wallace (Frontend)                               Waeyword
- - Jude Oyedele (Backend)                                   Judekennywise
- - Adelaja Oluwatobi (Backend)                              aristobells
- - Adesina	oluwatimileyin (Backend)                        timmyades3
- - Isaac Olowookere (Backend)                               Olowookereisaac
- - Richard Tamaramieye (Frontend)                           Marvingt 
- - Laurrencia O. Francis Joseph (Frontend)                  Laurrencia
- - Peace Bello (Frontend)                                   SuperPaix
- - Mas’uud Abdulkareem (Backend)                            viperrrr
- - Precious Onyishi (Backend)                               Njidekaa
- - Etinosa	Ogbevoen (Backend)                              Jheff4
- - Rhoda Adegbola (Frontend)                                Rhododen
- - Odubo Timidi James (Frontend)                            Timidij
- - Ojewale Kehinde (Backend)                                ojewalekehinde
- - Eugene Reinhard (Frontend/Backend)                       Iam-Rey
+### Developers---------------------------Github Usernames                                               
+ - Amafaye Wallace (Frontend)-----------Waeyword
+ - Jude Oyedele (Backend)---------------Judekennywise
+ - Adelaja Oluwatobi (Backend)----------aristobells
+ - Adesina	oluwatimileyin (Backend)----timmyades3
+ - Isaac Olowookere (Backend)-----------Olowookereisaac
+ - Richard Tamaramieye (Frontend)-------Marvingt 
+ - Laurrencia O. Francis Joseph (Frontend)-----Laurrencia
+ - Peace Bello (Frontend)---------------SuperPaix
+ - Mas’uud Abdulkareem (Backend)--------viperrrr
+ - Precious Onyishi (Backend)-----------Njidekaa
+ - Etinosa	Ogbevoen (Backend)----------Jheff4
+ - Rhoda Adegbola (Frontend)------------Rhododen
+ - Odubo Timidi James (Frontend)--------Timidij
+ - Ojewale Kehinde (Backend)------------ojewalekehinde
+ - Eugene Reinhard (Frontend/Backend)---Iam-Rey
  
 
 ## To contribute:
