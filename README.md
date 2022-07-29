@@ -2,7 +2,11 @@
 # Project Name
  Haggle Version 1.0 
 
-## Project Description
+
+## Table of Contents
+   Loading..
+   
+## About Project
  Haggle is a price comparison web application that allows users to compare prices of products from different e-commerce merchants. Users can compare prices, make comments under products/prices, share products directly to their social media platforms and also share via emails to third parties. Also, users interested in purchasing any of the products will be redirected to the purchase page of the selected merchant via the ref link, available on the product page of every product. Haggle will be accessible to both authenticated and unauthenticated users, but with the authenticated users having full access to the platform.
 
 One major challenge faced during the development was geting reliable merchants APIs with credible data for free.
@@ -12,9 +16,6 @@ Features we hope to implement in the nearest future are:
  - Top deal section
  - Wishlist
  - Blog
-
-## Table of Contents
-   Loading...
 
 ## Technologies Used
 * __Design__<br/>
@@ -119,7 +120,7 @@ python manage.py runserver
 
 
 
-## Project Team
+## Contributors
 
 ### Designers--------------------------Github Usernames
  - Ogechim Wodi (OG)--------------------Ogecheem
