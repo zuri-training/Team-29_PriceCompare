@@ -174,7 +174,7 @@ python manage.py runserver
 - Run your terminal
 
 - Add Upstream
-    # git remote add upstream https://github.com/zuri-training/Price-Compare-Team-29.git
+    # git remote add upstream https://github.com/zuri-training/Team-29_PriceCompare.git
 
 - Create a branch
     # git branch branchname
