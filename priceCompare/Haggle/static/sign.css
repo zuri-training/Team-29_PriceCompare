@@ -1,0 +1,99 @@
+body{
+    /* background-color: red; */
+    text-align: center;
+    justify-items: center;
+    /* display: flex;
+    width: 70%; */
+  
+    
+   
+}
+.lay{
+    /* text-align: center; */
+    /* width: 100%; */
+    
+display: flex;
+    width: 7vw;
+    /* background-color: rgb(244, 247, 246); */
+    /* height: 70vh; */
+    
+
+    
+}
+.flow{
+    border-radius: 15px;
+    /* margin-right: 30%; */
+    height: 2.5em;
+    width: 9em;
+    font-size: 25px;
+}
+.flow2{
+    margin-right: 35%;
+    margin-left: 10%;
+    /* background-color: #2960EE; */
+    color: #FFFFFF;
+   
+}
+
+/* styling of input  */
+.thro{
+    font-size: 20px;
+    border: none;
+    width: 40vw;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-top: none;
+    margin-left: 7%;
+    border-bottom: 4px solid #2960EE;   
+
+}
+
+.submit_btn{
+    border-radius: 20px;
+    height: 2.4em;
+    width: 8em;
+    text-align: center;
+    font-size: 40px;
+    background-color: #2960EE;
+    color: #FFFFFF;
+}
+.sub{
+    text-align: center;
+}
+.labe{
+    font-size: 30px;
+    text-align: left;
+    margin-left: 9%;
+}
+.sign{
+    margin-bottom: 40px;
+    display: flex;
+    margin-top: 20px;
+    /* width: 80%; */
+    /* margin-right: 50px; */
+    font-size: 40px;
+}
+
+.forgot{
+    text-align: left;
+    margin-left: 9%;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.empty{
+    height:70vh;
+    width: 40%;
+    display: flex;
+    background-color: blue;
+
+}
+main{
+    display: flex;
+    margin: 10%;
+   
+}
+container{
+    padding: 20px;
+    background-color: #FFFFFF;
+}
