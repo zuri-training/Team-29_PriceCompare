@@ -71,7 +71,7 @@ Open your terminal
 
 Clone the project 
 ```
-git clone https://github.com/zuri-training/price_compare_team_27.git 
+git clone https://github.com/zuri-training/Team-29_PriceCompare.git
 ```
 
 Enter the project directory 
