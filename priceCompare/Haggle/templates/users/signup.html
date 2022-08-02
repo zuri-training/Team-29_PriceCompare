@@ -1,0 +1,113 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup {
+            margin-top: 150px;
+
+        }
+
+        .input-field {
+            height: 30px;
+        }
+
+        .submit {
+            border-width: 0px;
+            background-color: blue;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .errors {
+            font-size: 12px;
+            color: black;
+
+        }
+
+        .form-input:focus {
+            outline: none;
+        }
+
+        .google{
+            background-color: blue;
+            width: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup">
+        <h1>SIGNUP</h1>
+        <form action="" method="post">
+            
+            <div class="google">
+                <a href="{% provider_login_url 'google' %}">google</a>
+            </div>
+
+            {%csrf_token%}
+
+
+            <div class="username">
+                {{form.username.label}}
+            </div>
+
+            <div >
+                <input type="text" name="username" placeholder="username" class="input-field">
+            </div>
+
+            <div class="email">
+                {{form.email.label}}
+            </div>
+
+            <div >
+                <input type="email" name="email" placeholder="email" class="input-field">
+            </div>
+
+            <div class="pasword1">
+                {{form.password1.label}}
+            </div>
+
+            <div >
+                <input type="password" name="password1" placeholder="password" class="input-field">
+            </div>
+
+            <div class="password2">
+                {{form.password2.label}}
+            </div>
+
+            <div >
+                <input type="password" name="password2" placeholder="confirm password" class="input-field">
+            </div>
+
+            <input class="submit" type="submit" name="create user">
+        </form>
+        <div class="errors">
+            {{form.errors}}
+        </div>
+
+        <div class="optional-msg">
+            <p>Already have an account ? <a href="{%url 'login' %}">login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

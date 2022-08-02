@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landingpage</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: aqua;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(5, 175, 175);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+        }
+
+        .logo{
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px black solid ;
+            padding: 5px 10px;
+        }
+
+        li{
+            list-style-type: none;
+            margin-right: 10px;
+        }
+        
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .signup{
+            border: black solid;
+            border-radius: 20px;
+            padding: 2px 5px;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="logo">TEST</div>
+
+    <nav>
+        <ul>
+            <li><a class="login" href="{%url 'login'%}">LOGIN</a></li>
+            <li><a class="signup" href="{%url 'signup'%}">SIGNUP</a></li>
+        </ul>
+    </nav>
+    </div>
+    <h1>This is a test page</h1>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            position: relative;
+        }
+        
+        p{
+            font-size: 18px;
+        }
+
+
+        .i-form{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 160px;
+            height: 25px;
+        }
+
+        .i-form:focus{
+            outline: none;
+        }
+
+        .submit{
+            border-width: 0px;
+            background-color: blue;
+            padding: 3px 10px;
+            border-radius: 15px; 
+        }
+
+        #messages{
+            position: absolute;
+            top: -50px;
+            right: 218px;
+            background-color: rgb(8, 126, 126);
+            border-width: 1px;
+            border-color: rgb(8, 126, 126);
+            border-radius: 3px;
+            padding: 4px 8px;
+
+        
+        }
+
+        .google{
+           background-color: blue;
+           width:5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+        <h1>HAGGLE</h1>
+        <p>log in to your account</p>
+        <form action="" method="post"  >
+            
+
+            <div class="google">
+               <a href="{% provider_login_url 'google' %}">google</a>
+            </div>
+            {%csrf_token%}
+            <div>
+                <p>username</p>
+                <input type="text" name="username" placeholder="username" class="i-form">
+            </div>
+            <div>
+                <p>password</p>
+                <input type="password" name="password" placeholder="password" class="i-form" type="hidden" >
+            </div>
+
+            <div>
+                <a href="{%url 'password_reset'%}">forget password?</a>
+            </div>
+
+            <div>
+                <input type="submit" class="submit" value="login">
+            </div>
+        </form>
+
+        <div>
+            <p>Dont have an account <a href="{%url 'signup'%}">signup</a></p>
+        </div>
+    </div>
+
+    {% for message in messages %}
+    <p id="messages">{{message}} </p>
+
+    {% endfor %}
+
+
+</body>
+
+</html>
