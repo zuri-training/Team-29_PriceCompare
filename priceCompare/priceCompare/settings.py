@@ -89,12 +89,16 @@ WSGI_APPLICATION = 'priceCompare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Haggle',
-        'USER': 'postgres',
-        'PASSWORD': 'preshy',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'Haggle',
+        #'USER': 'postgres',
+        #'PASSWORD': 'preshy',
+        #'HOST': 'localhost',
+        #'PORT': '5432',
     }
 }
 
@@ -145,11 +149,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #SMTP configuration
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'postmaster@sandboxc94d55d838a94067965bcdf289e8ec86.mailgun.org'
+EMAIL_HOST_PASSWORD = '48f2a0fe0b38298fc3ed9d026556cd5a-1b3a03f6-140e38cc'
+DEFAULT_FROM_EMAIL = "hagglezuri029@gmail.com"
 
 #social app  custom settings
 AUTHENTICATION_BACKENDS = [
