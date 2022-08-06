@@ -1,0 +1,529 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* DESKTOP VIEW(760PX-1440PX) */
+body{
+    background-color:#fff;
+    font-family: 'Inter', sans-serif;
+    
+}
+/* FIRST NAVIGATION BAR */
+.nav1{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem 1.5rem ;
+    justify-content: space-between; 
+    align-items: center;
+}
+/* HAGGLE LOGO */
+.nav1-logo{
+    width: 7rem;
+    margin-left: 2rem;
+}
+.nav1-logo img{
+    width: 100%;
+}
+/* SIGNIN/REGISTER SECTION */
+.nav1-1{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 13px;
+}
+.nav1-icon{
+    margin: 0.3rem 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #98B3F9;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50%; 
+}
+   /* USER ICON  */
+.iconify3{
+    color:blue;
+    font-size:1rem;
+}
+.nav1-1 a {
+    text-decoration: none;
+    color: blue;
+    font-family: 'Inter', sans-serif;
+    
+}
+.nav1-1 a:hover{
+    color:  #EEB729;
+}
+.nav1-1 a:active{
+    color:  #EEB729;
+    border-bottom: 2px solid  #EEB729; 
+}
+/* SECOND NAVIGATION BAR */
+.nav2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    background-color: #2960EE;
+}
+/* PAGES IN THE NAVIGATION */
+.nav2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 10px;
+    margin-bottom:10px ;
+    color:#fff;
+    font-family: 'Inter', sans-serif;
+    
+}
+.nav2 a:hover{
+    color:  #EEB729;
+}
+.nav2 a:active{
+    color:  #EEB729;
+    border-bottom: 1px solid #EEB729; 
+}
+/* HAMBURGER MENU */
+.menu{
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+}
+.menu:hover{
+    color:  #EEB729;
+}
+/* ALL CATEGORIES SECTION */
+select{
+    
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #2960EE;
+    margin-bottom:10px ;
+    font-size: 1em;
+    font-weight: 10px;
+    font-family: 'Inter', sans-serif;
+    
+}
+select:hover{
+    color: #EEB729;
+    
+}
+option{
+    padding: 1.5rem;
+    margin: 2.5rem;
+    font-family: 'Inter', sans-serif;
+}
+option:active{
+    color: #2960EE;
+}
+
+
+/* MAIN SECTION */
+.flexboxitem{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Flexbox Item 3 & its Contents Styling*/
+.flexboxitem3{
+    background-color: white;
+}
+.bodybox1{
+    background-color: #2960EE;
+    margin: 2rem;
+    width: 30%;
+    height: 30rem;
+    border-radius: 2rem;
+}
+.bodybox1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+.bodybox2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #8197cf;
+    background-image: url(./images/tv.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
+    border-radius: 2rem;
+    margin: 2rem;
+    width: 60%;
+    height: 30rem;
+    
+}
+.innerbodybox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+    border: 3px solid goldenrod;
+    border-radius: 2rem;
+    width: 80%;
+    margin: 5rem 1rem;
+}
+.innerbodybox1{
+    background-color: none;
+    border: none;
+    width: 30%;
+    height: 7rem;
+    text-align: center;
+
+}
+.innerbodybox1 img{
+    color: white;
+    width: 9rem;
+
+}
+.innerbodybox2{
+    background-color: none;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+.innerbodybox2 h2{
+    font-weight: 550;
+    font-size: 1.8rem;
+}
+.innerbodybox2 p{
+    padding-top: 2rem;
+    font-size: 1rem;
+    
+}
+
+/* Flexbox Item 4 & its Contents Styling*/
+.flexboxitem4{
+    background-color: white;
+}
+.shape{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    color:  black;
+    gap: 2rem;
+}
+.rectangle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+}
+.circle{
+    background-color: white;
+    width: 50%;
+    height: 10rem;
+    border-radius: 50%;
+    margin-left: rem;
+}
+.letters{
+    margin-left: 1rem;
+    white-space: ;
+}
+.letters p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+.m{
+    white-space: nowrap;
+}
+.n{
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+.iconic{
+    background-color: #2960EE;
+    color: white;
+    border: 1 px solid C5D5FD;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 2rem;
+    font-size: 8.8rem;
+}
+.circle img{
+    background-color: #2960EE;
+    color: white;
+    border: 1 px solid C5D5FD;
+    border-radius: 50%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 2rem;
+    width: 8.8rem;
+
+}
+
+/* Flexbox Item 5 & its Contents Styling*/
+.flexboxitem5{
+    background-color: white;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #2960EE;
+    color:  white;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+.textbox{
+    margin: 1rem;
+    padding: 3rem;
+}
+#a{
+    margin-right: rem;
+    line-height: 1.5rem;
+}
+#b{
+    margin-left: -4rem;
+    line-height: 1.5rem;
+}
+
+
+/* Flexbox Item 6 & its Contents Styling*/
+.flexboxitem6{
+    background-color: white;
+}
+.tree{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem;
+    height: 15rem;
+}
+.branches{
+    background-color: #2960EE;
+    margin: 1rem;
+    height: 8rem;
+    width: 25.5rem;
+    border-radius: 2rem;
+}
+#f{
+    background-image: url(./images/award1.png);
+    background-size: cover;
+    height: 100%;
+}
+#g{
+    background-image: url(./images/award2.png);
+    background-size: cover;
+    height: 100%;
+}
+#h{
+    background-image: url(./images/award3.png);
+    background-size: cover;
+    height: 100%;
+}
+
+
+/* Flexbox Item 7 & its Contents Styling*/
+.flexboxitem7{
+    background-color: white;
+    color: black;
+}
+.stem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    margin: 1rem;
+    height: auto;
+}
+.leaves{
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem 6.2rem 0 6.2rem;
+    width: 25.5rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-align: center;
+}
+.fruits{
+    margin-top: -2rem;
+}
+
+
+/* footer section */
+/* FOOTER */
+
+.footer-content{
+   padding: 2rem 2.5rem;
+   background-color:#2960EE;   
+}
+/* NEWSLETTER SECTION */
+.news-letter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #98B3F9;
+    padding: 0.5rem 0.3rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: auto;
+   
+}
+.news-letter-details{
+    line-height: 1rem;
+    color: #2960EE;
+    font-weight: 400;
+    font-size: 15px;
+    margin-left:1rem ;
+}
+small{
+    color: #2960EE; 
+}
+.news-letter-email{
+    border: 1.5px solid #EEB729;
+    padding: 0.2rem 1rem;
+    background: #fff;
+    margin-right: 1rem;
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    border-radius: 50px;
+    
+    
+}
+
+.news-letter-email input{
+    outline: none;
+    border: none;
+    color: #2960EE;
+
+}
+.email-input::placeholder{
+    color: #2960EE;
+    font-weight: lighter;
+    
+   
+
+}
+.email-holder{
+   display: flex;
+   gap:0.5rem;
+}
+/* SUBSCRIBE BUTTON */
+#subscribe{
+    padding: 0.3rem 0.9rem;
+    background-color: #EEB729;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+#subscribe:hover{
+    background-color: #fff;
+    color: #EEB729;
+    border: 2px solid #EEB729;
+    padding:0.5rem 1rem ;
+    cursor: pointer;
+}
+/* BLUE FOOTER */
+.first-footer-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.footer-ul li{
+ list-style: none;
+ color: #fff;
+ line-height: 1.5rem;
+}
+.title{
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+ul  a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+}
+ul a:hover{
+    color:  #EEB729;
+}
+ul a:active{
+    color:  #EEB729;
+    border-bottom:1px solid #EEB729;
+}
+.title a{
+    font-size: 20px;
+}
+#m{
+    margin-top: 1rem;
+}
+
+.footer-tagline{
+    font-size: 12px;
+}
+/* SOCIAL  ICONS */
+.socials-icon{
+    display: flex;
+}
+.icon{
+    margin: 0.3rem 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #fff;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.2rem 0.2rem;
+    border-radius: 50%;
+}
+.iconic2{
+    color: #2960EE;
+}
+.iconic2:hover{
+    color: #EEB729;
+    padding: 0.3rem 0.3rem;
+}
+.iconify1{
+    color: #2960EE;  
+}
+.iconify2{
+    color: #fff;
+}
+/* SECOND FOOTER */
+.second-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    background-color: #98B3F9;
+}
+.footer-logo{
+    width: 7rem;
+    margin-left: 2rem;
+}
+.second-footer p{
+    color: #2960EE;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'inter',sans-serif;
+}
+.second-footer p:hover {
+    color: #EEB729;
+
+}
+
