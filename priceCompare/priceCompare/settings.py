@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-cdahcro=7=*qxm-()a&3w0egrkby@4865dt)^)b_2k*k6s02@p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['comparetheprice.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'priceCompare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Haggle',
-        'USER': 'postgres',
-        'PASSWORD': 'preshy',
-        'HOST': 'localhost',
+        'NAME': 'd2dfghvmheq815',
+        'USER': 'fjtcgptfuoqpdp',
+        'PASSWORD': '30c21acefc69bb36daf08c019b5e6b4618b2899e8f4c307777bcc7248c2b0bef',
+        'HOST': 'ec2-107-22-122-106.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -120,7 +121,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+django_heroku.settings(locals())
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
