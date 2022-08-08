@@ -61,7 +61,7 @@ def scraper(base_url, brand, category):
                 data=final_scraped_data[i]
                 if data[2] not in list(productDetails.objects.values_list('productLink', flat=True)):
                     productDetails.objects.create(name=data[0],price=data[1],productLink=data[2],imageLink=data[3],merchantName=merchant_name.capitalize(),category=category,brand=brand.capitalize())
-    
+                    print(str(i)+'A')
   
     while True:
         try:
@@ -82,35 +82,46 @@ def scraper(base_url, brand, category):
                 final_scraped_data[j]= temporary_scraped_data
                 j+=1
                 temporary_scraped_data=[]
+                print(j)
             length_final_scraped_data_after = len(final_scraped_data)
             if length_final_scraped_data_before==length_final_scraped_data_after:
                 break
             page+=1
         except Exception as e:
             print(e)
+            length_final_scraped_data_after = len(final_scraped_data)
+            print(length_final_scraped_data_after)
             browser.close() 
             break
 
     save_data()
+    print('DONEEEEEEEEEEEEE')
 
 #SCRAPING TASKS
+
+#DONE
 # scraper(base_url='https://slot.ng/search/result?q=iphone&page=', brand='apple',category='phone')
 # scraper(base_url="https://www.jumia.com.ng/smartphones/samsung/?page=",brand="samsung",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/laptops/apple/?page=",brand="apple",category="laptop")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/infinix/?page=",brand="infinix",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/lenovo/?page=",brand="lenovo",category="phone")
 # scraper(base_url="https://www.konga.com/category/macbooks-5249?page=",brand="apple",category="laptop")
+# scraper(base_url='https://slot.ng/search/result?q=asus&page=', brand='asus',category='laptop')
+# scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
+# scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
+# scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
+
+
+
+
 
 ###########################################################################################################
 
+#To-Do
 
 # scraper(base_url='https://slot.ng/search/result?q=samsung&page=', brand='samsung',category='phone')
 
-# scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
-# scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
 # scraper(base_url='https://slot.ng/search/result?q=macbook&page=', brand='apple',category='laptop')
-# scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
-# scraper(base_url='https://slot.ng/search/result?q=asus&page=', brand='asus',category='laptop')
 
 
 
