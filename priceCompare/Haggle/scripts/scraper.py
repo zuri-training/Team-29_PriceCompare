@@ -6,7 +6,8 @@ def scraper(base_url, brand, category):
     import time
 
 
-    driver = Service("C:/Users/MY PC/Downloads/chromedriver.exe")
+  # change the driver path before runing the script
+    driver = Service('C:/Users/USER/Downloads/chromedriver_win32/chromedriver.exe')
 
     options = webdriver.ChromeOptions()
     options.add_argument('--headless --window-size=400,800') 
@@ -33,7 +34,7 @@ def scraper(base_url, brand, category):
         image_id= "div.Carousel_carouselSlideActive__aDcau>img"
         product_link_id="div.p-2>a"
     elif merchant_name=="konga":
-        title_class_name="_24849_2Ymhg"
+        title_class_name="af885_1iPzH"
         price_class_name="d7c0f_sJAqi"
         image_id="div._7e903_3FsI6>a>picture>img"
         product_link_id="div._4941f_1HCZm>a"
@@ -68,14 +69,7 @@ def scraper(base_url, brand, category):
             browser.get(url)
             length_final_scraped_data_before = len(final_scraped_data)
             for i in range(len(browser.find_elements(By.CLASS_NAME, price_class_name))):
-                if merchant_name=='konga':
-                    link = get_image_and_product_link()
-                    temporary_scraped_data=[]
-                    browser.get(link)
-                    temporary_scraped_data.append(browser.find_elements(By.CLASS_NAME, title_class_name)[0].text)
-                    browser.get(url)
-                else:
-                    temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, title_class_name)[i].text))
+                temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, title_class_name)[i].text))
                 temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, price_class_name)[i].text))
                 get_image_and_product_link()
                 final_scraped_data[j]= temporary_scraped_data
@@ -90,20 +84,41 @@ def scraper(base_url, brand, category):
             break
 
     save_data()
+    print('DONEEEEEEEEEEEEEEEEEEEEEEEEEEE')
 
 #SCRAPING TASKS
 
 #DONE
 # scraper(base_url='https://slot.ng/search/result?q=iphone&page=', brand='apple',category='phone')
+# scraper(base_url='https://slot.ng/search/result?q=asus&page=', brand='asus',category='laptop')
+# scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
+# scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
+# scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
+
 # scraper(base_url="https://www.jumia.com.ng/smartphones/samsung/?page=",brand="samsung",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/laptops/apple/?page=",brand="apple",category="laptop")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/infinix/?page=",brand="infinix",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/lenovo/?page=",brand="lenovo",category="phone")
 # scraper(base_url="https://www.konga.com/category/macbooks-5249?page=",brand="apple",category="laptop")
-# scraper(base_url='https://slot.ng/search/result?q=asus&page=', brand='asus',category='laptop')
-# scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
-# scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
-# scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
+# scraper(base_url="https://www.jumia.com.ng/smartphones/tecno/?page=",brand="tecno",category="phone")
+# scraper(base_url="https://www.jumia.com.ng/smartphones/xiaomi/?page=",brand="xiaomi",category="phone")
+# scraper(base_url="https://www.jumia.com.ng/smartphones/oppo/?page=",brand="oppo",category="phone")
+# scraper(base_url="https://www.jumia.com.ng/laptops/asus/?page=",brand="asus",category="laptop")
+# scraper(base_url="https://www.jumia.com.ng/laptops/dell/?page=",brand="dell",category="laptop")
+# scraper(base_url="https://www.jumia.com.ng/laptops/acer/?page=",brand="acer",category="laptop")
+# scraper(base_url="https://www.jumia.com.ng/laptops/lenovo/?page=",brand="lenovo",category="laptop")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=tecno&page=",brand="tecno",category="phone")
+# scraper(base_url="https://www.konga.com/category/laptops-5230?brand=acer&page=",brand="acer",category="laptop")
+# scraper(base_url="https://www.konga.com/category/laptops-5230?brand=asus&page=",brand="asus",category="laptop")
+# scraper(base_url="https://www.konga.com/category/laptops-5230?brand=dell&page=",brand="dell",category="laptop")
+# scraper(base_url="https://www.konga.com/category/laptops-5230?brand=lenovo&page=",brand="lenovo",category="laptop")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=xiaomi&page=",brand="xiaomi",category="phone")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=samsung&page=",brand="samsung",category="phone")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=nokia&page=",brand="nokia",category="phone")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=oppo&page=",brand="oppo",category="phone")
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=apple&page=",brand="apple",category="phone")
+
+
 
 
 
@@ -111,22 +126,37 @@ def scraper(base_url, brand, category):
 
 ###########################################################################################################
 
+
 #To-Do
+# scraper(base_url="https://www.jumia.com.ng/laptops/hp/?page=",brand="hp",category="laptop")
+# scraper(base_url="https://www.jumia.com.ng/smartphones/apple/?page=",brand="apple",category="phone")
+# scraper(base_url="https://www.jumia.com.ng/smartphones/nokia/?page=",brand="nokia",category="phone")
+
+
+# Rescrape about 200 are already in the database
+# scraper(base_url="https://www.konga.com/category/laptops-5230?brand=hp&page=",brand="hp",category="laptop")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=infinix&page=",brand="infinix",category="phone")
+
+
+#END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END EN
 
 # scraper(base_url='https://slot.ng/search/result?q=samsung&page=', brand='samsung',category='phone')
-
 # scraper(base_url='https://slot.ng/search/result?q=macbook&page=', brand='apple',category='laptop')
-
-
-
-# scraper(base_url="https://www.jumia.com.ng/smartphones/tecno/?page=",brand="tecno",category="phone")
-# scraper(base_url="https://www.jumia.com.ng/smartphones/apple/?page=",brand="apple",category="phone")
-
-
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
-# scraper(base_url="",brand="",category="")
