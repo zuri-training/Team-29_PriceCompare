@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.faqContainer{
+    max-width: 70%;
+    margin: 5% auto;
+    position: relative;
+}
+
+.faqContainer .faqQuestion{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+/* .faqContainer .faqQuestion::before{
+    content: '+';
+    position: absolute;
+    left: 40%;
+    transform: translateY(50%);
+    font-size: 25px;
+} */
+
+.faqContainer .faqAnswer{
+    color: blue;
+    position: relative;
+    /* padding: 5px; */
+    height: 0px;
+    overflow: hidden;
+    /* overflow-y: auto; */
+}
+
+.faqContainer .faqContent.active .faqAnswer{
+    color: green;
+    height: 150px;
+    position: relative;
+    /* overflow-y: auto; */
+}
