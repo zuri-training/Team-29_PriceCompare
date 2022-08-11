@@ -17,3 +17,4 @@ print(productDetails.objects.order_by('-price').values()[0])
 # print(len(list(productDetails.objects.values_list('price', flat=True))))
 
 
+

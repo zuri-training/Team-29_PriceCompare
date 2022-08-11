@@ -75,6 +75,7 @@ def scraper(base_url, brand, category):
             length_final_scraped_data_before = len(final_scraped_data)
             for i in range(len(browser.find_elements(By.CLASS_NAME, price_class_name))):
                 temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, title_class_name)[i].text))
+
                 clean_price()
                 get_image_and_product_link()
                 final_scraped_data[j]= temporary_scraped_data
@@ -101,6 +102,7 @@ def scraper(base_url, brand, category):
 # scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
 # scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
 # scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
+
 
 # scraper(base_url="https://www.jumia.com.ng/smartphones/samsung/?page=",brand="samsung",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/laptops/apple/?page=",brand="apple",category="laptop")
@@ -130,8 +132,8 @@ def scraper(base_url, brand, category):
 
 
 
-
 ###########################################################################################################
+
 
 
 #To-Do
