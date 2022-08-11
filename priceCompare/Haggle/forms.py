@@ -35,7 +35,7 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
-class CommentForm(forms.Model):
+class CommentForm(forms.Form):
     class Meta:
-        model = ProductComment
-        fields = ('author', 'body')
+       model = ProductComment
+       fields = ('author', 'body')
