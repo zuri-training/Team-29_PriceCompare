@@ -3,7 +3,7 @@
 .accordion {
     box-sizing: border-box;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     overflow: hidden;
     width: 90%;
     margin: 1rem;
@@ -102,7 +102,7 @@
     .accordion {
     box-sizing: border-box;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     overflow: hidden;
     width: 95%;
     margin: 1rem;
