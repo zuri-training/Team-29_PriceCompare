@@ -62,7 +62,12 @@ def scraper(base_url, brand, category):
                 data=final_scraped_data[i]
                 if data[2] not in list(productDetails.objects.values_list('productLink', flat=True)):
                     productDetails.objects.create(name=data[0],price=data[1],productLink=data[2],imageLink=data[3],merchantName=merchant_name.capitalize(),category=category,brand=brand.capitalize())
-  
+    
+    def clean_price():
+        value=browser.find_elements(By.CLASS_NAME, price_class_name)[i].text
+        temporary_scraped_data.append(int(''.join(re.findall(r'\d+',value))))
+
+
     while True:
         try:
             url = base_url + str(page)
@@ -70,14 +75,14 @@ def scraper(base_url, brand, category):
             length_final_scraped_data_before = len(final_scraped_data)
             for i in range(len(browser.find_elements(By.CLASS_NAME, price_class_name))):
                 temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, title_class_name)[i].text))
-                temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, price_class_name)[i].text))
+                clean_price()
                 get_image_and_product_link()
                 final_scraped_data[j]= temporary_scraped_data
                 j+=1
                 temporary_scraped_data=[]
-            length_final_scraped_data_after = len(final_scraped_data)
+            length_final_scraped_data_after = len(final_scraped_data)  
             if merchant_name=='jumia' and page==5:
-                break            
+                break          
             if length_final_scraped_data_before==length_final_scraped_data_after:
                 break
             page+=1
