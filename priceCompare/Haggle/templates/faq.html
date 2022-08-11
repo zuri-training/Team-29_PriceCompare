@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ</title>
-  <link rel="stylesheet" href="faq.css">
-</head>
-<body>
+{% extends 'base.html' %}
+  
+{% block title %} FAQ {% endblock title %}
+
+{% block content %}
   <div class="faqContainer"> 
     <div class="faqContent"> 
       <div class="faqQuestion"><h1>How can I use Haggle</h1></div>
@@ -41,15 +36,5 @@
         </p>
       </div>
     </div>
-  </div>
-
-  <script>
-    const faq = document.getElementsByClassName('faqContent');
-    for( i = 0; i<faq.length; i++){
-      faq[i].addEventListener('click', function(){
-        this.classList.toggle('active')
-      })
-    }
-  </script>   
-</body>
-</html>
+  </div> 
+{% endblock %} 
