@@ -10,7 +10,7 @@ def search(search_value,minimum,maximum,mode='default', ):
     elif mode=='high_to_low':
         results=productDetails.objects.filter(name__icontains=search_value).order_by('-price').values()
     elif mode=='filter':
-        results=productDetails.objects.filter(name__icontains=search_value).filter(price__in=[i for i in range(minimum,maximum)]).values()
+        results=productDetails.objects.filter(name__icontains=search_value).filter(price__in=[i for i in range(minimum,maximum+1)]).values()
     
     return results
 
