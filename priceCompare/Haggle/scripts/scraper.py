@@ -62,7 +62,12 @@ def scraper(base_url, brand, category):
                 data=final_scraped_data[i]
                 if data[2] not in list(productDetails.objects.values_list('productLink', flat=True)):
                     productDetails.objects.create(name=data[0],price=data[1],productLink=data[2],imageLink=data[3],merchantName=merchant_name.capitalize(),category=category,brand=brand.capitalize())
-  
+    
+    def clean_price():
+        value=browser.find_elements(By.CLASS_NAME, price_class_name)[i].text
+        temporary_scraped_data.append(int(''.join(re.findall(r'\d+',value))))
+
+
     while True:
         try:
             url = base_url + str(page)
@@ -70,12 +75,15 @@ def scraper(base_url, brand, category):
             length_final_scraped_data_before = len(final_scraped_data)
             for i in range(len(browser.find_elements(By.CLASS_NAME, price_class_name))):
                 temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, title_class_name)[i].text))
-                temporary_scraped_data.append((browser.find_elements(By.CLASS_NAME, price_class_name)[i].text))
+
+                clean_price()
                 get_image_and_product_link()
                 final_scraped_data[j]= temporary_scraped_data
                 j+=1
                 temporary_scraped_data=[]
-            length_final_scraped_data_after = len(final_scraped_data)
+            length_final_scraped_data_after = len(final_scraped_data)  
+            if merchant_name=='jumia' and page==5:
+                break          
             if length_final_scraped_data_before==length_final_scraped_data_after:
                 break
             page+=1
@@ -94,6 +102,7 @@ def scraper(base_url, brand, category):
 # scraper(base_url='https://slot.ng/search/result?q=hp&page=', brand='hp',category='laptop')
 # scraper(base_url='https://slot.ng/search/result?q=infinix&page=', brand='infinix',category='phone')
 # scraper(base_url='https://slot.ng/search/result?q=tecno&page=', brand='tecno',category='phone')
+
 
 # scraper(base_url="https://www.jumia.com.ng/smartphones/samsung/?page=",brand="samsung",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/laptops/apple/?page=",brand="apple",category="laptop")
@@ -123,36 +132,15 @@ def scraper(base_url, brand, category):
 
 
 
-
 ###########################################################################################################
+
 
 
 #To-Do
 # scraper(base_url="https://www.jumia.com.ng/laptops/hp/?page=",brand="hp",category="laptop")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/apple/?page=",brand="apple",category="phone")
 # scraper(base_url="https://www.jumia.com.ng/smartphones/nokia/?page=",brand="nokia",category="phone")
-
-
-# Rescrape about 200 are already in the database
 # scraper(base_url="https://www.konga.com/category/laptops-5230?brand=hp&page=",brand="hp",category="laptop")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=infinix&page=",brand="infinix",category="phone")
 
 
