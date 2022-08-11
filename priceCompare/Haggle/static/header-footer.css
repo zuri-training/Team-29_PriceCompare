@@ -5,13 +5,13 @@ body{
     font-family: 'Inter', sans-serif;
     
 }
-header{
+/* header{
     position:fixed;
     display: block;
     right: 0;
     left:0;
     top:0;
-}
+} */
 /* FIRST NAVIGATION BAR */
 .nav1{
     background-color: #fff;
