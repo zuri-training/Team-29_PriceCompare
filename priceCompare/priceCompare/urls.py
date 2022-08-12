@@ -22,4 +22,6 @@ urlpatterns = [
     path('', include('Haggle.urls')),
     #AUTHENTICATION
     path('accounts/', include('allauth.urls')),
+
+
 ]

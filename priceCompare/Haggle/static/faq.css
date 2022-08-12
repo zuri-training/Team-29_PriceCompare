@@ -1,0 +1,35 @@
+
+
+.faqContainer{
+    max-width: 70%;
+    margin:  5% auto;
+    position: relative;
+}
+
+.faqContainer .faqQuestion{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+/* .faqContainer .faqQuestion::before{
+    content: '+';
+    position: absolute;
+    left: 40%;
+    transform: translateY(50%);
+    font-size: 25px;
+} */
+
+.faqContainer .faqAnswer{
+    position: relative;
+    /* padding: 5px; */
+    height: 0px;
+    overflow: hidden;
+    /* overflow-y: auto; */
+}
+
+.faqContainer .faqContent.active .faqAnswer{
+    height: fit-content;
+    position: relative;
+    padding: 10px;
+    /* overflow-y: auto; */
+}

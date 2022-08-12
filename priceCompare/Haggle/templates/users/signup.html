@@ -6,108 +6,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGNUP</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .signup {
-            margin-top: 150px;
-
-        }
-
-        .input-field {
-            height: 30px;
-        }
-
-        .submit {
-            border-width: 0px;
-            background-color: blue;
-            padding: 5px 10px;
-            border-radius: 15px;
-        }
-
-        .errors {
-            font-size: 12px;
-            color: black;
-
-        }
-
-        .form-input:focus {
-            outline: none;
-        }
-
-        .google{
-            background-color: blue;
-            width: 5rem;
-        }
-    </style>
+    <title>sign up</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'sign.css' %}">
 </head>
 
 <body>
-    <div class="signup">
-        <h1>SIGNUP</h1>
+    <!-- <div class="empty"></div> -->
+
+    <div class="lay">
+
+        <div class="sub_btn">
+            <img src="img/footer-logo.png" alt="haggle logo" class="logo" srcset="">
+
+            <div class="sign">
+                <!-- <input type="button" value="Login" class="flow flow2 "> -->
+
+                <!-- <input type="button" value="Sign Up" class="flow"> -->
+                <a href="{%url 'login'%}" class="ep2 he">login</a>
+                <a href="{%url 'signup'%}" class="ep">Sign up</a>
+
+            </div>
+        </div>
+
         <form action="" method="post">
-            
-            <div class="google">
-                <a href="{% provider_login_url 'google' %}">google</a>
-            </div>
-
             {%csrf_token%}
+            <!-- <div class="sign">
+                    <input type="button" value="Sign up" class="flow flow2" >
+                    <input type="button" value="Login" class="flow">
+                    
+                </div> -->
+            <div class="content">
 
 
-            <div class="username">
-                {{form.username.label}}
+                <div class="name_field">
+                    <div class="first">
+                        <label>First Name</label><br>
+                        <input type="text" name="first_name" placeholder="John" class="mail firstn">
+                    </div>
+                    <div class="last">
+                        <label>Last Name </label> <br>
+                        <input type="text" name="last_name" placeholder="John" class="mail lastn">
+                    </div>
+
+                </div>
+
+                <label>username</label> <br>
+                <input class="mail" type="text" name="username" placeholder="Joh">
+                <br>
+                <label>Email</label> <br>
+                <input class="mail" type="email" name="email" placeholder="Joh Doe@gmail.com">
+                <br>
+
+                Password <br>
+                <input class="mail" type="password" name="password1" placeholder="John123!">
+                Password <br>
+                <input class="mail" type="password" name="password2" placeholder="John123!">
             </div>
+            <br>
 
-            <div >
-                <input type="text" name="username" placeholder="username" class="input-field">
+            <div class="errors">
+                {{form.errors}}
             </div>
+            <br>
 
-            <div class="email">
-                {{form.email.label}}
+            <div class="sub_n">
+            <input type="checkbox" name="terms" id="" >
+             <label > Yes, I'd like to receive news and updates from Haggle. <br>
+                For more information about how we deal with privacy and data, view our <a href="#">privacy policy</a> </label>
+            <br>
             </div>
-
-            <div >
-                <input type="email" name="email" placeholder="email" class="input-field">
-            </div>
-
-            <div class="pasword1">
-                {{form.password1.label}}
-            </div>
-
-            <div >
-                <input type="password" name="password1" placeholder="password" class="input-field">
-            </div>
-
-            <div class="password2">
-                {{form.password2.label}}
-            </div>
-
-            <div >
-                <input type="password" name="password2" placeholder="confirm password" class="input-field">
-            </div>
-
-            <input class="submit" type="submit" name="create user">
+                <div class="sub_btn">
+                <input type="submit" value="Sign up" class="sub">
+          </div>
+          
+          <div class="google">
+            <a  href="{% provider_login_url 'google' %}"><img class="google-img" src="images/Google__G__Logo.svg.png" alt=""> <span class="google-note" >continue with google</span> </a>
+        </div>
         </form>
-        <div class="errors">
-            {{form.errors}}
-        </div>
-
-        <div class="optional-msg">
+        
+        <!--<div class="optional-msg">
             <p>Already have an account ? <a href="{%url 'login' %}">login</a></p>
-        </div>
+        </div>-->
+
     </div>
+
+
 </body>
 
-</html>
+</html> 

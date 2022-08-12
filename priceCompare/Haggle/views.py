@@ -13,6 +13,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
 #AUTHENTICATION
 def landing(request):
     if request.user.is_authenticated:
@@ -65,3 +66,7 @@ def logoutuser(request):
 
 
     return redirect('login')
+
+
+def faq(request):
+    return render(request, 'faq.html')

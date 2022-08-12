@@ -6,7 +6,7 @@ from .models import  ProductComment
 
 
 class CreateUserForm(UserCreationForm):
-    def __init__(self, *args, **kwargs):
+     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["username"].widget.attrs.update({
             'name':'username',
@@ -30,12 +30,18 @@ class CreateUserForm(UserCreationForm):
             'class':'form-input',
         })
 
-    class Meta:
+        
+
+
+     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = [ 'username','first_name', 'last_name', 'email', 'password1', 'password2']
 
 
-class CommentForm(forms.Form):
+
+
+class CommentForm(forms.ModelForm):
     class Meta:
-       model = ProductComment
-       fields = ('author', 'body')
+        model = ProductComment
+        fields = ('author', 'body')
+

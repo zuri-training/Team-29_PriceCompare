@@ -6,107 +6,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 150px;
-            position: relative;
-        }
-        
-        p{
-            font-size: 18px;
-        }
-
-
-        .i-form{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            width: 160px;
-            height: 25px;
-        }
-
-        .i-form:focus{
-            outline: none;
-        }
-
-        .submit{
-            border-width: 0px;
-            background-color: blue;
-            padding: 3px 10px;
-            border-radius: 15px; 
-        }
-
-        #messages{
-            position: absolute;
-            top: -50px;
-            right: 218px;
-            background-color: rgb(8, 126, 126);
-            border-width: 1px;
-            border-color: rgb(8, 126, 126);
-            border-radius: 3px;
-            padding: 4px 8px;
-
-        
-        }
-
-        .google{
-           background-color: blue;
-           width:5rem;
-        }
-    </style>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign.css' %}">
 </head>
 
 <body>
+    <!-- <div class="empty"></div> -->
 
-    <div class="login">
-        <h1>HAGGLE</h1>
-        <p>log in to your account</p>
-        <form action="" method="post"  >
-            
+    <div class="lay">
 
-            <div class="google">
-               <a href="{% provider_login_url 'google' %}">google</a>
+        <div class="sub_btn">
+            <img src="img/footer-logo.png" alt="haggle logo" class="logo" srcset="">
+
+            <div class="sign">
+                <!-- <input type="button" value="Login" class="flow flow2 "> -->
+
+                <!-- <input type="button" value="Sign Up" class="flow"> -->
+                <a href="{%url 'login'%}" class="ep he">login</a>
+                <a href="{%url 'signup'%}" class="ep2">Sign up</a>
+
             </div>
+        </div>
+
+        <form action="" method="post">
             {%csrf_token%}
-            <div>
-                <p>username</p>
-                <input type="text" name="username" placeholder="username" class="i-form">
-            </div>
-            <div>
-                <p>password</p>
-                <input type="password" name="password" placeholder="password" class="i-form" type="hidden" >
+            <!-- <div class="sign">
+                    <input type="button" value="Sign up" class="flow flow2" >
+                    <input type="button" value="Login" class="flow">
+                    
+                </div> -->
+            <div class="content">
+
+
+                <label>username</label> <br>
+                <input class="mail" type="text" name="username" placeholder="Joh Doe@gmail.com">
+                <br>
+
+                Password <br>
+                <input class="mail" type="password" name="password" placeholder="John123!">
             </div>
 
-            <div>
-                <a href="{%url 'password_reset'%}">forget password?</a>
-            </div>
+            <br>
+                <div class="sub_btn">
+                <input type="submit" value="Log in" class="sub">
+          </div>
 
-            <div>
-                <input type="submit" class="submit" value="login">
-            </div>
+          <div class="google">
+            <a class="google-l"  href="{% provider_login_url 'google' %}"><img class="google-img" src="images/Google__G__Logo.svg.png" alt=""> <span class="google-note" >continue with google</span> </a>
+        </div>
         </form>
 
-        <div>
-            <p>Dont have an account <a href="{%url 'signup'%}">signup</a></p>
+        <div class="forget-password" >
+            <a href="{%url 'password_reset'%}">forget password?</a>
         </div>
-    </div>
 
+    </div>
     {% for message in messages %}
-    <p id="messages">{{message}} </p>
+    <p id="messages" class="caution">{{message}} </p>
 
     {% endfor %}
 
-
 </body>
 
-</html>
+</html> 
