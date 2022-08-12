@@ -1,0 +1,122 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* DESKTOP VIEW(760PX-1440PX) */
+body{
+    background-color:#fff;
+    font-family: 'Inter', sans-serif;
+    
+}
+/* MAIN SECTION */
+/* feedback page */
+main{
+    margin-top:2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.feedback-page{
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    gap: 4rem;
+}
+p{
+    text-align: center;
+    color:#101113;
+    font-weight: 300;
+}
+.white-section{
+    margin: auto;
+    border-radius: 8px;
+    gap: 3rem;
+    align-items: center;
+}
+.sec{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+form{
+    margin: auto;
+    gap: 2rem;
+   
+ }
+form label{
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color:#101113;
+}
+form input{
+    width: 100%;
+    padding: 1.7rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sec2-btnhold{
+    display: flex;
+    gap:3rem;
+}
+.sec2-btn{
+    padding: 0.3rem 2.5rem;
+    background-color: #fff;
+    border: 1px solid #2960EE;
+    color:#101113;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 15px;
+}
+.sec2-btn:hover{
+    background-color: #2960EE;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.sec2-btn:active{
+    background-color: #2960EE;
+    color: #fff;
+    border: none;
+    outline: none; 
+}
+.btn-hold{
+    text-align: center;
+}
+.btn-submit{
+    padding:0.5rem 1.5rem;
+    margin-top: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color:#2960EE;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+/* MEDIA RESPONSIVE CSS */
+/* LAPTOP SMALL TO MOBILE  */
+
+@media screen and (max-width:500px){
+    /* Feedback Page */
+    form{
+        width: 80%;
+    }
+    .sec2-btnhold{
+        gap:1rem;
+        width: 80%;
+    }
+    .sec2-btn{
+        padding: 0.3rem 1.5rem;
+    }
+    form label{
+        font-size: 12px;
+    }
+
+
+}
