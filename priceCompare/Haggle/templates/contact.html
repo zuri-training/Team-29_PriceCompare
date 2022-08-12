@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+  
+{% block title %} About {% endblock title %}
+
+{% block content %}
+<div class="main">
+    <div class="main-img">
+        <img src="https://i.postimg.cc/3xjYSVKK/IMAGE.png" alt="" class="contact-img">
+    </div>
+    <div class="contact-box">
+        <h2>CONTACT US</h2>
+        <form action="">
+            <div class="name">
+                <div class="name-hold">
+                    <label for="firstname">First name</label>
+                    <input type="text" name="" placeholder="John"id="" minlength="3" required>
+                </div>
+                <div class="name-hold">
+                    <label for="lastname">Last name</label>
+                    <input type="text" name="" placeholder="Doe"id="" minlength="3" required>
+                </div>
+            </div>
+            
+            <label for="email">Email</label>
+            <input type="email" name="" id="" placeholder="johndoe@doe.com" required>
+            <label for="subect">Subject</label>
+            <input type="text" name="" id="" minlength="3" required>
+            <label for="message">Message/Enquiry</label>
+            <textarea name="message" id="" class="msg-box"></textarea>
+            <div class="btn-hold">
+                <button  value="submit" class="btn-submit" required>Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    
+</div>
+{% endblock content %}
