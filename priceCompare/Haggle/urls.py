@@ -1,8 +1,12 @@
 from django.urls import path
-from .views import faq
+
+from .views import contactPage, faq, Home, pricecompare, SearchResultView
+
+
 from . import views
 from django.contrib.auth import views as auth_views
-from .views import faq, Home, pricecompare, SearchResultView
+
+
 
 urlpatterns = [
     path('', views.landing, name='landing'),
@@ -15,12 +19,16 @@ urlpatterns = [
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name ="users\password_reset_form.html"), name='password_reset_confirm'),
     path('reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name ="users\password_reset_complete.html"), name='password_reset_complete'),
     path('faq/', faq, name = 'faq' ),
+    path('contact/', contactPage, name = 'contact' ),
     path('home', Home, name='home'),
     path('<int:pk>/', pricecompare, name='compare'),
     path('', SearchResultView.as_view(), name= 'search'),
 
 
+
+
 ]  
+
 
 
 

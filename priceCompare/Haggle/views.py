@@ -79,6 +79,8 @@ def faq(request):
     return render(request, 'faq.html')
 
 
+def contactPage(request):
+    return render(request, 'contact.html')
 def Home(request):
     product = productDetails.objects.all()
     return render(request, 'index.html', {'product':product} )
