@@ -113,8 +113,6 @@ form input{
 /* LAPTOP SMALL TO MOBILE LARGE */
 
 @media screen and (max-width:570px ){
-
-
    .main-img{
     width: 90%;
     
