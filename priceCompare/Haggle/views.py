@@ -16,18 +16,20 @@ def Home(request):
 
 class SearchResultView(ListView):
     model = productDetails
+    #extra_context={ 'product':productDetails.objects.values()[0]['name']}
     template_name = 'search.html'
 
-    def search(self, mode='default', ):
+
+    def search(self ):
         search_value = self.request.GET.get('search')
-        search_value = search_value.strip()
-        if mode == 'default':
-            results = productDetails.objects.filter(name__icontains=search_value)
-            random.Random(4).shuffle(results)
-        elif mode == 'low_to_high':
-            results = productDetails.objects.filter(name__icontains=search_value).order_by('price')
-        elif mode == 'high_to_low':
-            results = productDetails.objects.filter(name__icontains=search_value).order_by('-price')
+        #search_value = search_value.strip()
+        #if mode == 'default':
+        results = productDetails.objects.filter(name__icontains=search_value)
+        #random.Random(4).shuffle(results)
+        #elif mode == 'low_to_high':
+        #results = productDetails.objects.filter(name__icontains=search_value).order_by('price')
+        #elif mode == 'high_to_low':
+        #results = productDetails.objects.filter(name__icontains=search_value).order_by('-price')
        # elif mode == 'filter':
         #results = productDetails.objects.filter(name__icontains=search_value).filter(
 
