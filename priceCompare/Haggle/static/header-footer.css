@@ -99,6 +99,7 @@ body{
 .menu-open, .menu-closed{
     font-size:2.5rem;
     display: none;
+    z-index: 1;
     
 }
 /* ALL CATEGORIES SECTION */

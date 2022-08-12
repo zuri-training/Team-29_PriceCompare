@@ -15,7 +15,7 @@ class productDetails(models.Model):
 
 
 class ProductComment(models.Model):
-    author = models.ForeignKey(User, null= True, blank= True, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey('productDetails', on_delete=models.CASCADE)
