@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from unicodedata import name
+from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormMixin
@@ -22,21 +23,27 @@ class SearchResultView(ListView):
     model = productDetails
     template_name = 'search.html'
 
-    def search(self, mode='default', ):
+    def get_queryset(self,mode='default'):
         search_value = self.request.GET.get('search')
         search_value = search_value.strip()
+        self.product=get_object_or_404(productDetails,name=self.kwargs['id'])
         if mode == 'default':
-            results = productDetails.objects.filter(name__icontains=search_value)
+            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
             random.Random(4).shuffle(results)
         elif mode == 'low_to_high':
-            results = productDetails.objects.filter(name__icontains=search_value).order_by('price')
+            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
         elif mode == 'high_to_low':
-            results = productDetails.objects.filter(name__icontains=search_value).order_by('-price')
-       # elif mode == 'filter':
-        #results = productDetails.objects.filter(name__icontains=search_value).filter(
-
-
+            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
+        
         return results
+    
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+        context['product']=self.product
+        return context
+
+
+    
 
 # Create your views here.
 

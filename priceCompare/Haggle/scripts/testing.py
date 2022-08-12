@@ -11,7 +11,7 @@ print(len(productDetails.objects.filter(merchantName='Slot').filter(brand='Apple
 # print(productDetails.objects.values()[8630])
 
 
-print(productDetails.objects.order_by('-price').all()[0].name)
+print(productDetails.objects.order_by('-price').first().name)
 
 
 # print(len(list(productDetails.objects.values_list('price', flat=True))))
