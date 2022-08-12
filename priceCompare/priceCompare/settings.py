@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Haggle.apps.HaggleConfig',
+    'django.contrib.sites', 
+    # ALLAUTH 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     'django_extensions',
 ]
 
@@ -57,7 +63,13 @@ ROOT_URLCONF = 'priceCompare.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+                
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'), 
+            #AUTHENTICATION
+            os.path.join(BASE_DIR, 'templates', 'allauth', 'templates')    
+
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +136,7 @@ USE_TZ = True
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
 django_heroku.settings(locals())
 
 
@@ -131,3 +144,45 @@ django_heroku.settings(locals())
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#       AUTHENTICATION SETTINGS
+
+#SMTP configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'postmaster@sandboxc94d55d838a94067965bcdf289e8ec86.mailgun.org'
+EMAIL_HOST_PASSWORD = '48f2a0fe0b38298fc3ed9d026556cd5a-1b3a03f6-140e38cc'
+DEFAULT_FROM_EMAIL = "hagglezuri029@gmail.com"
+
+#social app  custom settings
+AUTHENTICATION_BACKENDS = [
+    
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
+
+SITE_ID = 2
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '663579936009-dvtau6jtqgvue54ht37jpoaljkllfpr0.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+    }
+}
+
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_COOKIE_AGE = 18000
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SOCIALACCOUNT_LOGIN_ON_GET=True
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
+LOGIN_REDIRECT_URL = 'home'

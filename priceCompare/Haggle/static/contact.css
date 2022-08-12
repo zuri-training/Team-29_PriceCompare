@@ -1,0 +1,174 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* DESKTOP VIEW(760PX-1440PX) */
+body{
+    background-color:#fff;
+    font-family: 'Inter', sans-serif;
+    
+}
+/* main section */
+
+main{
+    background-color: #fff;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+ 
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 7rem;
+   
+}
+.main-img{
+    width: 500px;
+    margin: auto;
+    
+}
+.contact-img{
+   
+  width: 100%;
+  
+    
+}
+
+.contact-box{
+    margin: auto;
+    border-radius: 20px;
+
+    
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 2rem;
+    color:#101113;
+}
+form{
+    margin: 2rem auto;
+    gap: 2rem;
+   
+ }
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.name-hold{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+form label{
+    display: flex;
+    margin-top: 1rem;
+    font-size: 12px;
+    color: gray;
+}
+form input{
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.msg-box{
+    width: 100%;
+    padding: 1.7rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.btn-hold{
+    text-align: center;
+}
+.btn-submit{
+    padding:0.5rem 1.5rem;
+    margin-top: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color:#2960EE;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+
+
+
+/* MEDIA RESPONSIVE CSS */
+
+
+/* LAPTOP SMALL TO MOBILE LARGE */
+
+@media screen and (max-width:570px ){
+
+
+   .main-img{
+    width: 90%;
+    
+    }
+    .contact-box{
+    width: 90%;
+    margin: auto;
+    
+    }
+    form{
+        width: 90%;
+        margin: 1rem auto;
+        gap: 2rem;
+    }
+    
+    .name{
+        gap: 0rem;
+    }
+    .name-hold{
+        gap: 3px;
+
+    }
+    .name-hold input{
+        padding-right:1.5rem;
+    }
+    h2{
+        padding-top: 5px;
+        margin-top: 1rem;
+    }
+    form input{
+        margin-top: 0.5rem;
+    }
+
+
+}
+@media screen and (max-width:530px ){
+    .name-hold input{
+        padding-right: 1rem;
+    }
+   
+}
+@media screen and (max-width:500px ){
+    .name{
+        flex-direction: column;
+    }
+   
+}
+@media screen and(max-width:460px){
+
+    .contact-box{
+        width: 250px;
+        height:500px;
+        margin: auto;
+    }
+
+
+}

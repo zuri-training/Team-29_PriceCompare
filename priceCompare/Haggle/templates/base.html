@@ -21,14 +21,23 @@
         {% comment %} js and css scripts for the header {% endcomment %}
         <link rel="stylesheet" href= "{% static 'header-footer.css' %}">
         <script defer src= "{% static 'header-footer.js' %}"></script>
-         <link rel="stylesheet" href= "{% static 'comparison.css' %}">
-        <link rel="stylesheet" href= "{% static 'product.css' %}">
+
+        {% comment %} for comparison page {% endcomment %}
+        <link rel="stylesheet" href= "{% static 'comparison.css' %}">
+        <link rel="stylesheet" href= "{% static 'accordion.css' %}">
         <script defer src= "{% static 'comparison.js' %}"></script>
 
         {% comment %} for faq pages {% endcomment %}
         <link rel="stylesheet" href= "{% static 'faq.css' %}" >
         <script defer src= "{% static 'faq.js' %}" ></script>
     
+        {% comment %} for contact page {% endcomment %}
+        <link rel="stylesheet" href="{% static 'contact.css' %}">
+
+        {% comment %} for product/search page {% endcomment %}
+        <link rel="stylesheet" href= "{% static 'product.css' %}">
+
+        
     </head>
 
 
