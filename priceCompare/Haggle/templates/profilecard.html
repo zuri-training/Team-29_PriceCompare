@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+  
+{% block title %} PROFILE CARD {% endblock title %}
+
+{% block content %}
+    <!-- MAIN FOR PROFILE CARD -->
+    <main>
+      <!-- FIRST ITEM ON THE PAGE -->
+      <div class="profile">
+        <div class="profile-pic">
+          <span class="iconify" data-icon="fa-regular:user"></span>
+        </div>
+        <p class="join">Joined 2020-07-30</p>
+      </div>
+      <!-- BORDER LINE -->
+      <hr />
+
+      <!-- FORM FIELDS -->
+      <form action="">
+        <div class="form-fields">
+          <div class="details-name">
+            <div class="f-name">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                name="fname"
+                placeholder="John"
+                class="field"
+                required
+              />
+            </div>
+            <div class="l-name">
+              <label for="lname"> Last Name</label>
+              <input
+                type="text"
+                name="lname"
+                placeholder="Doe"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+          <div class="details-contact">
+            <div class="email-add">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Johndoe@mail.com"
+                class="field"
+                required
+              />
+            </div>
+            <div class="phone-no">
+              <label for="phoneno"> Phone Number</label>
+              <input
+                type="number"
+                name="phoneno"
+                placeholder="0812222333"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+          <div class="details-verify">
+            <div class="pass-wd">
+              <label for="passwd">Password</label>
+              <input
+                type="password"
+                name="passwd"
+                placeholder="John123!"
+                class="field"
+                required
+              />
+              <span
+                class="iconify"
+                data-icon="clarity:eye-show-line"
+                id="icon1"
+              ></span>
+            </div>
+            <div class="gender">
+              <label for="gender">Gender</label>
+              <input
+                type="text"
+                name="gender"
+                placeholder="female"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+ {% endblock %} 
