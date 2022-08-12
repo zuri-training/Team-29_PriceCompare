@@ -110,7 +110,7 @@ class PriceCompareView(FormMixin, DetailView):
             return self.form_invalid(form)
 
     def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
+        form.save(commit=False)
+        return super(PriceCompareView, self).form_valid(form)
 
 
