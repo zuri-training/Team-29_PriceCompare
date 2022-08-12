@@ -16,10 +16,14 @@
 
 
         {% load static %}
+        <link rel="stylesheet" href="{% static 'landing.css' %}">
 
         {% comment %} js and css scripts for the header {% endcomment %}
         <link rel="stylesheet" href= "{% static 'header-footer.css' %}">
         <script defer src= "{% static 'header-footer.js' %}"></script>
+         <link rel="stylesheet" href= "{% static 'comparison.css' %}">
+        <link rel="stylesheet" href= "{% static 'product.css' %}">
+        <script defer src= "{% static 'comparison.js' %}"></script>
 
         {% comment %} for faq pages {% endcomment %}
         <link rel="stylesheet" href= "{% static 'faq.css' %}" >
@@ -56,7 +60,7 @@
                 <option value="">Laptops</option>
                 <option value="">Electronics</option>
             </select>
-            <a href="about.html">About us</a>
+            <a href="aboutPage.html">About us</a>
             <a href="contact.html">Contact</a>
             <a href="profilecard.html" class="create-account2">User Profile</a>
             <a href="signin.html" class="create-account2">Sign in/Register</a>
