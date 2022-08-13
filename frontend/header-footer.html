@@ -36,11 +36,26 @@
         <!-- SECOND NAVIGATION BAR -->
         <nav class="nav2">
             <a href="index.html">Home</a>
-            <select name="" id="">
+            <select name="links" id="" size="1" onchange="window.location.href=this.value;">
                 <option value="">All Categories</option>
-                <option value="">Phones</option>
-                <option value="">Laptops</option>
-                <option value="">Electronics</option>
+                <optgroup label="Phones">
+                    <option value="">Techno</option>
+                    <option value="">Samsung</option>
+                    <option value="">Lenovo</option>
+                    <option value="">Nokia</option>
+                    <option value="">Xiaomi</option>
+                    <option value="">Infinix</option>
+                    <option value="">Oppo</option>
+                    <option value="">Apple</option>
+                </optgroup>
+                <optgroup label="Laptops">
+                    <option value="">Asus</option>
+                    <option value="">Lenovo</option>
+                    <option value="">Hp</option>
+                    <option value="">Dell</option>
+                    <option value="">Apple</option>
+                </optgroup>
+                <optgroup label="Electronics"></optgroup>
             </select>
             <a href="aboutPage.html">About us</a>
             <a href="contact.html">Contact</a>
