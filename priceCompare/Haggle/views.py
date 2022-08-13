@@ -1,4 +1,5 @@
 
+from itertools import product
 from unicodedata import name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
@@ -100,38 +101,26 @@ class SearchResultView(ListView):
     template_name = 'search.html'
 
     def get_queryset(self,mode='default'):
-        search_value = self.request.GET.get('search')
+        search_value = self.request.GET.get('q')
         search_value = search_value.strip()
-        self.product=get_object_or_404(productDetails,name=self.kwargs['id'])
         if mode == 'default':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
+            results = list(productDetails.objects.filter(name__icontains=search_value))
+            # results=list(results)
             random.Random(4).shuffle(results)
         elif mode == 'low_to_high':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
+            results = productDetails.objects.filter(name__icontains=search_value)
         elif mode == 'high_to_low':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
-        
+            results = productDetails.objects.filter(name__icontains=search_value)
         return results
     
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
-        context['product']=self.product
+        context['products']=self.get_queryset()
         return context
 
 
     
 
-# Create your views here.
-
-# class ProductListView(ListView):
-#     model = productDetails
-#     paginate_by= 50
-
-#     results= model.objects.filter(brand=brand).filter(category=category)
-
-#     # def get_context_data(self, **kwargs):
-#     #     context=
-#     #     return context
 
 class PriceCompareView(FormMixin, DetailView):
     model = productDetails
@@ -141,9 +130,13 @@ class PriceCompareView(FormMixin, DetailView):
     def get_success_url(self):
         return reverse('Haggle:product', kwargs={'pk': self.object.pk})
 
+    def get_product(self, *args, **kwargs):
+        return get_object_or_404(productDetails,id=self.kwargs['pk'])
+    
     def product_comparison_fetch(self):
         import re
-        brand= self.object.brand
+        product=self.get_product()
+        brand= product.brand
         reduced_name=re.search(f'{brand}(.+)',self.object.name).group()
 
         #CASES FOR QUERY VALUE
@@ -178,9 +171,10 @@ class PriceCompareView(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['product'] = self.object
+        product=self.get_product()
+        context['product'] = product
         context['comparisons'] = self.product_comparison_fetch()
-        context['comments'] = ProductComment.objects.filter(product=self.object.id).order_by('created_on')
+        context['comments'] = ProductComment.objects.filter(product=product.id).order_by('created_on')
         context['form'] = self.get_form()
         return context
 
