@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,11 +12,14 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./img/hagglefavicon.png" type="" />
-    <link rel="stylesheet" href="profilecard.css" />
+
+    <link rel="stylesheet" href="profilecard.css" >
   </head>
 
   <body>
     <header></header>
+
+{% block content %}
 
     <!-- MAIN FOR PROFILE CARD -->
     <main>
@@ -109,4 +113,5 @@
     <!-- FOOTER -->
     <footer></footer>
   </body>
+{% endblock %}
 </html>

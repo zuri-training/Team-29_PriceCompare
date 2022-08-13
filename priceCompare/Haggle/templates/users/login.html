@@ -1,0 +1,72 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sign.css' %}">
+</head>
+
+<body>
+    <!-- <div class="empty"></div> -->
+
+    <div class="lay">
+
+        <div class="sub_btn">
+            <img src="img/footer-logo.png" alt="haggle logo" class="logo" srcset="">
+
+            <div class="sign">
+                <!-- <input type="button" value="Login" class="flow flow2 "> -->
+
+                <!-- <input type="button" value="Sign Up" class="flow"> -->
+                <a href="{%url 'login'%}" class="ep he">login</a>
+                <a href="{%url 'signup'%}" class="ep2">Sign up</a>
+
+            </div>
+        </div>
+
+        <form action="" method="post">
+            {%csrf_token%}
+            <!-- <div class="sign">
+                    <input type="button" value="Sign up" class="flow flow2" >
+                    <input type="button" value="Login" class="flow">
+                    
+                </div> -->
+            <div class="content">
+
+
+                <label>username</label> <br>
+                <input class="mail" type="text" name="username" placeholder="Joh Doe@gmail.com">
+                <br>
+
+                Password <br>
+                <input class="mail" type="password" name="password" placeholder="John123!">
+            </div>
+
+            <br>
+                <div class="sub_btn">
+                <input type="submit" value="Log in" class="sub">
+          </div>
+
+          <div class="google">
+            <a class="google-l"  href="{% provider_login_url 'google' %}"><img class="google-img" src="images/Google__G__Logo.svg.png" alt=""> <span class="google-note" >continue with google</span> </a>
+        </div>
+        </form>
+
+        <div class="forget-password" >
+            <a href="{%url 'password_reset'%}">forget password?</a>
+        </div>
+
+    </div>
+    {% for message in messages %}
+    <p id="messages" class="caution">{{message}} </p>
+
+    {% endfor %}
+
+</body>
+
+</html> 
