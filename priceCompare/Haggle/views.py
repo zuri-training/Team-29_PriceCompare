@@ -100,22 +100,21 @@ class SearchResultView(ListView):
     template_name = 'search.html'
 
     def get_queryset(self,mode='default'):
-        search_value = self.request.GET.get('search')
+        search_value = self.request.GET.get('q')
         search_value = search_value.strip()
-        self.product=get_object_or_404(productDetails,name=self.kwargs['id'])
         if mode == 'default':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
+            results = list(productDetails.objects.filter(name__icontains=search_value))
+            # results=list(results)
             random.Random(4).shuffle(results)
         elif mode == 'low_to_high':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
+            results = productDetails.objects.filter(name__icontains=search_value)
         elif mode == 'high_to_low':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
-        
+            results = productDetails.objects.filter(name__icontains=search_value)
         return results
     
     def get_context_data(self, **kwargs):
         context=super().get_context_data(**kwargs)
-        context['product']=self.product
+        context['products']=self.get_queryset()
         return context
 
 

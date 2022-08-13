@@ -24,7 +24,7 @@ urlpatterns = [
     path('home', Home, name='home'),
 
     path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
-    path('', SearchResultView.as_view(), name= 'search'),
+    path('search/', SearchResultView.as_view(), name= 'search'),
     path('profilecard/', profilecard, name = 'profilecard')
 
     
