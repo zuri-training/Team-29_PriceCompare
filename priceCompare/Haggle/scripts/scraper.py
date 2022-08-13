@@ -7,7 +7,7 @@ def scraper(base_url, brand, category):
 
 
   # change the driver path before runing the script
-    driver = Service('C:/Users/USER/Downloads/chromedriver_win32/chromedriver.exe')
+    driver = Service('C:/Users/my computer/Downloads/chromedriver_win32/chromedriver.exe')
 
     options = webdriver.ChromeOptions()
     options.add_argument('--headless --window-size=400,800') 
@@ -82,7 +82,7 @@ def scraper(base_url, brand, category):
                 j+=1
                 temporary_scraped_data=[]
             length_final_scraped_data_after = len(final_scraped_data)  
-            if merchant_name=='jumia' and page==5:
+            if merchant_name=='jumia' and page==3:
                 break          
             if length_final_scraped_data_before==length_final_scraped_data_after:
                 break
@@ -127,7 +127,11 @@ def scraper(base_url, brand, category):
 # scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=oppo&page=",brand="oppo",category="phone")
 # scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=apple&page=",brand="apple",category="phone")
 
-
+# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=infinix&page=",brand="infinix",category="phone")
+# scraper(base_url='https://slot.ng/search/result?q=samsung&page=', brand='samsung',category='phone')
+# scraper(base_url='https://slot.ng/search/result?q=macbook&page=', brand='apple',category='laptop')
+# scraper(base_url="https://www.jumia.com.ng/laptops/hp/?page=",brand="hp",category="laptop")
+# scraper(base_url="https://www.jumia.com.ng/smartphones/apple/?page=",brand="apple",category="phone")
 
 
 
@@ -137,14 +141,10 @@ def scraper(base_url, brand, category):
 
 
 #To-Do
-# scraper(base_url="https://www.jumia.com.ng/laptops/hp/?page=",brand="hp",category="laptop")
-# scraper(base_url="https://www.jumia.com.ng/smartphones/apple/?page=",brand="apple",category="phone")
+
 # scraper(base_url="https://www.jumia.com.ng/smartphones/nokia/?page=",brand="nokia",category="phone")
 # scraper(base_url="https://www.konga.com/category/laptops-5230?brand=hp&page=",brand="hp",category="laptop")
-# scraper(base_url="https://www.konga.com/category/smartphones-7539?brand=infinix&page=",brand="infinix",category="phone")
+
 
 
 #END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END END EN
-
-# scraper(base_url='https://slot.ng/search/result?q=samsung&page=', brand='samsung',category='phone')
-# scraper(base_url='https://slot.ng/search/result?q=macbook&page=', brand='apple',category='laptop')
