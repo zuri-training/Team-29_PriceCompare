@@ -1,4 +1,4 @@
-
+from django.db.models import Q
 from unicodedata import name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
@@ -29,11 +29,11 @@ import random
 # Create your views here.
 
 #AUTHENTICATION
-def landing(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:    
-        return render(request, 'users/landing.html')
+#def landing(request):
+    #if request.user.is_authenticated:
+        #return redirect('home')
+    #else:
+        #return render(request, 'users/landing.html')
 
 @login_required(login_url='login')
 def home(request):
@@ -95,45 +95,22 @@ def Home(request):
 
 class SearchResultView(ListView):
     model = productDetails
-    #extra_context={ 'product':productDetails.objects.values()[0]['name']}
     template_name = 'search.html'
 
-<<<<<<< HEAD
-
-    def search(self ):
-        search_value = self.request.GET.get('search')
-        #search_value = search_value.strip()
-        #if mode == 'default':
-        results = productDetails.objects.filter(name__icontains=search_value)
-        #random.Random(4).shuffle(results)
-        #elif mode == 'low_to_high':
-        #results = productDetails.objects.filter(name__icontains=search_value).order_by('price')
-        #elif mode == 'high_to_low':
-        #results = productDetails.objects.filter(name__icontains=search_value).order_by('-price')
-       # elif mode == 'filter':
-        #results = productDetails.objects.filter(name__icontains=search_value).filter(
 
 
-=======
-    def get_queryset(self,mode='default'):
-        search_value = self.request.GET.get('search')
-        search_value = search_value.strip()
-        self.product=get_object_or_404(productDetails,name=self.kwargs['id'])
-        if mode == 'default':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
-            random.Random(4).shuffle(results)
-        elif mode == 'low_to_high':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
-        elif mode == 'high_to_low':
-            results = productDetails.objects.filter(id=self.product).filter(name__icontains=search_value)
-        
->>>>>>> 2f06d585113ca2241536579228f0c3fca8e7c60d
-        return results
+    def get_queryset(self):
+        query = self.request.GET.get("search")
+        object_list = productDetails.objects.filter(
+        Q(name__icontains=query) | Q(brand__icontains=query)
+        )
+        return object_list
     
-    def get_context_data(self, **kwargs):
-        context=super().get_context_data(**kwargs)
-        context['product']=self.product
-        return context
+    #def get_context_data(self, **kwargs):
+        #context=super().get_context_data(**kwargs)
+
+        #context['product']=self.product
+        #return context
 
 
     

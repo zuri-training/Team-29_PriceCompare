@@ -11,7 +11,7 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    path('', views.landing, name='landing'),
+    #path('', views.landing, name='landing'),
     #AUTHENTICATION
     path('signup/', views.signup, name='signup'),
     path('login/', views.loginpage, name='login'),
