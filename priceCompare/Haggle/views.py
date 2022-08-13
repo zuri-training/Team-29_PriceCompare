@@ -85,6 +85,8 @@ def logoutuser(request):
 def faq(request):
     return render(request, 'faq.html')
 
+def profilecard(request):
+    return render(request, 'profilecard.html')
 
 def contactPage(request):
     return render(request, 'contact.html')
@@ -193,5 +195,6 @@ class PriceCompareView(FormMixin, DetailView):
     def form_valid(self, form):
         form.save(commit=False)
         return super(PriceCompareView, self).form_valid(form)
+
 
 
