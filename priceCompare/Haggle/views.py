@@ -94,24 +94,7 @@ def Home(request):
     return render(request, 'index.html', {'product':product} )
 
 
-class SearchResultView(ListView):
-    model = productDetails
-    template_name = 'search.html'
 
-
-
-    def get_queryset(self):
-        query = self.request.GET.get("search")
-        object_list = productDetails.objects.filter(
-        Q(name__icontains=query) | Q(brand__icontains=query)
-        )
-        return object_list
-    
-    #def get_context_data(self, **kwargs):
-        #context=super().get_context_data(**kwargs)
-
-        #context['product']=self.product
-        #return context
 
 
     
@@ -309,8 +292,6 @@ class ApplePCCategoryView(ListView):
     model = productDetails
     template_name = 'applepc.html'
     def get_queryset(self):
-        object_list = list(productDetails.objects.filter(
-        Q(name__icontains='macbook')
-        ))
+        object_list = list(productDetails.objects.filter(name__icontains='macbook')
 
         return random.sample(object_list, 157)
