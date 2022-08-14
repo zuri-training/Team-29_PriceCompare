@@ -1,4 +1,4 @@
-from django.db.models import Q
+
 from unicodedata import name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
