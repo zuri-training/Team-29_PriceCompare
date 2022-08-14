@@ -153,8 +153,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'postmaster@sandboxc94d55d838a94067965bcdf289e8ec86.mailgun.org'
-EMAIL_HOST_PASSWORD = '48f2a0fe0b38298fc3ed9d026556cd5a-1b3a03f6-140e38cc'
+EMAIL_HOST_USER = os.environ.get('HAGGLE_MAILGUN_EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('HAGGLE_MAILGUN_EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = "hagglezuri029@gmail.com"
 
 #social app  custom settings
@@ -173,8 +173,8 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '663579936009-dvtau6jtqgvue54ht37jpoaljkllfpr0.apps.googleusercontent.com',
-            'secret': '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',
+            'client_id': os.environ.get('HAGGLE_GOOGLE_CLIENT_ID'),
+            'secret': os.environ.get('HAGGLE_GOOGLE_SECRET'),
             'key': ''
         }
     }
