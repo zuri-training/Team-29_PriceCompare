@@ -194,8 +194,7 @@ class ProductListView(ListView):
     model = productDetails
     template_name = 'productlist.html'
 
-    def get_queryset(self,mode='default'):
-    
+    def get_queryset(self):
         results = list(productDetails.objects.filter(category=self.kwargs.get('category')).filter(brand__icontains=self.kwargs.get('brand')))
         random.Random(4).shuffle(results)
         return results
