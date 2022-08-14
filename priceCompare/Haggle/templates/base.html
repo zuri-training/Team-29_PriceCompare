@@ -56,7 +56,8 @@
                 <div class="nav1-icon">
                     <span class="iconify iconify3" data-icon="fa-regular:user"></span>
                 </div>
-                <a href="signin.html" class="create-account">Sign In/Register</a> 
+                <a href="{% url 'Haggle:login' %}" class="create-account">Sign In</a>
+                <a href="{% url 'Haggle:signup' %}" class="create-account">Register</a>
             </div>
    
             <span class="iconify menu-open" data-icon="bx:menu"></span>
@@ -66,11 +67,26 @@
         <!-- SECOND NAVIGATION BAR -->
         <nav class="nav2">
             <a href="index.html">Home</a>
-            <select name="" id="">
+            <select name="links" id="" size="1" onchange="window.location.href=this.value;">
                 <option value="">All Categories</option>
-                <option value="">Phones</option>
-                <option value="">Laptops</option>
-                <option value="">Electronics</option>
+                <optgroup label="Phones">
+                    <option value="/phone/tecno">Tecno</option>
+                    <option value="/phone/samsung">Samsung</option>
+                    <option value="/phone/lenovo">Lenovo</option>
+                    <option value="/phone/nokia">Nokia</option>
+                    <option value="/phone/xiaomi">Xiaomi</option>
+                    <option value="/phone/infinix">Infinix</option>
+                    <option value="/phone/oppo">Oppo</option>
+                    <option value="/phone/apple">Apple</option>
+                </optgroup>
+                <optgroup label="Laptops">
+                    <option value="/laptop/asus">Asus</option>
+                    <option value="/laptop/lenovo">Lenovo</option>
+                    <option value="/laptop/hp">Hp</option>
+                    <option value="/laptop/dell">Dell</option>
+                    <option value="/laptop/apple">Apple</option>
+                </optgroup>
+                <optgroup label="Electronics"></optgroup>
             </select>
             <a href="aboutPage.html">About us</a>
             <a href="contact.html">Contact</a>

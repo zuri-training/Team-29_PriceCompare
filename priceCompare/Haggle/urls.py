@@ -6,11 +6,11 @@ from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, p
 from . import views
 from django.contrib.auth import views as auth_views
 
-
+app_name = 'Haggle'
 
 
 urlpatterns = [
-    path('', views.landing, name='landing'),
+    #path('', views.landing, name='landing'),
     #AUTHENTICATION
     path('signup/', views.signup, name='signup'),
     path('login/', views.loginpage, name='login'),

@@ -10,11 +10,11 @@
                 <div class="flexboxitem flexboxitem2">
                     <div class="products">
                         <div class="image-container">
-                            <img id="img-Box" src="https://i.postimg.cc/Z0k4KSRT/airpod1.png" alt="click here">
+                            <img id="img-Box" src="{{ product.imageLink }}" alt="click here">
                         </div>
                         <div class="products-gallery">
                             <div>
-                                <img src="https://i.postimg.cc/Z0k4KSRT/airpod1.png" alt="click here"
+                                <img src="{{ product.imageLink }}" alt="click here"
                                     onclick="myFunction(this);">
                             </div>
                             <div>
@@ -37,8 +37,17 @@
                     </div>
                     <div class="text-container">
                         <div class="first-text">
+                             <div>
+            {% for comment in comments %}
+                        On {{comment.created_on }}&nbsp;
+        <b>{{ comment.author }}</b> wrote:
+    </p>
+    <p>{{ comment.body }}</p>
+    <hr>
+    {% endfor %}
+            </div>
                             <div>
-                                <h2>Mini Bluetooth <span class="newline">EarPhones</span></h2>
+                                <h2>{{ product.name }}</h2>
                             </div>
                             <div class="share-icon">
                                 <span class="iconify" data-icon="cil:share-alt" id="first-icon"></span>
@@ -49,12 +58,10 @@
                             <i class="naira-icon">
                                 <img src="./icons/Naira.svg" alt="">
                             </i>
-                            <h2>7,890</h2>
+                            <h2>{{ product.price }}</h2>
                         </div>
                         <div class="third-text">
-                            <p>Mini Bluetooth Earphones, Hi-Fi Wireless Headphones In-Ear <br> Stereo Earbuds.Supports
-                                listening to songs and making calls. <br>
-                                Compatible with all mobile phones with Bluetooth function.</p>
+                            <p></p>
                         </div>
                         <div class="fourth-text">
                             <div class="jumia-text">
@@ -81,6 +88,8 @@
                 </div>
             </section>
 
+
+
             <!-- Comments & Review Section -->
             <div class="accordion">
                 <input type="radio" name="select" class="accordion-select" />
@@ -98,21 +107,28 @@
                 </div>
                 <div class="accordion-content">
                     <div class="comment-box">
-                        <div class="user-picture-and-text-area">
+                        <form action="{% url 'Haggle:compare' product.slug %}" method="post">
+                            <div class="user-picture-and-text-area">
+                            {% csrf_token %}
                             <img src="./images/comment picture1.svg" alt="profile picture" id="first-image">
-                            <input type="textarea" name="comment-box" placeholder="Add your comment...">
+                             {{ form.author }} <br>
+
+                            {{ form.body }}
                         </div>
                         <div class="post-comment-button">
-                            <button type="submit"><a href="#">Post</a></button>
+                            <button type="submit">Post</button>
                         </div>
-                    </div>
+                        </form>
+
+
                     <div class="flexboxitem old-comments">
+
                         <div>
                             <img src="./images/profile picture2.svg" alt="user-picture-two">
                         </div>
                         <div class="comment-details">
                             <div class="user-name">
-                                <p>Sarah Walker</p>
+                                <p></p>
                             </div>
                             <div class="comment-date">
                                 <p>23 weeks ago</p>
@@ -168,6 +184,7 @@
             </div>
 
             <!-- Price Comparison Section -->
+
             <section>
                 <div class="flexboxitem other-store-offers">
                     <h3>Other Store Offers</h3>

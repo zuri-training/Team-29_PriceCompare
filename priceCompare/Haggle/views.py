@@ -30,11 +30,11 @@ import random
 # Create your views here.
 
 #AUTHENTICATION
-def landing(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:    
-        return render(request, 'users/landing.html')
+#def landing(request):
+    #if request.user.is_authenticated:
+        #return redirect('home')
+    #else:
+        #return render(request, 'users/landing.html')
 
 @login_required(login_url='login')
 def home(request):
@@ -126,8 +126,8 @@ class PriceCompareView(FormMixin, DetailView):
     template_name = 'comparison.html'
     form_class = CommentForm
 
-    def get_success_url(self):
-        return reverse('Haggle:product', kwargs={'slug': self.object.slug})
+    def get_success_url(self, **kwargs):
+        return reverse('Haggle:compare', kwargs={'slug': self.object.slug})
 
     def get_product(self, *args, **kwargs):
         return get_object_or_404(productDetails,slug=self.kwargs['slug'])
