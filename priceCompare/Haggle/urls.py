@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, profilecard
+from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, profilecard, ProductListView
 
 
 from . import views
@@ -23,9 +23,13 @@ urlpatterns = [
     path('contact/', contactPage, name = 'contact' ),
     path('home', Home, name='home'),
 
-    path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
+
     path('search/', SearchResultView.as_view(), name= 'search'),
-    path('profilecard/', profilecard, name = 'profilecard')
+    path('profilecard/', profilecard, name = 'profilecard'),
+    path('<str:category>/<str:brand>/', ProductListView.as_view(), name= 'product-list'),
+    path('<slug>/', PriceCompareView.as_view(), name='compare'),
+    
+
 
     
 
