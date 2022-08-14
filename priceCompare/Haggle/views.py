@@ -1,6 +1,6 @@
 
 from itertools import product
-from unicodedata import name
+from unicodedata import category, name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -105,7 +105,6 @@ class SearchResultView(ListView):
         search_value = search_value.strip()
         if mode == 'default':
             results = list(productDetails.objects.filter(name__icontains=search_value))
-            # results=list(results)
             random.Random(4).shuffle(results)
         elif mode == 'low_to_high':
             results = productDetails.objects.filter(name__icontains=search_value)
@@ -128,10 +127,10 @@ class PriceCompareView(FormMixin, DetailView):
     form_class = CommentForm
 
     def get_success_url(self):
-        return reverse('Haggle:product', kwargs={'pk': self.object.pk})
+        return reverse('Haggle:product', kwargs={'slug': self.object.slug})
 
     def get_product(self, *args, **kwargs):
-        return get_object_or_404(productDetails,id=self.kwargs['pk'])
+        return get_object_or_404(productDetails,slug=self.kwargs['slug'])
     
     def product_comparison_fetch(self):
         import re
@@ -191,4 +190,17 @@ class PriceCompareView(FormMixin, DetailView):
         return super(PriceCompareView, self).form_valid(form)
 
 
+class ProductListView(ListView):
+    model = productDetails
+    template_name = 'productlist.html'
 
+    def get_queryset(self,mode='default'):
+    
+        results = list(productDetails.objects.filter(category=self.kwargs.get('category')).filter(brand__icontains=self.kwargs.get('brand')))
+        random.Random(4).shuffle(results)
+        return results
+    
+    def get_context_data(self, **kwargs):
+        context=super().get_context_data(**kwargs)
+        context['products']=self.get_queryset()
+        return context
