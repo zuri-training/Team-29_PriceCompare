@@ -1,7 +1,7 @@
 from django.urls import path
 
 
-from .views import contactPage, faq, Home, PriceCompareView, SearchResultView
+from .views import HpCategoryView, DellCategoryView, XiaomiCategoryView, OppoCategoryView, InfinixCategoryView, LenovoCategoryView, SamsungCategoryView, NokiaCategoryView, TechnoCategoryView, ApplePCCategoryView, AsusCategoryView, LenovoPCCategoryView, contactPage, faq, Home, PriceCompareView, SearchResultView, AppleCategoryView
 
 
 from . import views
@@ -25,13 +25,20 @@ urlpatterns = [
     path('home', Home, name='home'),
 
     path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
-    path('', SearchResultView.as_view(), name= 'search')
-
-    
-
-
-
-
+    path('', SearchResultView.as_view(), name= 'search'),
+    path('phone/apple', AppleCategoryView.as_view(), name='apple'),
+    path('phone/samsung', SamsungCategoryView.as_view(), name='samsung'),
+    path('phone/oppo', OppoCategoryView.as_view(), name='oppo'),
+    path('phone/techno', TechnoCategoryView.as_view(), name='techno'),
+    path('phone/lenovo', LenovoCategoryView.as_view(), name='lenovo'),
+    path('phone/infinix', InfinixCategoryView.as_view(), name='infinix'),
+    path('phone/nokia', NokiaCategoryView.as_view(), name='nokia'),
+    path('phone/xiaomi', XiaomiCategoryView.as_view(), name='xiaomi'),
+    path('laptop/asus', AsusCategoryView.as_view(), name='asus'),
+    path('laptop/lenovo', LenovoPCCategoryView.as_view(), name='lenovopc'),
+    path('laptop/hp', HpCategoryView.as_view(), name='hp'),
+    path('laptop/apple', ApplePCCategoryView.as_view(), name='applepc'),
+    path('laptop/dell', DellCategoryView.as_view(), name='dell')
 
 ]  
 

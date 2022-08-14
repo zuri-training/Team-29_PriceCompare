@@ -63,11 +63,26 @@
         <!-- SECOND NAVIGATION BAR -->
         <nav class="nav2">
             <a href="index.html">Home</a>
-            <select name="" id="">
+             <select name="links" id="" size="1" onchange="window.location.href=this.value;">
                 <option value="">All Categories</option>
-                <option value="">Phones</option>
-                <option value="">Laptops</option>
-                <option value="">Electronics</option>
+                <optgroup label="Phones">
+                    <option value="{% url 'techno' %}">Techno</option>
+                    <option value="{% url 'samsung' %}">Samsung</option>
+                    <option value="{% url 'lenovo' %}">Lenovo</option>
+                    <option value="{% url 'nokia' %}">Nokia</option>
+                    <option value="{% url 'xiaomi' %}">Xiaomi</option>
+                    <option value="{% url 'infinix' %}">Infinix</option>
+                    <option value="{% url 'oppo' %}">Oppo</option>
+                    <option value="{% url 'apple' %}">Apple</option>
+                </optgroup>
+                <optgroup label="Laptops">
+                    <option value="{% url 'asus' %}">Asus</option>
+                    <option value="{% url 'lenovopc' %}">Lenovo</option>
+                    <option value="{% url 'hp' %}">Hp</option>
+                    <option value="{% url 'dell' %}">Dell</option>
+                    <option value="{% url 'applepc' %}">Apple</option>
+                </optgroup>
+                <optgroup label="Electronics"></optgroup>
             </select>
             <a href="aboutPage.html">About us</a>
             <a href="contact.html">Contact</a>

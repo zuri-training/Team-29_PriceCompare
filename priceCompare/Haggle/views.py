@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormMixin
+import random
 
 
 from multiprocessing import context
@@ -191,3 +192,125 @@ class PriceCompareView(FormMixin, DetailView):
         return super(PriceCompareView, self).form_valid(form)
 
 
+class AppleCategoryView(ListView):
+    model = productDetails
+    template_name = 'apple.html'
+    def get_queryset(self):
+        object_list = productDetails.objects.filter(
+        Q(category__icontains='phones') | Q(brand__icontains='apple')
+        )
+
+        return random.sample(object_list, 1123)
+
+
+class SamsungCategoryView(ListView):
+    model = productDetails
+    template_name = 'samsung.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='samsung'))
+
+        return random.sample(object_list, 1149)
+
+
+class NokiaCategoryView(ListView):
+    model = productDetails
+    template_name = 'nokia.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='nokia'))
+
+        return random.sample(object_list, 104)
+
+
+class TechnoCategoryView(ListView):
+    model = productDetails
+    template_name = 'techno.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(name__icontains='techno'))
+
+        return object_list
+
+
+
+
+class InfinixCategoryView(ListView):
+    model = productDetails
+    template_name = 'infinix.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='infinix'))
+
+        return random.sample(object_list, 541)
+
+
+
+
+class OppoCategoryView(ListView):
+    model = productDetails
+    template_name = 'oppo.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='oppo'))
+
+        return random.sample(object_list, 198)
+
+
+
+class XiaomiCategoryView(ListView):
+    model = productDetails
+    template_name = 'xiaomi.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='xiaomi'))
+
+        return object_list
+
+
+class LenovoCategoryView(ListView):
+    model = productDetails
+    template_name = 'apple.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='lenovo'))
+
+        return random.sample(object_list, 960)
+
+class AsusCategoryView(ListView):
+    model = productDetails
+    template_name = 'asus.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='asus'))
+
+        return random.sample(object_list, 444)
+
+class LenovoPCCategoryView(ListView):
+    model = productDetails
+    template_name = 'lenovopc.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(name__icontains='lenovo'))
+
+        return random.sample(object_list, 960)
+
+
+class DellCategoryView(ListView):
+    model = productDetails
+    template_name = 'dell.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='dell'))
+
+        return random.sample(object_list, 703)
+
+
+class HpCategoryView(ListView):
+    model = productDetails
+    template_name = 'hp.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(brand__icontains='hp'))
+
+        return random.sample(object_list, 1206)
+
+
+class ApplePCCategoryView(ListView):
+    model = productDetails
+    template_name = 'applepc.html'
+    def get_queryset(self):
+        object_list = list(productDetails.objects.filter(
+        Q(name__icontains='macbook')
+        ))
+
+        return random.sample(object_list, 157)
