@@ -25,7 +25,6 @@ urlpatterns = [
     path('home', Home, name='home'),
 
     path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
-    path('', SearchResultView.as_view(), name= 'search'),
     path('phone/apple', AppleCategoryView.as_view(), name='apple'),
     path('phone/samsung', SamsungCategoryView.as_view(), name='samsung'),
     path('phone/oppo', OppoCategoryView.as_view(), name='oppo'),
