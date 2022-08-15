@@ -130,7 +130,7 @@ class PriceCompareView(FormMixin, DetailView):
     form_class = CommentForm
 
     def get_success_url(self):
-        return reverse('Haggle:product', kwargs={'slug': self.object.slug})
+        return reverse('Haggle:compare', kwargs={'slug': self.object.slug})
 
     def get_product(self, *args, **kwargs):
         return get_object_or_404(productDetails,slug=self.kwargs['slug'])
@@ -139,6 +139,7 @@ class PriceCompareView(FormMixin, DetailView):
         import re
         product=self.get_product()
         brand= product.brand
+        merchant=product.merchantName
         reduced_name=re.search(f'{brand}(.+)',self.object.name).group()
 
         #CASES FOR QUERY VALUE
@@ -166,8 +167,9 @@ class PriceCompareView(FormMixin, DetailView):
         return_list=[]
             
         for i in result_list:
-            if i.exists():
+            if i.exists() and list(i)!=list(productDetails.objects.filter(merchantName=merchant).filter(name__icontains=query_value).order_by('price')):
                 return_list.append(i[0])
+    
         
         return return_list
 

@@ -21,7 +21,7 @@ class productDetails(models.Model):
         pass 
     
     def get_absolute_url(self):
-        return reverse("Haggle:product_detail", kwargs={"slug": self.slug})
+        return reverse("Haggle:compare", kwargs={"slug": self.slug})
 
 
 
