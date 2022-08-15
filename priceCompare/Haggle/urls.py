@@ -1,6 +1,9 @@
 from django.urls import path
 
-from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, profilecard, ProductListView
+from .views import (contactPage, faq, 
+                    Home, PriceCompareView, SearchResultView, 
+                    profilecard, ProductListView, landing_page
+)
 
 
 from . import views
@@ -13,7 +16,7 @@ app_name = "Haggle"
 
 
 urlpatterns = [
-    path('', views.landing, name='landing'),
+    path('', landing_page, name='landing' ),
     #AUTHENTICATION
     path('signup/', views.signup, name='signup'),
     path('login/', views.loginpage, name='login'),
