@@ -6,6 +6,9 @@ from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, p
 from . import views
 from django.contrib.auth import views as auth_views
 
+
+
+
 app_name = "Haggle"
 
 
@@ -22,6 +25,7 @@ urlpatterns = [
     path('faq/', faq, name = 'faq' ),
     path('contact/', contactPage, name = 'contact' ),
     path('home', Home, name='home'),
+    path('privacy/', views.privacy, name='privacy'),
 
 
     path('search/', SearchResultView.as_view(), name= 'search'),
