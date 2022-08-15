@@ -1,12 +1,10 @@
 from django.urls import path
 
-
-from .views import contactPage, faq, Home, PriceCompareView, SearchResultView
+from .views import contactPage, faq, Home, PriceCompareView, SearchResultView, profilecard, ProductListView
 
 
 from . import views
 from django.contrib.auth import views as auth_views
-
 
 
 urlpatterns = [
@@ -21,10 +19,7 @@ urlpatterns = [
     path('reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name ="users\password_reset_complete.html"), name='password_reset_complete'),
     path('faq/', faq, name = 'faq' ),
     path('contact/', contactPage, name = 'contact' ),
-    path('home/', Home, name='home'),
 
-    path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
-    path('', SearchResultView.as_view(), name= 'search')
 
     
 

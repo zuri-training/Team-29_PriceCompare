@@ -1,26 +1,8 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="./img/hagglefavicon.png" type="" />
-
-    <link rel="stylesheet" href="profilecard.css" >
-  </head>
-
-  <body>
-    <header></header>
+  
+{% block title %} PROFILE CARD {% endblock title %}
 
 {% block content %}
-
     <!-- MAIN FOR PROFILE CARD -->
     <main>
       <!-- FIRST ITEM ON THE PAGE -->
@@ -74,7 +56,7 @@
               <input
                 type="text"
                 name="usernamee"
-                placeholder="Joh"
+                placeholder="joh"
                 class="field"
                 required
               />
@@ -110,8 +92,4 @@
         </div>
       </form>
     </main>
-    <!-- FOOTER -->
-    <footer></footer>
-  </body>
-{% endblock %}
-</html>
+ {% endblock %} 

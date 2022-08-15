@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class productDetails(models.Model):
@@ -11,6 +13,15 @@ class productDetails(models.Model):
     brand = models.CharField(max_length=40 , null= False )
     category = models.CharField(max_length= 50 , null= False)
     productLink = models.CharField(max_length= 5000, null=True)
+    slug = models.SlugField(max_length=500,  null=True, unique=True, editable=False)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name+' '+str(self.id))
+        super().save(*args, **kwargs)
+        pass 
+    
+    def get_absolute_url(self):
+        return reverse("Haggle:compare", kwargs={"slug": self.slug})
 
 
 
