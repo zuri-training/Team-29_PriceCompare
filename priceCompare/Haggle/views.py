@@ -30,11 +30,11 @@ import random
 # Create your views here.
 
 #AUTHENTICATION
-#def landing(request):
-    #if request.user.is_authenticated:
-        #return redirect('home')
-    #else:
-        #return render(request, 'users/landing.html')
+def landing(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        return render(request, 'users/landing.html')
 
 @login_required(login_url='login')
 def home(request):
@@ -161,14 +161,16 @@ class PriceCompareView(FormMixin, DetailView):
         
         result_list=[slot,jumia,konga]
         return_list=[]
-            
+
         for i in result_list:
-            if i.exists():
+            if i.exists() and list(i) != list(
+                    productDetails.objects.filter(merchantName=merchant).filter(name__icontains=query_value).order_by(
+                            'price')):
                 return_list.append(i[0])
         
         return return_list
 
-    def get_context_data(self, **kwargs):
+    def get_context_data(self):
         context = super().get_context_data(**kwargs)
         product=self.get_product()
         context['product'] = product
