@@ -9,7 +9,6 @@ from django.contrib.auth import views as auth_views
 
 
 
-
 urlpatterns = [
     path('', views.landing, name='landing'),
     #AUTHENTICATION
@@ -22,7 +21,7 @@ urlpatterns = [
     path('reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name ="users\password_reset_complete.html"), name='password_reset_complete'),
     path('faq/', faq, name = 'faq' ),
     path('contact/', contactPage, name = 'contact' ),
-    path('home', Home, name='home'),
+    path('home/', Home, name='home'),
 
     path('<int:pk>/', PriceCompareView.as_view(), name='compare'),
     path('', SearchResultView.as_view(), name= 'search')
