@@ -1,0 +1,465 @@
+*{margin: 0; padding: 0;}
+body{
+    font-family: Inter Arial, Helvetica, sans-serif;
+}
+
+.main{
+    /* border: 1px solid #2960EE; */
+    padding: 2rem 3rem;
+    margin-left: 18rem;
+    width: 55%;
+    margin-top: 7rem;
+}
+hr{
+    height: 1px;
+    background-color: #2960EE;
+    border: none;
+}
+.auth{
+    font-size: 1.1rem;
+}
+.auth1{
+    margin-bottom: 3.5vh;
+    /* color: #2960EE; */
+}
+.paragraph1{
+    margin-top: 2.7vh;
+    margin-bottom: 12vh;
+    line-height: 1.5rem;
+}
+.paragraph1 p{
+    font-size: 1rem;
+}
+.unauthenticated{
+    margin-bottom: 3.5vh;   
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2960EE;
+}
+.user1 p{
+    font-size: 0.95rem;
+}
+.userflow1{
+    margin-bottom: 3.5vh;
+    line-height: 1.5rem;
+    margin-top: 2.7vh;
+}
+.authenticated{
+    margin-bottom: 3.5vh;   
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2960EE;
+}
+.user2 p{
+    font-size: 0.95rem;
+}
+.userflow2{
+    margin-bottom: 4.5vh;
+    line-height: 1.5rem;
+    margin-top: 2.7vh;
+}
+.user3 li{
+    margin-left: 2.5rem;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+.auth2{
+    color: #2960EE;
+    font-size: 1.4rem;
+    margin-bottom: 3.5vh;
+}
+.login1{
+    margin-top: 2.5vh;
+    margin-bottom: 2vh;
+    font-size: 1rem;
+}
+.signup1{
+    margin-bottom: 2vh;
+    font-size: 1rem;
+}
+.main-page{
+    display: flex;
+}
+.page{
+    margin-bottom: 1rem;
+}
+.sidenav1 {
+    width: 12rem;
+    margin-left: 8rem;
+    margin-top: 8rem;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+    bottom: 5rem;
+    background-color:  white;
+    overflow-x: hidden;
+}
+.sidenav1 a {
+    padding-top: 0.7rem;  
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #787a80;
+    display: block;
+  }
+  .sidenav1 a:hover{
+    color: #2960EE;
+  }
+  .sidenav1 a:active{
+    text-decoration: underline;
+  }
+
+  /* FOOTER STYLE */
+  .footer1{
+    display: flex;
+    margin-left: 20rem;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+.footer1 a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.p4{
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 500;
+    /* margin-top: 15.5rem; */
+    border-top: 1px solid #B0B1B2;
+    padding-top: 2.3rem;
+}
+.p5{
+    width: 23rem;
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+    line-height: 1.3rem;
+}
+.p6{
+    width: 21rem;
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-left: 1px solid #B0B1B2;
+    padding-left: 1.3rem;
+    margin-top: 0.4rem;
+    margin-left: 1.7rem;
+    line-height: 1.3rem;
+}
+.vid{
+    margin-left: 3rem;
+}
+.p4:hover{
+    color: #2960EE;
+}
+.p4:active{
+    color: #EEB729;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width:1300px) {
+    .footer1{
+        margin-left: 16rem;
+    }
+    .p4{
+        color: #131417;
+        font-size: 0.9rem;
+        font-weight: 500;
+        /* margin-top: 15.5rem; */
+        border-top: 1px solid #B0B1B2;
+        padding-top: 2.3rem;
+    }
+    .p5{
+        width: 18rem;
+        font-size: 0.8rem;
+    }
+    .p6{
+        width: 18rem;
+        font-size: 0.8rem;
+        margin-left: 1.4rem;
+    }
+    .vid{
+        margin-left: 2.7rem;
+    }
+}
+
+@media screen and (max-width:1213px) {
+    .main{
+        margin-left: 15rem;
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .main{
+        margin-left: 14.8rem;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .main{
+        margin-left: 14.2rem;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .main{
+        margin-left: 14.2rem;
+    }
+    .sidenav1 {
+        width: 10rem;
+        right: 0.8rem;
+    }
+}
+
+
+/* Responsiveness for small laptop size 1024px */
+@media screen and (max-width:1024px) {
+    .main{
+        margin-left: 14rem;
+    }
+    .sidenav1 {
+        width: 9rem;
+        margin-left: 8rem;
+        margin-top: 8rem;
+        z-index: 1;
+        top: 1rem;
+        right: 0.5rem;
+        bottom: 5rem;
+    }
+    .footer1{
+        margin-left: 16rem;
+    }
+    .p4{
+        color: #131417;
+        font-size: 0.9rem;
+        font-weight: 500;
+        /* margin-top: 15.5rem; */
+        border-top: 1px solid #B0B1B2;
+        padding-top: 2.3rem;
+    }
+    .p5{
+        width: 18rem;
+        font-size: 0.8rem;
+    }
+    .p6{
+        width: 18rem;
+        font-size: 0.8rem;
+        margin-left: 1.4rem;
+    }
+    .vid{
+        margin-left: 2.7rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .footer1{
+        margin-left: 14rem;
+    }
+    .p4{
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding-top: 2.3rem;
+    }
+    .p5{
+        width: 15rem;
+        font-size: 0.57rem;
+    }
+    .p6{
+        width: 15rem;
+        font-size: 0.57rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        margin-right: 6.93rem;
+    }
+    .vid{
+        margin-left: 2.7rem;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .main{
+        margin-left: 12.8rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .main{
+        margin-left: 12.4rem;
+    }
+    .sidenav1 {
+        width: 8rem;
+        margin-left: 8rem;
+        margin-top: 8rem;
+        padding-right: 0.4rem;
+        z-index: 1;
+        top: 1rem;
+        right: 0;
+        bottom: 5rem;
+    }
+}
+
+
+/* Responsiveness for Tablets 768px */
+@media screen and (max-width:768px) {
+    .main{
+        margin-left: 11rem;
+        width: 60%;
+    }
+    .sidenav1 {
+        width: 8rem;
+        margin-left: 8rem;
+        margin-top: 8rem;
+        padding-right: 0.4rem;
+        z-index: 1;
+        top: 1rem;
+        right: 0;
+        bottom: 5rem;
+    }
+    .sidenav1 a {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .page{
+        font-size: 0.9rem;
+      }
+    .main li{
+        margin-top: 1rem;
+    }
+    .footer1{
+        margin-left: 14rem;
+    }
+    .p4{
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding-top: 2.3rem;
+    }
+    .p5{
+        width: 15rem;
+        font-size: 0.57rem;
+    }
+    .p6{
+        width: 15rem;
+        font-size: 0.57rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        margin-right: 6.93rem;
+    }
+    .vid{
+        margin-left: 2.7rem;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .main{
+        margin-left: 11.4rem;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .sidenav1{
+        display: none;
+    }
+    .main{
+        margin-right: -9rem;
+        margin-left: 11.5rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .main{
+        margin-right: -14rem;
+        margin-left: 11rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .main{
+        margin-right: -18rem;
+        margin-left: 11rem;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:580px) {
+    .main{
+       width: 70rem;
+    }
+    .sidenav1{
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .sidenav1{
+        display: none;
+    }
+    .sidenav{
+        display: none;
+    }
+    .main{
+        width: 90%;
+        margin-left: 0;
+        padding: 1.5rem 1.5rem;
+    }
+    .auth{
+        font-size: 0.9rem;
+    }
+    .paragraph1 p{
+        font-size: 0.9rem;
+    }
+    .user1 p{
+        font-size: 0.9rem;
+    }
+    .user2 p{
+        font-size: 0.9rem;
+    }
+   .userflow1{
+    margin-top: 2.2rem;
+   }
+    .user3 li{
+        font-size: 0.85rem;
+    }
+    .auth2{
+        margin-top: 2.2rem;
+        font-size: 1.2rem;
+    }
+    .login1{
+        font-size: 0.9rem;
+    }
+    .signup1{
+        font-size: 0.9rem;
+    }
+    .footer1{
+        display: block;
+        margin-left: 1.5rem;
+    }
+    .p4{
+        color: #131417;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: none;
+    }
+    .p6{
+        width: 13rem;
+        color: #131417;
+        font-size: 0.65rem;
+        font-weight: 300;
+        border: none;
+        margin-top: 0.4rem;
+        margin-left: 0;
+        line-height: 1rem;
+        padding-left: 0;
+    }
+    .vid{
+        margin-left: 0;
+    }
+    
+}
