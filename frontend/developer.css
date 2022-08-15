@@ -1,0 +1,294 @@
+*{margin: 0; padding: 0;}
+body{
+    font-family: Inter Arial, Helvetica, sans-serif;
+}
+.main{
+    margin-left: 26rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    width: 70%;
+}
+h2{
+    color: #2960EE;
+}
+hr{
+    height: 1px;
+    background-color: #2960EE;
+    border: none;
+    margin-top: 3.5vh;
+    margin-bottom: 3vh;
+}
+.dev-tools{
+    font-size: 2rem;
+}
+.paragraph1{
+    margin-bottom: 9vh;
+    line-height: 1.9rem;
+}
+.paragraph1 p{
+    font-size: 1.2rem;
+}
+img{
+    margin-bottom: 1.5vh;
+}
+.design1 .frontend1 .backend1{
+    font-size: 1.75rem;
+}
+.design-paragraph, .frontend-paragraph{
+    margin-bottom: 6vh;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.figma{
+    width: 9rem;
+    height: 7vh;
+    margin-bottom: 3vh;
+}
+.selenium{
+    width: 9rem;
+    height: 7vh;
+}
+.javascript, .html, .css{
+    width: 9rem;
+    height: 7vh;
+}
+
+.python, .django{
+    width: 9rem;
+    height: 7vh;
+}
+.postgres, .github{
+    width: 9rem;
+    height: 7vh;
+}
+.list{
+    font-weight: 600;
+}
+.list1{
+    font-weight: 600;
+}
+.design-paragraph li{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    list-style: none;
+    line-height: 1.9rem;
+}
+.frontend-paragraph li{
+    margin-top: 1rem;
+    /* margin-left: 2rem; */
+    list-style: none;
+    line-height: 1.9rem;
+}
+.scraping, .product, .database{
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+.django-paragraph, .database-paragraph, .merchants, .version-paragraph{
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+}
+.version-control a{
+    text-decoration: none;
+    color: #2960EE;
+}
+
+  /* FOOTER STYLE */
+  .footer1{
+    display: flex;
+    margin-left: 0;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+.footer1 a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.p4{
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 500;
+    /* margin-top: 15.5rem; */
+    border-top: 1px solid #B0B1B2;
+    padding-top: 2.3rem;
+}
+.p5{
+    width: 23rem;
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.4rem;
+    line-height: 1.3rem;
+}
+.p6{
+    width: 21rem;
+    color: #131417;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-left: 1px solid #B0B1B2;
+    padding-left: 1.3rem;
+    margin-top: 0.4rem;
+    margin-left: 1.7rem;
+    line-height: 1.3rem;
+}
+.vid{
+    margin-left: 3rem;
+}
+.p4:hover{
+    color: #2960EE;
+}
+.p4:active{
+    color: #EEB729;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1365px) {
+    .main{
+        margin-left: 22rem;
+        /* width: 70%; */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main{
+        margin-left: 20rem;
+        /* width: 70%; */
+    }
+}
+
+
+/* RESPONSIVENESS FOR SMALL LAPTOP SCREEN SIZE */
+@media screen and (max-width: 1024px) {
+    .main{
+        margin-left: 17rem;
+        /* width: 70%; */
+    }
+}
+@media screen and (max-width: 945px) {
+    .main{
+        margin-left: 16rem;
+        width: 78%;
+    }
+}
+
+/* RESPONSIVENESS FOR TABLETS 768PX */
+@media screen and (max-width: 768px) {
+    .main{
+        margin-left: 14em;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 680px) {
+    .main{
+        margin-left: 4rem;
+        width: 95%;
+    }
+    .sidenav{
+        display: none;
+    }
+    .footer1{
+        margin-left: -3rem;
+    }
+}
+
+/* RESPONSIVENESS FOR MMOBILE PHONES */
+@media screen and (max-width: 600px) {
+    .main{
+       margin-left: 1rem;
+       padding: 1.5rem;
+       width: 95%;
+    }
+    
+    .dev-tools{
+        font-size: 1.5rem;
+    }
+    .li{
+        margin-left: 1rem;
+        /* margin-right: 2rem; */
+    }
+    .paragraph1{
+        margin-bottom: 9vh;
+        line-height: 1.9rem;
+    }
+    .paragraph1 p{
+        font-size: 1rem;
+    }
+    img{
+        margin-bottom: 1.5vh;
+    }
+    .figma{
+        width: 7rem;
+        height: 5vh;
+    }
+    .selenium{
+        width: 7rem;
+        height: 5vh;
+    }
+    .javascript, .html, .css{
+        width: 7rem;
+        height: 5vh;
+    }
+    .python, .django{
+        width: 7rem;
+        height: 5vh;
+    }
+    .postgres, .github{
+        width: 7rem;
+        height: 5vh;
+    }
+    .design1 .frontend1 .backend1{
+        font-size: 0.7rem;
+    }
+    .design-paragraph, .frontend-paragraph{
+        margin-bottom: 6vh;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+    .scraping, .product, .database{
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+    .django-paragraph, .database-paragraph, .merchants, .version-paragraph{
+        font-size: 1rem;
+        line-height: 1.9rem;
+    }
+    .footer1{
+        display: block;
+        margin-left: 1.5rem;
+    }
+    .p4{
+        color: #131417;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: none;
+    }
+    .p5{
+        width: 13rem;
+        font-size: 0.65rem;
+    }
+
+    .p6{
+        width: 13rem;
+        color: #131417;
+        font-size: 0.65rem;
+        font-weight: 300;
+        border: none;
+        margin-top: 0.4rem;
+        margin-left: 0;
+        line-height: 1rem;
+        padding-left: 0;
+    }
+    .vid{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .main{
+        padding: 1.5rem;
+        width: 99%;
+        margin-left: 0;
+    }
+}
