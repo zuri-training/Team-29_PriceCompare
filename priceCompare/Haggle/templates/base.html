@@ -16,11 +16,14 @@
 
 
         {% load static %}
-        <link rel="stylesheet" href="{% static 'landing.css' %}">
+        
 
         {% comment %} js and css scripts for the header {% endcomment %}
         <link rel="stylesheet" href= "{% static 'header-footer.css' %}">
         <script defer src= "{% static 'header-footer.js' %}"></script>
+
+        {% comment %}  for the landing page {% endcomment %}
+        <link rel="stylesheet" href="{% static 'landingPage.css' %}">
 
         {% comment %} for comparison page {% endcomment %}
         <link rel="stylesheet" href= "{% static 'comparison.css' %}">
@@ -69,7 +72,7 @@
         </nav>
         <!-- SECOND NAVIGATION BAR -->
         <nav class="nav2">
-            <a href="index.html">Home</a>
+            <a href="{% url 'Haggle:landing' %}">Home</a>
             <select name="links" id="" size="1" onchange="window.location.href=this.value;">
                 <option value="">All Categories</option>
                 <optgroup label="Phones">
