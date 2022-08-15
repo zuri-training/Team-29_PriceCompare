@@ -1,0 +1,642 @@
+body{
+    margin-left: 10%;
+}
+
+.caution_logo{
+    
+width: 24px;
+height: 24px;
+}
+.caution{
+
+    /* Auto layout */
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 80px;
+
+position: absolute;
+width: 880px;
+height: 61px;
+left: 280px;
+top: 136px;
+
+background: #FFFFFF;
+/* red/500-Base */
+
+border: 1px solid #EE2960;
+border-radius: 16px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+
+
+
+}
+.logo{
+    /* Logo */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 171px;
+height: 56px;
+left: 634px;
+top: 236px;
+}
+.ep2{
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 8px;
+
+width: 200px;
+height: 48px;
+
+/* Primary/500- Base */
+
+background: #2960EE;
+/* Primary/500- Base */
+
+border: 1px solid #2960EE;
+border-radius: 32px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+margin-right: 64px;
+/* fs-24/lh-32/semibold */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.ep{
+
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 8px;
+
+width: 200px;
+height: 48px;
+
+background: #FFFFFF;
+/* Primary/500- Base */
+
+border: 1px solid #2960EE;
+border-radius: 32px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.sign{
+    /* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 64px;
+
+position: absolute;
+width: 464px;
+height: 48px;
+left: 527px;
+top: 360px;
+} 
+
+.email{
+
+    /* Email Address */
+
+
+position: absolute;
+width: 106px;
+height: 24px;
+left: 463px;
+top: 495px;
+
+/* fs-16/lh-24/light */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+/* Grey/500-Base */
+
+color: #131417;
+}
+
+.email_in{
+    
+
+    position: absolute;
+    width: 534px;
+    height: 48px;
+    left: 463px;
+    top: 528px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.pass{
+    /* Password */
+    position: absolute;
+    width: 73px;
+    height: 24px;
+    left: 463px;
+    top: 598px;
+    
+    /* fs-16/lh-24/light */
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    /* Grey/500-Base */
+    
+    color: #131417;
+
+
+
+}
+
+.pass_in{
+
+    position: absolute;
+    width: 539px;
+    height: 43px;
+    left: 463px;
+    top: 651px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+.sub{
+    
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 8px;
+
+position: absolute;
+width: 539px;
+height: 48px;
+left: 463px;
+top: 783px;
+
+/* Primary/500- Base */
+
+background: #2960EE;
+/* Primary/500- Base */
+
+border: 1px solid #2960EE;
+border-radius: 32px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+
+color: #FFFFFF;
+}
+
+.google_logo{
+    border-radius: 50%;
+    position: absolute;
+ 
+width: 32px;
+height: 32px;
+left: 0px;
+top: 2px;
+margin-left: 60px;
+background: #EBEEF5;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+}
+
+
+.sub_n{
+    position: absolute;
+    width: 32px;
+    height: 29px;
+    left: 459px;
+    top: 982px;
+}
+
+.google{
+    
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+gap: 24px;
+
+position: absolute;
+width: 539px;
+height: 48px;
+left: 463px;
+top: 879px;
+
+background: #EBEEF5;
+/* Primary/500- Base */
+
+border: 1px solid #2960EE;
+border-radius: 32px;
+}
+
+
+
+
+
+/* APPLICATION OF MEDIA QUERRY TO CREATE RESPONSIVENESS */
+@media only screen and (max-device-width:376px ) {
+
+    body{
+    
+   /* Auto layout */
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 48px;
+margin: 24px;
+/* position: absolute; */
+/* width: 342px; */
+/* height: 48px; */
+left: 0px;
+top: 0px;
+
+
+    }
+   
+    .ep2{
+        box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 8px;
+
+width: 120px;
+height: 40px;
+
+background: #FFFFFF;
+/* Primary/500- Base */
+margin-right: 8px;
+border: 1px solid #2960EE;
+border-radius: 32px;
+color: #131417;
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    
+    }
+
+
+.ep{
+    
+        box-sizing: border-box;
+
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 32px;
+        gap: 8px;
+        
+        width: 150px;
+        height: 40px;
+        
+        /* Primary/500- Base */
+        
+        background: #2960EE;
+        /* Primary/500- Base */
+        
+        border: 1px solid #2960EE;
+        border-radius: 32px;
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+     
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+/* identical to box height, or 133% */
+
+
+color: #FFFFFF;
+
+    }
+    .logo{
+        display: none;
+    }
+    .sign{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 46px;
+        top: 216px;
+        width: 386px;
+        height: 40px;
+        text-align: center;
+        margin: 0px;
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        left: 0px;
+        /* top: 4px; */
+
+    } 
+
+
+    .email{
+   position: absolute;
+   left: 0px;
+   top: 305px;
+    
+    
+    }
+    
+    .email_in{
+        width: 320px;
+        height: 40px;
+        position: absolute;
+        left: 0px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        top: 336px;
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+   
+   
+    }
+    
+    .pass{
+  position: absolute;
+  left: 0px;
+
+        top: 408px;
+    
+    }
+    
+    .pass_in{
+        width: 320px;
+        height: 40px;
+        position: absolute;
+        left: 0px;
+        top: 440px;
+
+
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    
+    
+  
+    }
+
+    
+   
+    .sub{
+        
+    
+        box-sizing: border-box;
+    
+        /* Auto layout */
+  
+        
+        /* Primary/500- Base */
+        
+        background: #2960EE;
+        /* Primary/500- Base */
+    
+   
+      padding-bottom: 3px;
+    
+    /* Inside auto layout */
+ 
+    }
+    
+    .google_logo{
+        border-radius: 50%;
+        position: absolute;
+     
+   
+    margin-left: 6px;
+    background: #EBEEF5;
+    
+    /* Inside auto layout */
+    
+    
+    }
+    .google{
+        box-sizing: border-box;
+        margin-left: 4px;
+        /* Auto layout */
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        /* gap: 24px; */
+        position: absolute;
+        top: 716x;
+        left: 0px;
+        width: 350px;
+    
+    
+    }
+    
+    .sub_n{
+        position: absolute;
+        /* width: 32px; */
+        height: 29px;
+      left: 0px;
+   
+      width: 242px;
+    height: 120px;
+    left: 0px;
+    top: 500px;
+    
+    }
+    
+    .sign{
+        justify-content: center;
+    }
+    .sub{
+        position: absolute;
+        /* top: 564px; */
+        left: 0px;
+       /* padding-bottom: 40px; */
+        width: 342px;
+        height: 43px;
+    }
+
+    .sub_log{
+        position: absolute;
+        top: -250px;
+        left: 0;
+    }
+  .caution_logo{
+    width: 24px;
+  }
+  .caution{
+box-sizing: border-box;
+
+width: 338px;
+height: 76px;
+position: absolute;
+left: 0px;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 314px;
+left: 12px;
+top: 150px;
+
+background: #FFFFFF;
+/* red/500-Base */
+
+border: 1px solid #EE2960;
+border-radius: 16px;
+/* Error: Account not found. To create an account, click Sign up */
+
+
+width: 290px;
+height: 21px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 16px;
+/* identical to box height, or 160% */
+
+
+/* Grey/500-Base */
+
+color: #131417;
+
+
+/* Inside auto layout */
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  }
+    
+
+
+
+}

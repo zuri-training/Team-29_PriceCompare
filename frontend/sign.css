@@ -1,22 +1,29 @@
 body{
     /* display: flex; */
-    width: 100vw;
+    width: 90vw;
+    position: absolute;
+width: 171px;
+height: 56px;
+left: 634px;
+top: 230px;
     
 }
 a{
     text-decoration: none;
     color: blue;
 }
+
 .lay{
     
     width: 95vw;
     background-color: #FFFFFF;
     height: 100vh;
     /* margin-top: 30px; */
-    margin: 20px;
+    margin: 5px;
 
     
 }
+
 /* logo size */
 .logo{
     /* height: 40%; */
@@ -30,6 +37,9 @@ a{
     /* margin-right: 50px; */
     text-align: center;
     margin-top: 50px;
+}
+.sub_n{
+    display: flex;
 }
 
 
@@ -45,7 +55,7 @@ form{
 .ep{
     background-color: #2960EE;
     color: #FFFFFF;
-    width: 90px;
+    width: 9000px;
     /* height: 3670px; */
     border-radius: 20px;
    padding-left: 50px;
@@ -69,7 +79,7 @@ form{
     color: black;
 }
 .he{
-    margin-right: 13%;
+    margin-right: 10%;
 }
 
 /* submit button */
@@ -88,11 +98,30 @@ form{
 .sub_btn{
     text-align: center;
     margin-top: 20px;
+  
 
 }
+.sub_btn2{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+
+}
+
 /* styliin of input area */
 .mail{
-    width: 140%;
+    width: 70vw;
+    border-radius: 40px;
+    height: 25px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: none;
+    margin-right: 10px;
+    border-bottom: 3px solid rgb(212, 209, 209);
+}
+.name{
     border-radius: 40px;
     height: 25px;
     margin-bottom: 20px;
@@ -146,6 +175,21 @@ form{
     margin-left: 10%;
 
 }
+.google{
+    background-color: gainsboro;
+    color: #2960EE;
+    margin-top: 5px;
+    border-radius: 20px;
+    /* padding-left: 80px;
+    padding-right: 80px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* font-size: 40px; */
+    /* height: 50px; */
+    font-size: 1em;
+    width: 80%;
+
+}
 
 
 
@@ -194,7 +238,7 @@ form{
     }
     .sub_btn{
         margin: 0px;
-        margin-top: 10px;
+        margin-top: 1px;
     }
     .caution{
         width: 90vw;
@@ -206,17 +250,24 @@ form{
     }
 
     .lastn{
-        width: 45vw;
+        width: 40vw;
     }
     .firstn{
-        width: 45vw;
+        width: 40vw;
     }
-
+    .sub_btn2{
+        align-items: center;
+        width: 95vw;
+        font-size: 2.5em;
+    }
+    .google{
+        font-size: 0.5em;
+        margin-left: 10%;
+    }
+    .mail{
+        width: 100vw;
+    }
 }
-
-
-
-
 
 
 
