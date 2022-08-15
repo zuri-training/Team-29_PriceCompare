@@ -1,0 +1,79 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* DESKTOP VIEW(760PX-1440PX) */
+body{
+    background-color:#fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* main section */
+/* PRIVACY POLICY PAGE */
+.container{
+    display: flex;
+    margin:  7rem auto;
+
+
+}
+.privacy-policy{
+    box-sizing: border-box;
+    margin: 2rem 5rem;
+    background-color :#fff;
+    color:#101113;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    border:1px solid #2960EE;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+
+}
+.content{
+    margin: 1rem 1.5rem;
+   
+}
+h5{
+    line-height: 2rem;
+    font-size: 16px;
+}
+h4{
+    line-height: 2rem;
+    font-size: 16px;
+}
+h3{
+    margin-top: 2rem;
+    font-size: 16px;
+}
+p{
+    margin-top: 1rem;
+    font-size: 16px;
+}
+.service-provider a{
+    text-decoration: none;
+    color: #101113;
+    cursor: pointer;
+    font-size: 16px;
+}
+.service-provider a:hover{
+    color: #2960EE;
+}
+.third-parties li{
+    line-height: 1.5rem;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 1rem;
+    color: #101113;
+}
+
+ 
+ /* MEDIA RESPONSIVE CSS */
+ 
+ @media screen and (max-width:760px){
+     
+     /* PRIVACY POLICY */
+     .privacy-policy{
+         margin: 1rem 1.5rem;
+     }
+ 
+    
+ }
+ 
+    

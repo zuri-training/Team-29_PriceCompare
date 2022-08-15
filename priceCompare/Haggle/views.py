@@ -95,6 +95,9 @@ def Home(request):
     product = productDetails.objects.all()
     return render(request, 'index.html', {'product':product} )
 
+def privacy(request):
+    return render(request, 'privacy.html')
+
 
 class SearchResultView(ListView):
     model = productDetails
