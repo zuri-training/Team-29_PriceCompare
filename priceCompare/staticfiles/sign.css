@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    /* display: flex; */
+    
+    
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+/*lay{
+
+    width: 95vw;
+    background-color: #FFFFFF;
+    height: 100vh;
+    margin-top: 30px; 
+    margin: 20px;
+}*/
+
+/* logo size */
+.logo{
+    /* height: 40%; */
+    width: 20%;
+    margin-top: 20px;
+}
+
+.sign{
+    margin-bottom: 40px;
+    /* display: flex; */
+    /* width: 70%; */
+    /* margin-right: 50px; */
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+
+form{
+
+    /* margin: 10%; */
+    /* margin: 20%; */
+    margin-left: 250px;
+    margin-right: 2%;
+}
+/* for the top login and sign up link button */
+
+.ep{
+    background-color: #2960EE;
+    color: #FFFFFF;
+    width: 90px;
+    /* height: 3670px; */
+    border-radius: 20px;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-size: 25px;
+}
+.ep2{
+    /* background-color: blue; */
+    /* color: #FFFFFF; */
+    border: 0.5px solid #2960EE;
+    width: 90px;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+   /* margin-right: 15%; */
+    color: black;
+}
+.he{
+    margin-right: 13%;
+}
+
+/* submit button */
+.sub{
+    background-color: #2960EE;
+    color: #FFFFFF;
+    /* width: 90px; */
+    border-radius: 20px;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-size: 25px;
+   margin-top: 50px;
+   margin-right: 200px;
+   text-align: center;
+}
+
+.sub_n{
+    margin-left: 25px;
+    
+}
+.sub_btn{
+    text-align: center;
+   /* margin-top: 20px;*/
+
+}
+/* styliin of input area */
+.mail{
+    width: 101%;
+    border-radius: 40px;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
+}
+.name_field{
+    display: flex;
+    width: 80%;
+}
+
+.first{
+    margin-right: 5%;
+}
+.firstn {
+    width: 30vw;
+    /* width: 70%; */
+    border-radius: 40px;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
+}
+.lastn{
+    width: 30vw;
+    margin-right: 10px;
+    /* width: 70%; */
+    border-radius: 40px;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
+}
+
+
+
+.content{
+    width: 80%;
+    margin-left: 20px;
+}
+.caution{
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid red;
+    width: 80%;
+    margin-left: 10%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+}
+
+.google-l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.google-img{
+    width: 25px;
+
+}
+
+.google-note{
+    margin-top: 2px;
+    margin-left: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+.google{
+    text-align: center;
+    margin-top: 30px;
+    border: 1px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    margin-left: 340px; 
+    margin-bottom: 0px;
+
+    border-radius: 30px;
+}
+
+
+
+.forget-password{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 35px;
+    margin-bottom: 50px;
+
+    
+}
+
+
+
+@media (max-device-width:376px ) {
+    body{
+       margin: 0px;
+       padding: 0px;
+       width: 60vw;
+    }
+    .logo{
+        display: none;
+    }
+    .ep{
+        margin-left: 1%;
+    }
+
+
+    .sign{
+        margin: 0px;
+        margin-top: 10vh;
+
+    }
+
+    form{
+
+        margin: 0px;
+
+    }
+
+    .ep2{
+        margin: 0px;
+        padding-left: 1px;
+        padding-right: 16px;
+    }
+
+    .ep{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .he{
+        margin: 0px;
+    }
+
+    .content{
+        margin-top: 10vh;
+    }
+    .sub_btn{
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .caution{
+        width: 90vw;
+        font-size: 12px;
+        /* display: none; */
+    }
+    .logo{
+        width: 20%;
+    }
+
+    .lastn{
+        width: 45vw;
+    }
+    .firstn{
+        width: 45vw;
+    }
+
+}

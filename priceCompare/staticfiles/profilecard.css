@@ -1,0 +1,135 @@
+/* DESKTOP STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FIRST SECTION OF THE PROFILE CARD */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 5.5rem;
+  margin-top: 5rem;
+}
+.profile-pic {
+  margin: 0.3rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #98b3f9;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  border-radius: 50%;
+}
+.iconify {
+  color: #2960ee;
+}
+.join {
+  width: 151px;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* BORDER STYLING */
+hr {
+  margin-top: 0.5rem;
+  height: 0px;
+  border: 2px solid #b0b1b2;
+}
+/* FORM STYLING */
+
+.form-fields {
+  margin-top: 5rem;
+}
+.details-name,
+.details-contact,
+.details-verify {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 30rem;
+}
+#icon1 {
+  margin-left: 10rem;
+  position: relative;
+  bottom: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+/* STACK STYLING FOR FORMS */
+.field {
+  margin: 8px 0;
+  display: block;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+}
+
+/* INPUT FIELD STYLING */
+
+.l-name,
+.phone-no,
+.gender {
+  margin-left: 4rem;
+}
+label {
+  width: 83px;
+  height: 24px;
+  left: 421px;
+  top: 469px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #131417;
+}
+
+::placeholder {
+  position: absolute;
+  width: 171px;
+  height: 24px;
+  left: 16px;
+  top: 14.5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b0b1b2;
+}
+
+/* MOBILE VIEW */
+
+/* TABLET VIEW */
+
+@media screen and (max-width: 760px) {
+  hr {
+    width: 750px;
+    height: 0px;
+  }
+
+  .profile {
+    margin-left: 1rem;
+  }
+
+  .details-name,
+  .details-contact,
+  .details-verify {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 10rem;
+  }
+  .l-name,
+  .phone-no,
+  .gender {
+    margin-left: 2rem;
+  }
+}
+
+/* Mobile view still in progress */

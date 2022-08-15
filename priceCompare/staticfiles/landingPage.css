@@ -1,0 +1,759 @@
+/* For Extra Small Devices (Phones, 600px and down) */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+@media only screen and (max-width: 600px){
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.flexboxitem{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Section & Its Contents Styling */
+.search-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 2rem 2rem 2rem;
+    background: linear-gradient(180deg, rgba(41, 96, 238, 0) 0%, rgba(41, 96, 238, 0.5) 100%);
+    border-radius: 8px;
+    padding-bottom: 2rem;
+}
+.search-section-image{
+    display: none;
+}
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+}
+.search-section-text {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #131417;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    padding: 1rem;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 20%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 0.3rem 1rem; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search-icon {
+    max-width: 1rem;
+    height: 1.2rem;
+    color: rgba(19, 20, 23, 1);
+    margin-top: 7px;
+}
+.search-field, ::placeholder  {
+    max-width: 90%;
+    height: 2rem;
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    color: rgba(19, 20, 23, 1);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    margin-left: 0.5rem;
+}
+input:focus {
+    outline: none;
+}
+
+/* Category and Link Bar Styling */
+.category-and-link-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    border-top: 1px solid rgba(238, 183, 41, 1);
+    border-bottom: 1px solid rgba(238, 183, 41, 1);
+    padding: 0.5rem 1.8rem;
+    margin-bottom: 1rem;
+}
+.category-and-link-bar p, .category-and-link-bar a{
+    font-family: 'Inter', sans-serif;
+    color: rgba(19, 20, 23, 1);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Items Styling */
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+    margin: 1rem 0;
+}
+.items-image{
+    max-height: 25rem;
+    width: 20rem;
+    margin: 1rem 0;
+}
+.items-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.items-description-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.description-header{
+    color: #131417;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.description-body{
+    color: #3F4249;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.items-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 2rem 1rem 2rem;
+}
+.items-logo > div{
+    border: 1px solid #2960EE;
+    border-radius: 8px;
+    color: #2960EE;
+    min-height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.items-logo img{
+    height: 1.5rem;
+}
+
+/* Vision and Mission Section Styling */
+.vision-section{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+}
+.vision-and-mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem rem;
+    padding-bottom: 1rem;
+}
+.mission-and-vision-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.mission-and-vision-statement{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 2rem;
+    color: #3F4249;
+}
+
+/* Popular Brand & Our Vendors Section Styling */
+.brand-and-vendor-section{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+}
+.popular-brands{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.popular-brands-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.popular-brands-logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.popular-brands-logos img{
+    min-height: 2rem;
+    width: 2rem;
+    margin: 0 1rem;
+}
+.our-vendors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1rem 2rem; */
+}
+.our-vendors-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.vendor-description-and-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vendor-description-text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0rem 2rem;
+    color: #3F4249;
+}
+.vendor-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+}
+.vendor-logo img{
+    height: 1.3rem;
+    margin: 0.3rem;
+}
+}
+
+/* Small Devices(Portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    .flex-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.flexboxitem{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Section & Its Contents Styling */
+.search-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 2rem 2rem 2rem;
+    background: linear-gradient(180deg, rgba(41, 96, 238, 0) 0%, rgba(41, 96, 238, 0.5) 100%);
+    border-radius: 8px;
+    padding-bottom: 2rem;
+}
+.search-section-image{
+    display: none;
+}
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+}
+.search-section-text {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #131417;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    padding: 1rem;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 20%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 0.3rem 1rem; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search-icon {
+    max-width: 1rem;
+    height: 1.2rem;
+    color: rgba(19, 20, 23, 1);
+    margin-top: 7px;
+}
+.search-field, ::placeholder  {
+    max-width: 90%;
+    height: 2rem;
+    font-weight: 300;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    color: rgba(19, 20, 23, 1);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    margin-left: 0.5rem;
+}
+input:focus {
+    outline: none;
+}
+
+/* Category and Link Bar Styling */
+.category-and-link-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    border-top: 1px solid rgba(238, 183, 41, 1);
+    border-bottom: 1px solid rgba(238, 183, 41, 1);
+    padding: 0.5rem 1.8rem;
+    margin-bottom: 1rem;
+}
+.category-and-link-bar p, .category-and-link-bar a{
+    font-family: 'Inter', sans-serif;
+    color: rgba(19, 20, 23, 1);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Items Styling */
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+    margin: 1rem 0;
+}
+.items-image{
+    max-height: 25rem;
+    width: 20rem;
+    margin: 1rem 0;
+}
+.items-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.items-description-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.description-header{
+    color: #131417;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.description-body{
+    color: #3F4249;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.items-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 2rem 1rem 2rem;
+}
+.items-logo > div{
+    border: 1px solid #2960EE;
+    border-radius: 8px;
+    color: #2960EE;
+    min-height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.items-logo img{
+    height: 1.5rem;
+}
+
+/* Vision and Mission Section Styling */
+.vision-section{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+}
+.vision-and-mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem rem;
+    padding-bottom: 1rem;
+}
+.mission-and-vision-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.mission-and-vision-statement{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 2rem;
+    color: #3F4249;
+}
+
+/* Popular Brand & Our Vendors Section Styling */
+.brand-and-vendor-section{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+}
+.popular-brands{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.popular-brands-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.popular-brands-logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+.popular-brands-logos img{
+    min-height: 3rem;
+    width: 3rem;
+    margin: 0 1rem;
+}
+.our-vendors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1rem 2rem; */
+}
+.our-vendors-header{
+    border: 1px solid #EEB729;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    font-weight: 500;
+    color: #131417;
+    font-size: 1.2rem;
+}
+.vendor-description-and-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vendor-description-text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0rem 2rem;
+    color: #3F4249;
+}
+.vendor-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+}
+.vendor-logo img{
+    height: 2rem;
+    margin: 0.3rem;
+}
+}
+
+/* Medium Devices (Landscape tablets, 770px and up) */
+@media only screen and (min-width: 771px){
+    .flex-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.flexboxitem{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Section & Its Contents Styling */
+.search-container{
+    margin-top: 8rem;
+}
+.search-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem 2rem 2rem 2rem;
+    border-radius: 8px;
+    background: #FFFFFF;
+    padding-bottom: 2rem;
+}
+.search-section-image{
+    display: inline-flex;
+    border: none;
+}
+.search-section-image img{
+    width: 5rem;
+}
+#shape-1{
+    margin-right: 2rem;
+}
+#shape-2{
+    margin-left: 2rem;
+}
+.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(41, 96, 238, 0) 0%, rgba(41, 96, 238, 0.5) 100%);
+    border-radius: 8px;
+    padding-bottom: 3rem;
+}
+.search-section-text {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #131417;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding: 1rem;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 20%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 0.3rem 1rem; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search-icon {
+    max-width: 2rem;
+    height: 1.4rem;
+    color: rgba(19, 20, 23, 1);
+    margin-top: 7px;
+}
+.search-field, ::placeholder  {
+    max-width: 90%;
+    height: 2rem;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: rgba(19, 20, 23, 1);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    margin-left: 0.5rem;
+}
+input:focus {
+    outline: none;
+}
+
+/* Category and Link Bar Styling */
+.category-and-link-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    border-top: 1px solid rgba(238, 183, 41, 1);
+    border-bottom: 1px solid rgba(238, 183, 41, 1);
+    padding: 1rem 1.8rem;
+    margin-bottom: 1rem;
+}
+.category-and-link-bar p, .category-and-link-bar a{
+    font-family: 'Inter', sans-serif;
+    color: rgba(19, 20, 23, 1);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Items Styling */
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(136, 165, 239, 0.324) 100%);
+    padding-bottom: 1rem;
+}
+.items-image{
+    max-height: 25rem;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.items-image img{
+    height: 15rem;
+}
+.items-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.items-description-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+#wireless-mouse{
+    margin-left: 18rem;
+}
+
+/* Popular Brand & Our Vendors Section Styling */
+.popular-brands-logos img{
+    height: 5rem;
+    min-width: 5rem;
+    margin: 0 1rem;
+}
+.vendor-description-and-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.vendor-description-text{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0rem 2rem;
+    color: #3F4249;
+}
+.vendor-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+}
+.vendor-logo img{
+    height: 2rem;
+    margin: 0.3rem;
+}
+}
+
+/* Large Devices (Laptops/Desktops, 1440px and up) */
+@media only screen and (min-width: 1440px){
+    .search-container{
+        margin-top: 12rem;
+    }
+    .search-section-text {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #131417;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 4.5rem;
+    padding: 3rem;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: 20%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem 1rem; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.search-icon{
+    max-width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    color: rgba(19, 20, 23, 1);
+    margin-top: 7px;
+}
+.search-field, ::placeholder  {
+    max-width: 90%;
+    height: 3rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color: rgba(19, 20, 23, 1);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    margin-left: 0.5rem;
+}
+input:focus {
+    outline: none;
+}
+#wireless-mouse{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20rem;
+}
+#iphone-14{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10rem;
+}
+}
