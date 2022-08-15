@@ -10,11 +10,6 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 
-
-
-app_name = "Haggle"
-
-
 urlpatterns = [
     path('', landing_page, name='landing' ),
     #AUTHENTICATION
@@ -27,15 +22,6 @@ urlpatterns = [
     path('reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name ="users\password_reset_complete.html"), name='password_reset_complete'),
     path('faq/', faq, name = 'faq' ),
     path('contact/', contactPage, name = 'contact' ),
-    path('home', Home, name='home'),
-    path('privacy/', views.privacy, name='privacy'),
-
-
-    path('search/', SearchResultView.as_view(), name= 'search'),
-    path('profilecard/', profilecard, name = 'profilecard'),
-    path('<str:category>/<str:brand>/', ProductListView.as_view(), name= 'product-list'),
-    path('<slug>/', PriceCompareView.as_view(), name='compare'),
-    
 
 
     

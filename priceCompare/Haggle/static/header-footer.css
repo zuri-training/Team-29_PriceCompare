@@ -20,8 +20,7 @@ header{
     justify-content: space-between; 
     align-items: center;
     min-height: 8vh;
-   
-    
+    margin: 0 1rem;    
    
 }
 /* HAGGLE LOGO */
@@ -40,24 +39,23 @@ header{
     gap: 0.5rem;
 }
 .nav1-icon{
-    margin: 0.3rem 0.5rem;
-    margin-left: 0.5rem;
+    margin: 0.3rem 0rem;
+    /* margin-left: 0.5rem; */
     background-color: #98B3F9;
     align-items: center;
     cursor: pointer;
-    padding: 0.5rem 0.5rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 50%; 
 }
    /* USER ICON  */
 .iconify3{
-    color:blue;
-    font-size:1rem;
+    font-size:0.7rem;
 }
 .nav1-1 a {
     text-decoration: none;
     color: blue;
     font-family: 'Inter', sans-serif;
-    
+    font-size: 0.8rem;
 }
 .nav1-1 a:hover{
     color:  #EEB729;
@@ -74,6 +72,7 @@ header{
     align-items: center;
     background-color: #2960EE;
     min-height: 8vh;
+    padding: 0 1rem;
 }
 /* PAGES IN THE NAVIGATION */
 .nav2 a{
@@ -113,14 +112,12 @@ select{
     font-size: 1em;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
-    
 }
 select:hover{
     color:#fff;
     
 }
 option{
-   
     font-family: 'Inter', sans-serif;
     cursor: pointer;
 }
@@ -164,7 +161,7 @@ option:active{
    
 }
 .news-letter-details{
-    line-height: 1rem;
+    line-height: 1.5rem;
     color: #fff;
     font-weight: 400;
     font-size: 15px;
@@ -174,7 +171,7 @@ small{
 }
 .news-letter-email{
     border: 1.5px solid #EEB729;
-    padding: 0.2rem 1rem;
+    padding: 0.4rem 1rem;
     background: #fff;
     display: flex;
     justify-items: space-between;
@@ -198,8 +195,9 @@ small{
 
 }
 .email-holder{
-   display: flex;
-   gap:0.5rem;
+    display: flex;
+    gap:0.5rem;
+    background-color: #98B3F9;
 }
 /* SUBSCRIBE BUTTON */
 #subscribe{
@@ -215,7 +213,7 @@ small{
 #subscribe:hover{
     background-color: #fff;
     color: #EEB729;
-    border: 2px solid #EEB729;
+    border: 0.2px solid #EEB729;
     cursor: pointer;
 }
 /* BLUE FOOTER */
@@ -236,6 +234,7 @@ small{
 }
 .title{
     font-size: 15px;
+    margin-bottom: 0.5rem;
 }
 ul  a{
     text-decoration: none;
@@ -245,7 +244,7 @@ ul  a{
     cursor: pointer;
     font-size: 12px;
     display: inline-flex;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
 }
 ul a:hover{
@@ -262,30 +261,38 @@ ul a:active{
 /* SOCIAL  ICONS */
 .socials-icon{
     display: flex;
+    margin-top: 0.7rem;
 }
+
 .icon{
-    margin: 0.3rem 0.5rem;
-    margin-left: 0.5rem;
     background-color: #fff;
     align-items: center;
     cursor: pointer;
-    padding: 0.2rem 0.2rem;
-    border-radius: 50%;
+    padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+    border-radius: 60%;
+    margin-right: 0.5rem;
 }
+
+
 .iconify{
     color: #2960EE;
 }
+
 .iconify:hover{
     color: #EEB729;
-    padding: 0.3rem 0.3rem;
+    padding: 0.1rem 0.1rem;
 }
 .iconify1{
     color: #2960EE;  
 }
+
+.iconify1:hover {
+    padding: 0;
+}
+
 .iconify2{
     color: #fff;
-    
-   
+    font-size: 0.8rem;
 }
 /* SECOND FOOTER */
 .second-footer{
@@ -415,7 +422,7 @@ ul a:active{
         margin-right: none; 
     }
     .email-holder{
-        display: inline-flex;
+        display: flex;
         gap: 0.2em;
     }
     .title{

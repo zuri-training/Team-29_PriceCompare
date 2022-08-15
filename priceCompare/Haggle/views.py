@@ -1,6 +1,3 @@
-
-from itertools import product
-from unicodedata import category, name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -14,7 +11,6 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
-
 from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
@@ -97,6 +93,8 @@ def profilecard(request):
 
 def contactPage(request):
     return render(request, 'contact.html')
+
+    
 def Home(request):
     product = productDetails.objects.all()
     return render(request, 'index.html', {'product':product} )
