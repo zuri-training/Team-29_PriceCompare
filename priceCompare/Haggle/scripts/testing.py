@@ -11,7 +11,7 @@ print(len(productDetails.objects.values()))
 # # print(productDetails.objects.values()[8630])
 
 
-print(productDetails.objects.order_by('-id').values('slug')[0:4])
+print(productDetails.objects.order_by('id').filter(id=6644).values('slug'))
 
 
 # print(len(list(productDetails.objects.values_list('price', flat=True))))

@@ -173,8 +173,8 @@ class PriceCompareView(FormMixin, DetailView):
         
         return return_list
 
-    def get_context_data(self):
-        context = super().get_context_data(**kwargs)
+    def get_context_data(self, **kwargs):
+        context = super(PriceCompareView,self).get_context_data(**kwargs)
         product=self.get_product()
         context['product'] = product
         context['comparisons'] = self.product_comparison_fetch()
