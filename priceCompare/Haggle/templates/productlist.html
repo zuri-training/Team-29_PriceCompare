@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--product section-->
+    <H2 id="heading">Hp laptops</H2>
+    <main>
+      <div class="container">
+        {% for product in products %}
+        <div class="product">
+         <a href="">
+           <figure>
+            <img src="{{ product.imageLink }}" width="304" height="368" alt="new-cashmere-sweater-2022";>
+          </figure><br>
+          <h3 id="price">{{ product.price }}</h3><br>
+          <p>
+            <h3 id="desc">{{ product.name }}</h3><br>
+         </a>
+        </div>
+          {% endfor %}
+      </div>
+    </main>
+
+{% endblock %}

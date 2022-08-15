@@ -1,58 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computers</title>
-    <script src="https://kit.fontawesome.com/773c20f948.js" crossorigin="anonymous"></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./img/hagglefavicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="product.css" />
-  </head>
-  <body>
-    <header>
-      <!-- FIRST NAVIGATION BAR -->
-      <nav class="nav1">
-        <div class="nav1-logo">
-          <img src="./img/haggle-logo.png" alt="">
-        </div>
-        <div class="nav1-1">
-          <div class="nav1-icon">
-            <span class="iconify iconify3" data-icon="fa-regular:user"></span>
-          </div>
-          <a href="" class="create-account">Sign In/Register</a> 
-        </div>
-      </nav>
-      <!-- SECOND NAVIGATION BAR -->
-      <nav class="nav2">
-        <a href="index.html">Home</a>
-        <select name="" id="">
-          <option value=""> All Categories</option>
-          <option value="">Home and Appliances</option>
-          <option value="">Kids and Toys</option>
-          <option value="">Phones</option>
-          <option value="">Laptops</option>
-          <option value="">Beauty Products</option>
-          <option value="">Electronics</option>
-        </select>
-        <a href="about.html">About us</a>
-        <a href="contact.html">Contact</a>
-        <a href="support.html">Support</a>
-        <img src="./img/menu.png" alt=""  class= "menu" srcset="">
-      </nav>
-      <!-- END OF HEADER -->
-    </header>
+{% extends 'base.html' %}
+   {% block content %}
     <!--product section-->
     <H2 id="heading">Computer</H2>
     <main>
       <div class="container">
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/dell-inspiron-5593-core-i7-512gb.png" width="304" height="368" alt="dell-inspiron-5593-core-i7-512gb";>
           </figure><br>
           <h3 id="price">₦ 650,000</h3><br>
           <p>
@@ -63,7 +17,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/m546-wireless-mouse.png" width="304" height="368" alt="m546-wireless-mouse";>
           </figure><br>
           <h3 id="price">₦ 19,000</h3><br>
           <p>
@@ -73,7 +27,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/apple-macbook-pro-2019%20-15-inch-core-I9.png" width="304" height="368" alt="apple-macbook-pro-2019%20-15-inch-core-I9";>
           </figure><br>
           <h3 id="price">₦ 240,000,000</h3><br>
           <p>
@@ -86,7 +40,7 @@
       <div class="container">
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/mini-2-4g-wireless-keyboard.png" width="304" height="368" alt="mini-2.4g-wireless-keyboard";>
           </figure><br>
           <h3 id="price">₦ 2,000</h3><br>
           <p>
@@ -97,7 +51,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/hp-spectre-x360-core-i7-1gb-ram-2tb-ssd.png"  width="304" height="368" alt="hp-spectre-x360-core-i7-1gb-ram-2tb-ssd";>
           </figure><br>
           <h3 id="price">₦ 190,000</h3><br>
           <p>
@@ -108,7 +62,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/apple-imac-21-5in2-7ghz-core%20i5.png" height="368" width="304" alt="apple-imac-21-5in2-7ghz-corei5";>
           </figure><br>
           <h3 id="price">₦ 900,000</h3><br>
           <p>
@@ -121,7 +75,7 @@
       <div class="container">
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/hp-pro-3400-mt-core-i5-8gb-ram.png" width="304" height="368" alt="hp-pro-3400-mt-core-i5-8gb-ram";>
           </figure><br>
           <h3 id="price">₦ 380,000</h3><br>
           <p>
@@ -132,7 +86,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/microsoft-surface-mobile-mouse.png" width="304" height="368" alt="microsoft-surface-mobile-mouse";>
           </figure><br>
           <h3 id="price">₦ 21,000</h3><br>
           <p>
@@ -143,7 +97,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/hp-all-in-one-intel-core-i3-3-7-ghv-4gb-ram.png" width="304" height="368" alt="hp-all-in-one-intel-core-i3-3-7-ghv-4gb-ram";>
           </figure><br>
           <h3 id="price">₦ 429,000</h3><br>
           <p>
@@ -156,7 +110,7 @@
       <div class="container">
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/surface-mobile-mouse.png" width="304" height="368" alt="surface-mobile-mouse";>
           </figure><br>
           <h3 id="price">₦ 15,000</h3><br>
           <p>
@@ -166,7 +120,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/apple-imac-21-5in2-7ghz-core%20i5.png" width="304" height="368" alt="apple-imac-21-5in2-7ghz-core-i5";>
           </figure><br>
           <h3 id="price">₦ 510,000</h3><br>
           <p>
@@ -177,7 +131,7 @@
         </div>
         <div class="product">
           <figure>
-            <img src="" alt="";>
+            <img src="https://antratic.sirv.com/zuri/prod-comp/wireless-mouse.png" width="304" height="368" alt="wireless-mouse";>
           </figure><br>
           <h3 id="price">₦ 6,000</h3><br>
           <p>
@@ -187,60 +141,4 @@
         </div>
       </div>
     </main>
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-content">
-        <!-- FIRST FOOTER STARTS -->
-        <div class="first-footer">
-          <div class="news-letter">
-            <!-- NEWS LETTER SECTION -->
-            <div class="news-letter-details">
-              <h5>Newsletter</h5>
-              <small>To know more about new innovations at Haggle </small>
-            </div>
-            <div class="news-letter-email">
-              <div class="email-holder">
-                  <span class=" iconify iconify1 " data-icon="fa-regular:envelope"></span>
-                  <input type="email" name="" id="" placeholder="Enter your email " class="email-input">
-              </div>
-              <button id="subscribe">Subscribe</button>
-            </div>
-          </div>
-          <!-- BLUE FOOTER DETAILS -->
-          <div class="first-footer-details">
-            <ul class="footer-ul">
-              <li  class="title"><a href="about.html">About</a></li>
-              <li class="footer-tagline">Leading the innovation in <br> online customer shopping experience <br> in Nigeria</li>
-              <a href="blog.html">Blog</a>
-            </ul>
-            <ul class="footer-ul">
-              <li class="title">Useful Links</li>
-              <li> <a href="topdeals.html">Top deals</a></li>
-              <li> <a href="faq.html">FAQ</a></li>
-              <li> <a href="privacy.html">Privacy policy</a></li>
-              <li> <a href="terms.html">Terms and condition</a></li>
-            </ul>
-            <div class="socials">
-              <ul class="footer-ul">
-                <li class="title"><a href="support.html">Support</a></li>
-                <li > <a href=""><span class=" iconify iconify2" data-icon="fa-regular:envelope"></span>info@haggle.com.ng</a></li>
-                <li > <a href=""><span class="iconify iconify2" data-icon="carbon:phone"></span>080-Haggle</a></li>
-                <div>
-              </ul>
-              <div class="socials-icon">
-                <div class="icon"><span class="iconify" data-icon="la:facebook-square" style="font-size:28px"></span></div>
-                <div class="icon"><span class="iconify" data-icon="line-md:twitter" style="font-size:28px"></span></div>
-                <div class="icon"><span class="iconify" data-icon="la:instagram" style="font-size:28px"></span></div>
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-  <!-- SECOND FOOTER STARTS -->
-      <div class="second-footer">
-        <img src="./img/footer-logo.png" alt="" class="footer-logo">
-        <p>&copy; 2022 Team 29 Nigeria. All rights reserved powered by Zuri-intership.com</p>
-      </div>
-    </footer>
-  </body>
-</html>
+  {% endblock %}

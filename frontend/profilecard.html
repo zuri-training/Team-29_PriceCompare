@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/hagglefavicon.png" type="" />
+
+    <link rel="stylesheet" href="profilecard.css" >
+  </head>
+
+  <body>
+    <header></header>
+
+{% block content %}
+
+    <!-- MAIN FOR PROFILE CARD -->
+    <main>
+      <!-- FIRST ITEM ON THE PAGE -->
+      <div class="profile">
+        <div class="profile-pic">
+          <span class="iconify" data-icon="fa-regular:user"></span>
+        </div>
+        <p class="join">Joined 2020-07-30</p>
+      </div>
+      <!-- BORDER LINE -->
+      <hr />
+
+      <!-- FORM FIELDS -->
+      <form action="">
+        <div class="form-fields">
+          <div class="details-name">
+            <div class="f-name">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                name="fname"
+                placeholder="John"
+                class="field"
+                required
+              />
+            </div>
+            <div class="l-name">
+              <label for="lname"> Last Name</label>
+              <input
+                type="text"
+                name="lname"
+                placeholder="Doe"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+          <div class="details-contact">
+            <div class="email-add">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Johndoe@mail.com"
+                class="field"
+                required
+              />
+            </div>
+            <div class="phone-no">
+              <label for="usernamee"> Username </label>
+              <input
+                type="text"
+                name="usernamee"
+                placeholder="Joh"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+          <div class="details-verify">
+            <div class="pass-wd">
+              <label for="passwd">Password</label>
+              <input
+                type="password"
+                name="passwd"
+                placeholder="John123!"
+                class="field"
+                required
+              />
+              <span
+                class="iconify"
+                data-icon="clarity:eye-show-line"
+                id="icon1"
+              ></span>
+            </div>
+            <div class="gender">
+              <label for="gender">Gender</label>
+              <input
+                type="text"
+                name="gender"
+                placeholder="female"
+                class="field"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <!-- FOOTER -->
+    <footer></footer>
+  </body>
+{% endblock %}
+</html>

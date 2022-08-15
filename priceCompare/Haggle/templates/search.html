@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--product section-->
+    <H2 id="heading">Clothing/Fashion</H2>
+    <main>
+      <div class="container">
+        {% for product in products %}
+        <div class="product">
+          <figure>
+            <img src="{{ product.imageLink }}" width="304" height="368" alt="new-cashmere-sweater-2022";>
+          </figure><br>
+          <h3 id="price">₦{{product.price}}</h3><br>
+          <p>
+            <h3 id="desc">{{product.name}}</h3>
+
+            {% endfor %}
+          </p>
+          <p><h5>Jumia</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/casual-slim-t-shirt-short-sleeves.png" width="304" height="368" alt="casual-slim-t-shirt-short-sleeves";>
+          </figure><br>
+          <h3 id="price">₦ 2,450</h3><br>
+          <p>
+            <h3 id="desc">Casual slim t-shirt short 
+              sleeves</h3>
+          </p>
+          <p><h5>Konga</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/men-hawaii-shirt-short-sleeve.png" width="304" height="368" alt="men-hawaii-shirt-short-sleeve";>
+          </figure><br>
+          <h3 id="price">₦ 4,896</h3><br>
+          <p>
+            <h3 id="desc">Men Hawai Shirt - Short
+              Sleeves</h3>
+          </p>
+          <p><h5>Jumia</h5></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/women-suit-hoodie-2022.png" width="304" height="368" alt="women-suit-hoodie-2022";>
+          </figure><br>
+          <h3 id="price">₦ 15,310</h3><br>
+          <p>
+            <h3 id="desc">Women Suit Hoodie
+              2022</h3><br>
+          </p>
+          <p><h5>Jiji</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/new-casual-suspender-2022.png" width="304" height="368" alt="new-casual-suspender-2022";>
+          </figure><br>
+          <h3 id="price">₦ 6,890</h3><br>
+          <p>
+            <h3 id="desc">New Casual Suspender 
+              2022</h3>
+          </p>
+          <p><h5>Jumia</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/vintage-print-dress-2022.png" width="304" height="368" alt="vintage-print-dress-2022";>
+          </figure><br>
+          <h3 id="price">₦ 8,310</h3><br>
+          <p>
+            <h3 id="desc">Vintage print dress 
+              2022</h3><br>
+          </p>
+          <p><h5>Konga</h5></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/formal-casual-coat-lapel-2022.png" width="304" height="368" alt="formal-casual-coat-lapel-2022";>
+          </figure><br>
+          <h3 id="price">₦ 8,776</h3><br>
+          <p>
+            <h3 id="desc">Formal Suit Coat Lapel 
+              2022</h3>
+          </p>
+          <p><h5>Konga</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/thicken-checker-shirt-2022.png" width="304" height="368" alt="thicken-checker-shirt-2022";>
+          </figure><br>
+          <h3 id="price">₦ 5,760</h3><br>
+          <p>
+            <h3 id="desc">Thicken Checker Shirt 
+              2022</h3><br>
+          </p>
+          <p><h5>Jiji</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/jean-jacket-2022.png" width="304" height="368" alt="jean-jacket-2022";>
+          </figure><br>
+          <h3 id="price">₦ 7,310</h3><br>
+          <p>
+            <h3 id="desc">Jean Jacket 
+              2022</h3><br>
+          </p>
+          <p><h5>Jumia</h5></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/harem-pants-2022.png" width="304" height="368" alt="harem-pants";>
+          </figure><br>
+          <h3 id="price">₦ 10,310</h3><br>
+          <p>
+            <h3 id="desc">Harem Pants 
+              2022</h3><br>
+          </p>
+          <p><h5>Jiji</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/women-denim-jean-2022.png" width="304" height="368" alt="women-denim-jean-2022";>
+          </figure><br>
+          <h3 id="price">₦ 9,435</h3><br>
+          <p>
+            <h3 id="desc">Women Denim Jean 
+              2022</h3><br>
+          </p>
+          <p><h5>Jumia</h5></p>
+        </div>
+        <div class="product">
+          <figure>
+            <img src="https://antratic.sirv.com/zuri/prod-cloth/casual-men-fashion-pants-2022.png" width="304" height="368" alt="casual-men-fashion-pants-2022";>
+          </figure><br>
+          <h3 id="price">₦ 8,905</h3><br>
+          <p>
+            <h3 id="desc">Casual Men Fashion Pants
+              2022</h3>
+          </p>
+          <p><h5>Jiji</h5></p>
+        </div>
+      </div>
+    </main>
+  {% endblock %}
