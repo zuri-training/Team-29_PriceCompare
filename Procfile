@@ -1,0 +1,1 @@
+web: gunicorn priceCompare.wsgi --log-file--
