@@ -21,35 +21,17 @@
           <div class="details-name">
             <div class="f-name">
               <label for="fname">First Name</label>
-              <input
-                type="text"
-                name="fname"
-                placeholder="John"
-                class="field"
-                required
-              />
+              {{user.first_name}}
             </div>
             <div class="l-name">
               <label for="lname"> Last Name</label>
-              <input
-                type="text"
-                name="lname"
-                placeholder="Doe"
-                class="field"
-                required
-              />
+              {{user.last_name}}
             </div>
           </div>
           <div class="details-contact">
             <div class="email-add">
               <label for="email">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Johndoe@mail.com"
-                class="field"
-                required
-              />
+              {{user.email}}
             </div>
             <div class="phone-no">
               <label for="usernamee"> Username </label>
@@ -65,13 +47,7 @@
           <div class="details-verify">
             <div class="pass-wd">
               <label for="passwd">Password</label>
-              <input
-                type="password"
-                name="passwd"
-                placeholder="John123!"
-                class="field"
-                required
-              />
+              {{user.password}}
               <span
                 class="iconify"
                 data-icon="clarity:eye-show-line"

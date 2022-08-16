@@ -6,34 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUTH-ERROR</title>
-    <style>
-        body {
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 150px;
-            position: relative;
-        }    
-
-        .login{
-            border: black solid;
-            border-radius: 20px;
-            padding: 2px 5px;
-            font-size: 15px;
-        }    
-    </style>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'authentication_error.css' %}">
 </head>
 
 <body>
-    <h1>Oops!, something went wrong</h1>
+    <div>
+        <img src="https://i.postimg.cc/MZ7cXnfs/footer-logo.png" alt="haggle logo" class="logo" srcset="">
+        <h1>Oops!, something went wrong</h1>
 
-    <p>
-        You may have pressed the back button, refreshed during login, opened too many login dialogs, or there is some
-        issue with cookies, since we couldn't find your session. Try logging in again from the application
-    </p>
-    
-    <a class="login" href="{%url 'login'%}">LOGIN</a>
+
+        <p>
+            You may have pressed the back button, refreshed during login, opened too many login dialogs, or there is
+            some
+            issue with cookies, since we couldn't find your session. Try logging in again from the application
+        </p>
+
+
+
+        <a class="login" href="{%url 'login'%}">LOGIN</a>
+    </div>
+
 
 </body>
 

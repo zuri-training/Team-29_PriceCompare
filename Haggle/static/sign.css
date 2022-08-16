@@ -8,26 +8,27 @@
 body{
     /* display: flex; */
     
-    
+
 }
 a{
     text-decoration: none;
     color: blue;
 }
-/*lay{
+.lay{
 
     width: 95vw;
     background-color: #FFFFFF;
     height: 100vh;
-    margin-top: 30px; 
+    /* margin-top: 30px; */
     margin: 20px;
-}*/
 
+
+}
 /* logo size */
 .logo{
     /* height: 40%; */
     width: 20%;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .sign{
@@ -37,7 +38,6 @@ a{
     /* margin-right: 50px; */
     text-align: center;
     margin-top: 50px;
-    
 }
 
 
@@ -45,8 +45,8 @@ form{
 
     /* margin: 10%; */
     /* margin: 20%; */
-    margin-left: 250px;
-    margin-right: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 /* for the top login and sign up link button */
 
@@ -91,30 +91,23 @@ form{
    padding-top: 5px;
    padding-bottom: 5px;
    font-size: 25px;
-   margin-top: 50px;
-   margin-right: 200px;
-   text-align: center;
-}
+   margin-bottom: 20px;
 
-.sub_n{
-    margin-left: 25px;
-    
 }
 .sub_btn{
     text-align: center;
-   /* margin-top: 20px;*/
+    margin-top: 20px;
 
 }
 /* styliin of input area */
 .mail{
-    width: 101%;
+    width: 140%;
     border-radius: 40px;
-    height: 35px;
+    height: 25px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding-left: 10px;
     border: none;
     margin-right: 10px;
-    
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
 }
 .name_field{
@@ -129,9 +122,9 @@ form{
     width: 30vw;
     /* width: 70%; */
     border-radius: 40px;
-    height: 35px;
+    height: 25px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding-left: 10px;
     border: none;
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
 }
@@ -140,18 +133,26 @@ form{
     margin-right: 10px;
     /* width: 70%; */
     border-radius: 40px;
-    height: 35px;
+    height: 25px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding-left: 10px;
     border: none;
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
 }
 
-
+.mail{
+    outline: none;
+}
+.firstn:focus{
+    outline: none;
+}
+.lastn :focus{
+   outline: none;
+}
 
 .content{
     width: 80%;
-    margin-left: 20px;
+    margin-left: 1%;
 }
 .caution{
     margin-top: 20px;
@@ -164,13 +165,12 @@ form{
     top: 0px;
     left: 0px;
     right: 0px;
-
 }
 
 .google-l{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex ;
+   justify-content: center;
+   align-items: center; 
 }
 
 
@@ -180,7 +180,7 @@ form{
 }
 
 .google-note{
-    margin-top: 2px;
+    padding-top: 2px;
     margin-left: 5px;
     font-size: 15px;
     color: black;
@@ -188,14 +188,15 @@ form{
 
 .google{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     border: 1px black solid;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 200px;
-    margin-left: 340px; 
+    margin-left: 290px; 
     margin-bottom: 0px;
 
     border-radius: 30px;
@@ -205,10 +206,10 @@ form{
 
 .forget-password{
     text-align: center;
-    margin-top: 10px;
+    /*margin-top: 10px;
     font-size: 18px;
     margin-left: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;*/
 
     
 }
