@@ -2,24 +2,42 @@
 
 {% block content %}
     <!--product section-->
-
-    <main>
         <H2 id="heading">{{ product.brand }} {{ product.category }}</H2>
       <div class="container">
         {% for product in products %}
-
         <div class="product">
-         <a href="{{product.get_absolute_url}}>
+          <a href="{{product.get_absolute_url}}">
            <figure>
-            <img src="{{ product.imageLink }}" width="304" height="368" alt="new-cashmere-sweater-2022";>
-          </figure><br>
-          <h3 id="price">{{ product.price }}</h3><br>
-          <p>
-            <h3 id="desc">{{ product.name }}</h3><br>
-         </a>
+            <img src="{{ product.imageLink }}">
+            </figure>
+            <h3 id="price">&#8358;{{ product.price }}</h3>
+            <p>
+              <h3 id="desc">{{ product.name }}</h3>
+            </p>
+            {% if product.merchantName == 'Jumia'  %}
+            <h5 style="color: cadetblue;">{{ product.merchantName }}</h5>
+            {% elif product.merchantName == 'Slot' %}
+            <h5 style="color: gray;">{{ product.merchantName }}</h5>
+            {% else %}
+            <h5>{{ product.merchantName }}</h5>
+            {% endif %}
+          </a>
         </div>
+    
+
+        <!-- <div class="container">
+          <div class="product">
+            <figure>
+              <img src="https://antratic.sirv.com/zuri/zuri-elec/genius-multimedia-black-bluetooth-speakers.png" alt="genius-multimedia-black-bluetooth-speakers";>
+            </figure><br>
+            <h3 id="price">₦ 50,000</h3><br>
+            <p>
+              <h3 id="desc">Genius Multimedia Black
+                Bluetooth Speaker</h3>
+            </p>
+            <p><h5>Jumia</h5></p>
+          </div> -->
           {% endfor %}
       </div>
-    </main>
 
 {% endblock %}
