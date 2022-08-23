@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{%  load static %}
+{% block content %}
+  
+            <div class="flex-container">
+              <!-- Search Section -->
+              <div class="flexboxitem search-section">
+                <div class="search-section-image" id="shape-1">
+                  <img src="{% static 'images/SHAPES.svg' %}" alt="Shapes">
+                </div>
+                <div class="search-container">
+                  <div class="search-section-text">
+                    <p>Compare prices and find the best online deals in Nigeria</p>
+                  </div>
+                  <div class="search-bar">
+                    <iconify-icon icon="radix-icons:magnifying-glass"></iconify-icon>
+                    <form action="{% url 'Haggle:search' %}" method="get">
+                      <input type="search" name="q" class="search-field" placeholder="Search for a product">
+                  </form>
+                  </div>
+                </div>
+                <div class="search-section-image" id="shape-2">
+                  <img src="./images/SHAPES.svg" alt="Shapes">
+                </div>
+              </div>
+              <div class="flexboxitem category-and-link-bar">
+                <div>
+                  <p>TOP DEALS</p>
+                </div>
+                <div>
+                  <a href="#">SEE ALL</a>
+                </div>
+              </div>
+              <div class="flexboxitem items">
+                <div class="items-image">
+                  <img src="images/LandingpageIphone.svg" alt="Red Iphone 13 Mini">
+                </div>
+                <div class="items-description">
+                  <div class="items-description-text description-header">
+                    <p>Apple Iphone 13 Mini</p>
+                  </div>
+                  <div class="items-description-text description-body">
+                    <p>The iPhone 13 Mini is the successor to Apple's first super mini
+                      flagship in recent years, the iPhone 12 Mini. It retains the same
+                      5.4" screen size and the one-handed use friendly form factor,
+                      while at the same time bringing a faster Apple A15 Bionic
+                      processor.</p>
+                  </div>
+                  <div class="items-logo">
+                    <div>
+                      <p>N1,200,000</p>
+                      <img src="{% static 'images/Body_Slot_Logo.svg'%}" alt="Jiji Logo">
+                    </div>
+                    <div>
+                      <p>N1,290,000</p>
+                      <img src="{% static 'images/Body_Konga_Logo.svg'%}" alt="Konga Logo">
+                    </div>
+                    <div>
+                      <p>N1,350,000</p>
+                      <img src="{% static 'images/Body_Jumia_Logo-.svg'%}" alt="Jumia Logo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexboxitem category-and-link-bar">
+                <div>
+                  <p>TRENDING PRODUCTS</p>
+                </div>
+                <div>
+                  <a href="#">SEE ALL</a>
+                </div>
+              </div>
+              <div class="flexboxitem items" id="item-alignment">
+                <div class="items-description">
+                  <div class="items-description-text description-header">
+                    <p>Hp Wireless Mouse</p>
+                  </div>
+                  <div class="items-description-text description-body" id="wireless-mouse-text">
+                    <p>This wireless mouse uses some manner of wireless technology,
+                      like Bluetooth, RF, or infrared radio waves.</p>
+                  </div>
+                  <div class="items-logo">
+                    <div>
+                      <p>N1,200,000</p>
+                      <img src="{% static 'images/Body_Slot_Logo.svg' %}" alt="Jiji Logo">
+                    </div>
+                    <div>
+                      <p>N1,290,000</p>
+                      <img src= "{% static 'images/Body_Konga_Logo.svg'%}" alt="Konga Logo">
+                    </div>
+                    <div>
+                      <p>N1,350,000</p>
+                      <img src=" {% static 'images/Body_Jumia_Logo-.svg'%}" alt="Jumia Logo">
+                    </div>
+                  </div>
+                </div>
+                <div class="items-image">
+                  <div id="wireless-mouse">
+                    <img src=" {% static 'images/LandingpageMouse.svg'%} " alt="Computer Mouse">
+                  </div>
+                </div>
+              </div>
+              <div class="flexboxitem category-and-link-bar">
+                <div>
+                  <p>TRENDING PRODUCTS</p>
+                </div>
+                <div>
+                  <a href="#">SEE ALL</a>
+                </div>
+              </div>
+              <div class="flexboxitem items">
+                <div class="items-image">
+                  <img src=" {% static 'images/LandingpageMacBook.svg' %}" alt="Apple MacBook Pro 2021">
+                </div>
+                <div class="items-description">
+                  <div class="items-description-text description-header">
+                    <p>MacBook Pro 2021</p>
+                  </div>
+                  <div class="items-description-text description-body">
+                    <p>Powered by either M1 Pro or M1 Max chips, they are the first to be available only with an
+                      Apple silicon system on a chip. This generation re-introduced MagSafe,function keys, and
+                      some other elements that had
+                      been removed from previous
+                      models.</p>
+                  </div>
+                  <div class="items-logo">
+                    <div>
+                      <p>N1,200,000</p>
+                      <img src=" {% static 'images/Body_Slot_Logo.svg' %}" alt="Jiji Logo">
+                    </div>
+                    <div>
+                      <p>N1,290,000</p>
+                      <img src=" {% static 'images/Body_Konga_Logo.svg'%}" alt="Konga Logo">
+                    </div>
+                    <div>
+                      <p>N1,350,000</p>
+                      <img src=" {% static 'images/Body_Jumia_Logo-.svg'%}" alt="Jumia Logo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexboxitem category-and-link-bar">
+                <div>
+                  <p>TRENDING PRODUCTS</p>
+                </div>
+                <div>
+                  <a href="#">SEE ALL</a>
+                </div>
+              </div>
+              <div class="flexboxitem items">
+                <div class="items-description">
+                  <div class="items-description-text description-header">
+                    <p>What to expect from the new iphone 14</p>
+                  </div>
+                  <div class="items-description-text description-body">
+                    <p>New iphones always include camera improvements and the iphone 14 is no exception. There will
+                      be improvements to the
+                      Ultra Wide camera, and there’s a possibility that Apple will introduce a periscope zoom lens
+                      that allows for much
+                      greater optical zoom, but it’s still not yet clear if this will comne in 2022 or 2023.</p>
+                  </div>
+                  <div class="items-logo">
+                    <div>
+                      <p>N1,200,000</p>
+                      <img src="images/Body_Jumia_Logo-.svg" alt="Jiji Logo">
+                    </div>
+                    <div>
+                      <p>N1,290,000</p>
+                      <img src="{% static 'images/Body_Konga_Logo.svg' %}" alt="Konga Logo">
+                    </div>
+                    <div>
+                      <p>N1,350,000</p>
+                      <img src=" {% static 'images/Body_Jumia_Logo-.svg'%}" alt="Jumia Logo">
+                    </div>
+                  </div>
+                </div>
+                <div class="items-image">
+                  <div id="iphone-14">
+                    <img src="{% static 'images/LandingpageIphone2.svg'%}" alt="Red Iphone 14">
+                  </div>
+                </div>
+              </div>
+              <div class="flexboxitem vision-and-mission">
+                <div class="mission-and-vision-header">
+                  <p>HAGGLE'S MISSION</p>
+                </div>
+                <div class="mission-and-vision-statement">
+                  <p>Our mission is to offer sort after products at unbeatable prices helping our users make
+                    informed
+                    decisions.</p>
+                </div>
+              </div>
+              <section class="vision-section">
+                <div class="flexboxitem vision-and-mission">
+                  <div class="mission-and-vision-header">
+                    <p>HAGGLE'S VISION</p>
+                  </div>
+                  <div class="mission-and-vision-statement">
+                    <p>Our vision is to build a comfortable environment that makes online shopping better.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="brand-and-vendor-section">
+                <div class="flexboxitem popular-brands">
+                  <div class="popular-brands-header">
+                    <p>POPULAR BRANDS</p>
+                  </div>
+                  <div class="popular-brands-logos">
+                    <img src="{% static 'images/Dell svgDell Logo.svg' %}" alt="Dell">
+                    <img src="{% static 'images/HP - jpeg.svg' %}" alt="HP">
+                    <img src="{% static 'images/Apple svgApple Logo.svg' %}" alt="Apple">
+                    <img src="{% static 'images/TECNO Mobile - jpeg.svg' %}" alt="Tecno">
+                    <img src="{% static 'images/Samsung Electronics - png.svg' %}" alt="Samsung">
+                  </div>
+                </div>
+                <div class="flexboxitem our-vendors">
+                  <div class="our-vendors-header">
+                    <p>OUR VENDORS</p>
+                  </div>
+                  <div class="vendor-description-and-logo">
+                    <div class="vendor-description-text">
+                      <p>Our vendors are Jumia, Konga and Slot.
+                        We are looking at incorporating more vendors
+                        to give our users the satisfaction they need.</p>
+                    </div>
+                    <div class="vendor-logo">
+                      <div>
+                        <img src="{% static 'images/Our_Vendor_Slot_Logo.svg' %}" alt="Jiji Logo">
+                      </div>
+                      <div>
+                        <img src="{% static 'images/Our_Vendor_Konga_Logo.svg' %}" alt="Konga Logo">
+                      </div>
+                      <div>
+                        <img src="{% static 'images/Our_Vendor_Jumia_Logo.svg' %}" alt="Jumia Logo">
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+            </div>
+            </div>
+        
+        
+            <!-- entire page ends -->
+          </div>
+    </main>
+  {% endblock %}

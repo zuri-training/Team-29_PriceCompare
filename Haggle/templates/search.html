@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--product section-->
+    <H2 id="heading">Search Result</H2>
+    <main>
+      
+       <div class="container">
+        {% for product in products %}
+        <a href="{% url 'Haggle:compare' product.slug %}">
+        <div class="product">
+          <figure>
+            <img src="{{ product.imageLink }}" width="304" height="368" alt="new-cashmere-sweater-2022";>
+          </figure><br>
+          <h3 id="price">₦{{product.price}}</h3><br>
+          <p>
+            <h3 id="desc">{{product.name}}</h3>
+          </a>
+            {% endfor %}
+          <div/> 
+          
+    </main>
+  {% endblock %}
