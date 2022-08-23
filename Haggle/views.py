@@ -146,34 +146,46 @@ class PriceCompareView(FormMixin, DetailView):
         product=self.get_product()
         brand= product.brand
         merchant=product.merchantName
-        reduced_name=re.search(f'{brand}(.+)',self.object.name).group()
+        name=product.name
+        reduced_name=re.search(f'{brand.lower()}(.+)',name.lower()).group()
 
         #CASES FOR QUERY VALUE
-        case_1=' '.join(reduced_name.split()[0:4])
-        case_2=' '.join(reduced_name.split()[0:3])
-        case_3=' '.join(reduced_name.split()[0:2])
-        case_4= brand + ' ' + reduced_name.split()[2]
+        
 
-        if productDetails.objects.filter(name__icontains=case_1).exists():
-            query_value=case_1
-        elif productDetails.objects.filter(name__icontains=case_2).exists():
-            query_value=case_2
-        elif productDetails.objects.filter(name__icontains=case_3).exists():
-            query_value=case_3
-        elif productDetails.objects.filter(name__icontains=case_4).exists():
-            query_value= case_4
-        else:
-            query_value=brand
+        def get_valid_query(merchant):
 
-        slot=productDetails.objects.filter(merchantName='Slot').filter(name__icontains=query_value).order_by('price')
-        jumia=productDetails.objects.filter(merchantName='Jumia').filter(name__icontains=query_value).order_by('price')
-        konga=productDetails.objects.filter(merchantName='Konga').filter(name__icontains=query_value).order_by('price')
+            case_1=' '.join(reduced_name.split()[0:4])
+            case_2=' '.join(reduced_name.split()[0:3])
+            case_3=' '.join(reduced_name.split()[0:2])
+            case_4= brand + ' ' + reduced_name.split()[2]
+
+            if productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_1).exists():
+                query_value=case_1
+            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_2).exists():
+                query_value=case_2
+            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_3).exists():
+                query_value=case_3
+            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_4).exists():
+                query_value= case_4
+            else:
+                query_value=brand
+            
+            return query_value
+        
+
+        slot_query_value=get_valid_query('Slot')
+        jumia_query_value=get_valid_query('Jumia')
+        konga_query_value=get_valid_query('Konga')
+
+        slot=productDetails.objects.filter(merchantName='Slot').filter(name__icontains=slot_query_value).order_by('price')
+        jumia=productDetails.objects.filter(merchantName='Jumia').filter(name__icontains=jumia_query_value).order_by('price')
+        konga=productDetails.objects.filter(merchantName='Konga').filter(name__icontains=konga_query_value).order_by('price')
         
         result_list=[slot,jumia,konga]
         return_list=[]
 
         for i in result_list:
-            if i.exists() and list(i)!=list(productDetails.objects.filter(merchantName=merchant).filter(name__icontains=query_value).order_by('price')):
+            if i.exists() and i[0].merchantName!=merchant:
                 return_list.append(i[0])
   
         
