@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} Comparison {% endblock title %}
+
+{% block content %}
+<main class = "comparePage">  
+    <section id="comparePageView">
+        
+        <a href="{{product.productLink}}"><img class = 'comparisonImage' src="{{ product.imageLink }}" alt=""></a> 
+        <aside>
+               
+            <div class="share-icon"> 
+                <span class="iconify" data-icon="cil:share-alt" id="first-icon"></span>
+                <span class="iconify" data-icon="fluent:comment-add-48-regular"></span>
+            </div><br>
+
+            <h1>{{product.name}}</h1><br>
+            
+
+            {% for products in comparisons %}
+            <a href="{{products.productLink}}" class = 'comparisonCard'>   
+                <p>#{{products.price}}</p> 
+                <h4>{{products.merchantName}}</h4>
+            </a>
+            {% endfor %}
+        </aside>
+
+    </section>
+    
+    
+</main>    
+{% endblock %}

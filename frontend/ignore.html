@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Haggle/static/comparison.css">
+</head>
+<body>
+
+
+    <main class = "comparePage">  
+        <section id="comparePageView">
+            <a href="{{products.productLink}}"><img class = 'comparisonImage' src="{{ product.imageLink }}" alt=""></a> 
+            <aside>
+                   
+                <div class="share-icon"> 
+                    <span class="iconify" data-icon="cil:share-alt" id="first-icon"></span>
+                    <span class="iconify" data-icon="fluent:comment-add-48-regular"></span>
+                </div><br>
+
+                <h1>{{products.name}}</h1><br>
+
+                <a href="{{products.productLink}}" class = 'comparisonCard'>   
+                    <p>#{{products.price}}</p> 
+                    <h4>{{products.merchantName}}</h4>
+                </a>
+            </aside>
+
+        </section>
+        
+        
+    </main>
+    
+</body>
+</html>
