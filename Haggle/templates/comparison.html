@@ -39,7 +39,7 @@
                         <div class="first-text">
             </div>
                             <div>
-                                <h2>{{ product.name }}</h2>
+                                <h2>{{ product.name }} {{product.merchantName}}</h2>
                             </div>
                             <div class="share-icon">
                                 <span class="iconify" data-icon="cil:share-alt" id="first-icon"></span>
@@ -59,7 +59,7 @@
                             <div class="jumia-text">
                                 <p>Jumia</p>
                             </div>
-                            <div class="specifications">
+                            {% comment %} <div class="specifications">
                                 <div class="spec-spacing1">
                                     <p><b>Condition:</b></p>
                                     <p><b>Brands:</b></p>
@@ -443,11 +443,18 @@
                                 Core i5</p>
                         </div>
                         <div class="other-products-you-may-like-second-text">
-                            <p>Apple</p>
+                            <p>Apple</p> {% endcomment %}
                         </div>
                     </div>
                 </div>
             </section>
+            
+            {% for products in comparisons %}
+                {{ products.name}}
+                #{{products.price}}
+                {{products.merchantName}}
+
+            {% endfor %}
         </div>
     </main>
    {% endblock %}
