@@ -8,6 +8,7 @@
 #comparePageView{
     display: grid;
     grid-template-columns: 50% 40%;
+    margin-top: 5%;
 }
 .comparisonCard{
     border: 1px solid black;
@@ -16,7 +17,8 @@
     text-align: center;
     color: black;
     font-size: 80%;
-    height: 50px;
+    height:fit-content;
+    text-decoration: none;
 }
 
 .comparisonImage{
