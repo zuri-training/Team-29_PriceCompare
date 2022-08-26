@@ -1,0 +1,460 @@
+{% extends 'base.html' %}
+{% block title %} Comparison {% endblock title %}
+
+{% block content %}
+    <main>
+        <div class="flex-container">
+            <!-- Main Product Section -->
+            <section>
+                <div class="flexboxitem flexboxitem1"></div>
+                <div class="flexboxitem flexboxitem2">
+                    <div class="products">
+                        <div class="image-container">
+                            <img id="img-Box" src="{{ product.imageLink }}" alt="click here">
+                        </div>
+                        <div class="products-gallery">
+                            <div>
+                                <img src="{{ product.imageLink }}" alt="click here"
+                                    onclick="myFunction(this);">
+                            </div>
+                            <div>
+                                <img src="https://i.postimg.cc/LXJ6DvgZ/airpod2.png" alt="click here"
+                                    onclick="myFunction(this);">
+                            </div>
+                            <div>
+                                <img src="https://i.postimg.cc/9XPsSZP4/airpod3.png" alt="click here"
+                                    onclick="myFunction(this);">
+                            </div>
+                            <div>
+                                <img src="https://i.postimg.cc/2yC9m9d1/airpod4.png" alt="click here"
+                                    onclick="myFunction(this);">
+                            </div>
+                            <div>
+                                <img src="https://i.postimg.cc/sxfmbQyS/airpod5.png" alt="click here"
+                                    onclick="myFunction(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <div class="first-text">
+            </div>
+                            <div>
+                                <h2>{{ product.name }} {{product.merchantName}}</h2>
+                            </div>
+                            <div class="share-icon">
+                                <span class="iconify" data-icon="cil:share-alt" id="first-icon"></span>
+                                <span class="iconify" data-icon="fluent:comment-add-48-regular"></span>
+                            </div>
+                        </div>
+                        <div class="second-text">
+                            <i class="naira-icon">
+                                <img src="./icons/Naira.svg" alt="">
+                            </i>
+                            <h2>{{ product.price }}</h2>
+                        </div>
+                        <div class="third-text">
+                            <p></p>
+                        </div>
+                        <div class="fourth-text">
+                            <div class="jumia-text">
+                                <p>Jumia</p>
+                            </div>
+                            {% comment %} <div class="specifications">
+                                <div class="spec-spacing1">
+                                    <p><b>Condition:</b></p>
+                                    <p><b>Brands:</b></p>
+                                    <p><b>Dimensions:</b></p>
+                                    <p><b>Model Number:</b></p>
+                                    <p><b>Shipping:</b></p>
+                                </div>
+                                <div class="spec-spacing2">
+                                    <p>Used</p>
+                                    <p>Lieve</p>
+                                    <p>15*16*78 cm</p>
+                                    <p>pk i12 i9000 pro3</p>
+                                    <p>Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Comments & Review Section -->
+            <div class="accordion">
+                <input type="radio" name="select" class="accordion-select" />
+                <div class="accordion-title">
+                    <div>
+                        <p>Comments</p>
+                    </div>
+                    <div class="comment-number">
+                        <span class="iconify" data-icon="ion:ellipse" style="color: #626264;"></span>
+                        <p>25 Comments</p>
+                    </div>
+                    <button class="accordion-button">
+                        <span class="iconify iconic" data-icon="ep:arrow-down" style="color: #eeb729;"></span>
+                    </button>
+                </div>
+                <div class="accordion-content">
+                    <div class="comment-box">
+                        <form action="{% url 'Haggle:compare' product.slug %}" method="post">
+                            <div class="user-picture-and-text-area">
+                            {% csrf_token %}
+                            <img src="./images/comment picture1.svg" alt="profile picture" id="first-image">
+                             {{ form.author }} <br>
+
+                            {{ form.body }}
+                        </div>
+                        <div class="post-comment-button">
+                            <button type="submit">Post</button>
+                        </div>
+                        </form>
+
+
+                    <div class="flexboxitem old-comments">
+
+                        <div>
+                            <img src="./images/profile picture2.svg" alt="user-picture-two">
+                        </div>
+                        <div class="comment-details">
+                            <div class="user-name">
+                                <p></p>
+                            </div>
+                            <div class="comment-date">
+                                <p>23 weeks ago</p>
+                            </div>
+                            <div class="comment">
+                                <p>Now, we have all seen before-and-after images on late night TV or in magazines that
+                                    are hard
+                                    to believe (or even worse, seem manipulated). This is the number one no go for
+                                    leveraging
+                                    these kind of images as positive reviews.</p>
+                            </div>
+                            <div class="replies">
+                                <a href="#">
+                                    <p>Replies...</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexboxitem old-comments">
+                        <div>
+                            <img src="./images/profile picture3.svg" alt="user-picture-two">
+                        </div>
+                        <div class="comment-details">
+                            <div class="user-name">
+                                <p>Timmy Poise</p>
+                            </div>
+                            <div class="comment-date">
+                                <p>23 weeks ago</p>
+                            </div>
+                            <div class="comment">
+                                <p>Now, we have all seen before-and-after images on late night TV or in magazines that
+                                    are hard
+                                    to believe (or even worse, seem manipulated). This is the number one no go for
+                                    leveraging
+                                    these kind of images as positive reviews.</p>
+                            </div>
+                            <div class="reply">
+                                <a href="#">
+                                    <p>Reply</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-comments-button">
+                        <button>
+                            <a href="#">See More Comments</a>
+                        </button>
+                    </div>
+                </div>
+                <input type="radio" name="select" class="accordion-select" />
+                <div class="accordion-title"><span class="iconify" data-icon="ep:arrow-up"
+                        style="color: #eeb729;"></span></div>
+            </div>
+
+            <!-- Price Comparison Section -->
+
+            <section>
+                <div class="flexboxitem other-store-offers">
+                    <h3>Other Store Offers</h3>
+                </div>
+                <div class="flexboxitem similar-products">
+                    <div class="similar-product-images">
+                        <img src="./images/airpod1.png" alt="milk-colored airpods">
+                    </div>
+                    <div class="similar-product-description">
+                        <div class="product-description-text">
+                            <div class="first-text-for-similar-product-description">
+                                <p>Mini Bluetooth Earphones</p>
+                            </div>
+                            <div class="second-text-for-similar-product-description">
+                                <p>Konga</p>
+                            </div>
+                            <div class="third-text-for-similar-product-description">
+                                <p>Original Air Pro 4 TWS Wireless <br> Headphones Bluetooth 5.0 Earphone <br> In Ear
+                                    Earbuds
+                                </p>
+                            </div>
+                        </div>
+                        <div class="similar-product-price-info alignments">
+                            <div class="similar-product-price">
+                                <i class="naira-icon">
+                                    <img src="./icons/Naira.svg" alt="">
+                                </i>
+                                <h2>6,304</h2>
+                            </div>
+                            <div class="store-link">
+                                <button>
+                                    <a href="#">Go To Store</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexboxitem similar-products">
+                    <div class="similar-product-images">
+                        <img src="./images/airpod1.png" alt="milk-colored airpods">
+                    </div>
+                    <div class="similar-product-description">
+                        <div class="product-description-text">
+                            <div class="first-text-for-similar-product-description">
+                                <p>Mini Bluetooth Earphones</p>
+                            </div>
+                            <div class="second-text-for-similar-product-description">
+                                <p>E world</p>
+                            </div>
+                            <div class="third-text-for-similar-product-description">
+                                <p>Bluetooth Earphone with Charging Box <br> Wireless Headphone Stereo <br> Sport
+                                    Earbuds
+                                </p>
+                            </div>
+                        </div>
+                        <div class="similar-product-price-info alignments1">
+                            <div class="similar-product-price">
+                                <i class="naira-icon">
+                                    <img src="./icons/Naira.svg" alt="">
+                                </i>
+                                <h2>9,345</h2>
+                            </div>
+                            <div class="store-link">
+                                <button>
+                                    <a href="#">Go To Store</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexboxitem similar-products">
+                    <div class="similar-product-images">
+                        <img src="./images/airpod1.png" alt="milk-colored airpods">
+                    </div>
+                    <div class="similar-product-description">
+                        <div class="product-description-text">
+                            <div class="first-text-for-similar-product-description">
+                                <p>Mini Bluetooth Earphones</p>
+                            </div>
+                            <div class="second-text-for-similar-product-description">
+                                <p>Zhenbaoshi Stores</p>
+                            </div>
+                            <div class="third-text-for-similar-product-description">
+                                <p>HiFi Music Wireless Earbuds <br> Sports Runing Headset for Smart Phone
+                                </p>
+                            </div>
+                        </div>
+                        <div class="similar-product-price-info alignments2">
+                            <div class="similar-product-price">
+                                <i class="naira-icon">
+                                    <img src="./icons/Naira.svg" alt="">
+                                </i>
+                                <h2>5,305</h2>
+                            </div>
+                            <div class="store-link">
+                                <button>
+                                    <a href="#">Go To Store</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexboxitem similar-products">
+                    <div class="similar-product-images">
+                        <img src="./images/airpod1.png" alt="milk-colored airpods">
+                    </div>
+                    <div class="similar-product-description">
+                        <div class="product-description-text">
+                            <div class="first-text-for-similar-product-description">
+                                <p>Mini Bluetooth Earphones</p>
+                            </div>
+                            <div class="second-text-for-similar-product-description">
+                                <p>UPhone Stores</p>
+                            </div>
+                            <div class="third-text-for-similar-product-description">
+                                <p>AirPods are equipped with the Apple <br> H1 headset chip, which provides up to <br>
+                                    2x faster switching between devices
+                                </p>
+                            </div>
+                        </div>
+                        <div class="similar-product-price-info alignments3">
+                            <div class="similar-product-price">
+                                <i class="naira-icon">
+                                    <img src="./icons/Naira.svg" alt="">
+                                </i>
+                                <h2>9,439</h2>
+                            </div>
+                            <div class="store-link">
+                                <button>
+                                    <a href="#">Go To Store</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexboxitem similar-products">
+                    <div class="similar-product-images">
+                        <img src="./images/airpod1.png" alt="milk-colored airpods">
+                    </div>
+                    <div class="similar-product-description">
+                        <div class="product-description-text">
+                            <div class="first-text-for-similar-product-description">
+                                <p>Mini Bluetooth Earphones</p>
+                            </div>
+                            <div class="second-text-for-similar-product-description">
+                                <p>Jumia</p>
+                            </div>
+                            <div class="third-text-for-similar-product-description">
+                                <p>1.5x faster connectivity when taking <br> calls. In addition, the H1 chip <br>
+                                    supports voice-activated Siri
+                                </p>
+                            </div>
+                        </div>
+                        <div class="similar-product-price-info alignments4">
+                            <div class="similar-product-price">
+                                <i class="naira-icon">
+                                    <img src="./icons/Naira.svg" alt="">
+                                </i>
+                                <h2>9,675</h2>
+                            </div>
+                            <div class="store-link">
+                                <button>
+                                    <a href="#">Go To Store</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginaton Section -->
+                <div class="pagination">
+                    <a href="#" class="previous-and-next-page-button">
+                        <span class="iconify" data-icon="wi:direction-left"></span>
+                        <p>Previous</p>
+                    </a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#" class="previous-and-next-page-button">
+                        <p>Next</p> <span class="iconify" data-icon="wi:direction-left" data-rotate="180deg"></span>
+                    </a>
+                    <p>Go to Page</p>
+                    <input type="textarea" name="pagination-input">
+                    <p><a href="">Go</a></p>
+                </div>
+            </section>
+
+            <!-- Products You May Like Section -->
+            <section>
+                <div class="flexboxitem">
+                    <div class="you-may-like">
+                        <p>You May Like...</p>
+                    </div>
+                </div>
+                <div class="flexboxitem products-you-may-like">
+                    <div class="other-products-you-may-like">
+                        <div class="other-products-you-may-like-images">
+                            <a href="#"> <img src="./images/headset.svg" alt="Headset"> </a>
+                        </div>
+                        <div class="other-products-you-may-like-price">
+                            <i class="naira-icon">
+                                <img src="./icons/Naira.svg" alt="Naira Sign">
+                            </i>
+                            <h3>50,000</h3>
+                        </div>
+                        <div class="other-products-you-may-like-first-text">
+                            <p>White Beats by Dr Dre <br>
+                                headset.</p>
+                        </div>
+                        <div class="other-products-you-may-like-second-text">
+                            <p>Konga</p>
+                        </div>
+                    </div>
+                    <div class="other-products-you-may-like">
+                        <div class="other-products-you-may-like-images">
+                            <a href="#"> <img src="./images/blender.svg" alt="blender"> </a>
+                        </div>
+                        <div class="other-products-you-may-like-price">
+                            <i class="naira-icon">
+                                <img src="./icons/Naira.svg" alt="Naira Sign">
+                            </i>
+                            <h3>45,000</h3>
+                        </div>
+                        <div class="other-products-you-may-like-first-text alignments5">
+                            <p>Olympia Coffee Maker</p>
+                        </div>
+                        <div class="other-products-you-may-like-second-text">
+                            <p>Jumia</p>
+                        </div>
+                    </div>
+                    <div class="other-products-you-may-like">
+                        <div class="other-products-you-may-like-images">
+                            <a href="#"> <img src="./images/refrigerator.svg" alt="refrigerator"></a>
+                        </div>
+                        <div class="other-products-you-may-like-price">
+                            <i class="naira-icon">
+                                <img src="./icons/Naira.svg" alt="Naira Sign">
+                            </i>
+                            <h3>180,000</h3>
+                        </div>
+                        <div class="other-products-you-may-like-first-text alignments6">
+                            <p>Refrigerator </p>
+                        </div>
+                        <div class="other-products-you-may-like-second-text">
+                            <p id="mobile-alignment-third-konga">Konga</p>
+                        </div>
+                    </div>
+                    <div class="other-products-you-may-like">
+                        <div class="other-products-you-may-like-images">
+                            <a href="#"><img src="./images/desktop-computer.svg" alt="desktop computer"></a>
+                        </div>
+                        <div class="other-products-you-may-like-price">
+                            <i class="naira-icon">
+                                <img src="./icons/Naira.svg" alt="Naira Sign">
+                            </i>
+                            <h3>510,000</h3>
+                        </div>
+                        <div class="other-products-you-may-like-first-text">
+                            <p>Apple iMac 21.5in 2.7GHz <br>
+                                Core i5</p>
+                        </div>
+                        <div class="other-products-you-may-like-second-text">
+                            <p>Apple</p> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            {% for products in comparisons %}
+                {{ products.name}}
+                #{{products.price}}
+                {{products.merchantName}}
+
+            {% endfor %}
+        </div>
+    </main>
+   {% endblock %}

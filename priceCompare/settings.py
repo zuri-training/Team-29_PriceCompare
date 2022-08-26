@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Haggle.apps.HaggleConfig',
     'django.contrib.sites', 
+    'django.contrib.humanize', 
     # ALLAUTH 
     'allauth',
     'allauth.account',
