@@ -6,7 +6,11 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormMixin
+
 from django.db.models import Q
+from django.core.paginator import Paginator
+
+
 
 
 from multiprocessing import context
@@ -118,8 +122,18 @@ class SearchResultView(ListView):
         return results
     
     def get_context_data(self, **kwargs):
+        product_list = self.get_queryset()
+        page = self.request.GET.get('page', 1)
+        paginator = Paginator(product_list, 100)
+        try:
+            product = paginator.page(page)
+        except PageNotAnInteger:
+            product = paginator.page(1)
+        except EmptyPage:
+            product = paginator.page(paginator.num_pages)
+
         context=super().get_context_data(**kwargs)
-        context['products']=self.get_queryset()
+        context['products']=product
         return context
 
 
@@ -220,8 +234,20 @@ class ProductListView(ListView):
         results = list(productDetails.objects.filter(Q(category=self.kwargs.get('category')) & Q(brand__icontains=self.kwargs.get('brand')))) 
         random.Random(4).shuffle(results)
         return results
+
+    
     
     def get_context_data(self, **kwargs):
+        product_list = self.get_queryset()
+        page = self.request.GET.get('page', 1)
+        paginator = Paginator(product_list, 100)
+        try:
+            product = paginator.page(page)
+        except PageNotAnInteger:
+            product = paginator.page(1)
+        except EmptyPage:
+            product = paginator.page(paginator.num_pages)
+
         context=super().get_context_data(**kwargs)
-        context['products']=self.get_queryset()
+        context['products']=product
         return context

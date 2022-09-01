@@ -1,6 +1,49 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+.pagination a{
+    color: black;
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+    border: 1px solid #EEB729;
+    border-radius: 4px;
+    transition: background-color .3s;
+}
+
+.pagination a.active{
+    background-color: #EEB729;
+    color: black;
+    border-radius: 4px;
+}
+
+.pagination a:hover:not(.active){
+    background-color: #EEB729;
+}
+
+.pagination .iconify{
+  color: black;
+    font-size: 1.5rem;
+    padding-top: 0rem;
+}
+
+.previous-and-next-page-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  </style>
     <!--product section-->
     <H2 id="heading">Search Result</H2>
     <main>
@@ -17,7 +60,34 @@
             <h3 id="desc">{{product.name}}</h3>
           </a>
             {% endfor %}
-          <div/> 
+          <div/>
+
+          {% if products.has_other_pages %}
+  <div class="pagination">
+    {% if products.has_previous %}
+      <a href="?page={{ products.previous_page_number }}" class="previous-and-next-page-button">
+                        <span class="iconify" data-icon="wi:direction-left"></span>
+                        <p>Previous</p>
+    {% else %}
+      <div class="page-item disabled"><span>&laquo;</span></div>
+    {% endif %}
+    {% for i in products.paginator.page_range %}
+      {% if products.number == i %}
+        <p class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></p>
+      {% else %}
+        <a href="?page={{ i }}" class="active">{{ i }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if products.has_next %}
+      
+      <a href="?page={{ products.next_page_number }}" class="previous-and-next-page-button">
+                        <p>Next</p> <span class="iconify" data-icon="wi:direction-left" data-rotate="180deg"></span>
+                    </a>
+    {% else %}
+      <p class="page-item disabled"><span>&raquo;</span></p>
+    {% endif %}
+  </div>
+{% endif %} 
           
     </main>
   {% endblock %}
