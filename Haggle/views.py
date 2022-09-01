@@ -36,11 +36,12 @@ import random
 # Create your views here.
 
 #AUTHENTICATION
-def landing(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:
-        return render(request, 'users/landing.html')
+# def landing(request):
+#     if request.user.is_authenticated:
+#         return redirect('home')
+#     else:
+#         return render(request, 'users/landing.html')
+b3f1e63
 
 @login_required(login_url='login')
 def home(request):
