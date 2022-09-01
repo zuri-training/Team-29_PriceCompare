@@ -13,16 +13,26 @@ class productDetails(models.Model):
     brand = models.CharField(max_length=40 , null= False )
     category = models.CharField(max_length= 50 , null= False)
     productLink = models.CharField(max_length= 5000, null=True)
+    merchantLogo = models.CharField(max_length= 100, null=True)
     slug = models.SlugField(max_length=500,  null=True, unique=True, editable=False)
 
+
     def save(self, *args, **kwargs):
+        konga_logo='https://www.konga.com/_next/static/images/62f8a0d88e07573b4d46735aa24f3f04.png'
+        jumia_logo='https://1000logos.net/wp-content/uploads/2022/02/Jumia-Logo-768x432.png'
+        slot_logo='https://slot.ng/media/wysiwyg/logo-icon-3_1_1_.png'
         self.slug = slugify(self.name+' '+str(self.id))
+        if self.merchantName=='Konga':
+            self.merchantLogo=konga_logo
+        elif self.merchantName=='Jumia':
+            self.merchantLogo=jumia_logo
+        else:
+            self.merchantLogo=slot_logo
         super().save(*args, **kwargs)
         pass 
     
     def get_absolute_url(self):
         return reverse("Haggle:compare", kwargs={"slug": self.slug})
-
 
 
 class ProductComment(models.Model):
