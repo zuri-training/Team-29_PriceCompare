@@ -1,11 +1,16 @@
 
 from itertools import product
+import queue
 from unicodedata import category, name
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormMixin
+
+from django.db.models import Q
 from django.core.paginator import Paginator
+
+
 
 
 from multiprocessing import context
@@ -30,18 +35,12 @@ import random
 
 # Create your views here.
 
-
-def landing_page(request):
-    return render(request,'index.html' )
-   
-
 #AUTHENTICATION
-# contact isaac if your are the one that made this view. Thank you
-# def landing(request):
-#     if request.user.is_authenticated:
-#         return redirect('home')
-#     else:
-#         return render(request, 'users/landing.html')
+def landing(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        return render(request, 'users/landing.html')
 
 @login_required(login_url='login')
 def home(request):
@@ -159,9 +158,7 @@ class PriceCompareView(FormMixin, DetailView):
         merchant=product.merchantName
         name=product.name
         reduced_name=re.search(f'{brand.lower()}(.+)',name.lower()).group()
-
-        #CASES FOR QUERY VALUE
-        
+        brands_list=list(productDetails.objects.values_list('brand',flat=True).distinct())
 
         def get_valid_query(merchant):
 
@@ -170,40 +167,45 @@ class PriceCompareView(FormMixin, DetailView):
             case_3=' '.join(reduced_name.split()[0:2])
             case_4= brand + ' ' + reduced_name.split()[2]
 
-            if productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_1).exists():
+            if productDetails.objects.filter(Q(merchantName=merchant) & Q(name__icontains=case_1)).exists():
                 query_value=case_1
-            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_2).exists():
+            elif productDetails.objects.filter(Q(merchantName=merchant) & Q(name__icontains=case_2)).exists():
                 query_value=case_2
-            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_3).exists():
+            elif productDetails.objects.filter(Q(merchantName=merchant) & Q (name__icontains=case_3)).exists() and (case_3.split()[0]!='apple'):
                 query_value=case_3
-            elif productDetails.objects.filter(merchantName=merchant).filter(name__icontains=case_4).exists():
+            elif productDetails.objects.filter(Q(merchantName=merchant) & Q(name__icontains=case_4)).exists():
                 query_value= case_4
             else:
                 query_value=brand
             
             return query_value
-        
 
         slot_query_value=get_valid_query('Slot')
         jumia_query_value=get_valid_query('Jumia')
         konga_query_value=get_valid_query('Konga')
-
-        slot=productDetails.objects.filter(merchantName='Slot').filter(name__icontains=slot_query_value).order_by('price')
-        jumia=productDetails.objects.filter(merchantName='Jumia').filter(name__icontains=jumia_query_value).order_by('price')
-        konga=productDetails.objects.filter(merchantName='Konga').filter(name__icontains=konga_query_value).order_by('price')
+        Slot,Jumia,Konga=1,2,3
+        query_map={Slot:[slot_query_value,'Slot'],Jumia:[jumia_query_value, 'Jumia'],Konga:[konga_query_value,'Konga']}
         
-        result_list=[slot,jumia,konga]
-        return_list=[]
 
-        for i in result_list:
+        
+        for i in list(query_map):
+            product_merchant_name=query_map[i][1]
+            query_value=query_map[i][0].split()
+            if query_map[i][0] in brands_list:
+                i_new=productDetails.objects.filter(Q(merchantName=product_merchant_name) & Q(name__icontains=query_map[i][0]) & Q(price__lte=product.price) & Q(category=product.category)).order_by('-price')
+                query_map[i_new]=query_map.pop(i)
+            else:
+                i_new=productDetails.objects.filter(Q(merchantName=product_merchant_name) & Q (name__icontains=query_map[i][0])).order_by('price')
+                query_map[i_new]=query_map.pop(i)
+
+        return_list=[]
+        for i in query_map:
             if i.exists() and i[0].merchantName!=merchant:
                 return_list.append(i[0])
-  
-        
         return return_list
 
     def get_context_data(self, **kwargs):
-        context = super(PriceCompareView,self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         product=self.get_product()
         context['product'] = product
         context['comparisons'] = self.product_comparison_fetch()
@@ -221,7 +223,7 @@ class PriceCompareView(FormMixin, DetailView):
 
     def form_valid(self, form):
         form.save(commit=False)
-        return super(PriceCompareView, self).form_valid(form)
+        return super().form_valid(form)
 
 
 class ProductListView(ListView):
@@ -229,7 +231,7 @@ class ProductListView(ListView):
     template_name = 'productlist.html'
 
     def get_queryset(self):
-        results = list(productDetails.objects.filter(category=self.kwargs.get('category')).filter(brand__icontains=self.kwargs.get('brand')))
+        results = list(productDetails.objects.filter(Q(category=self.kwargs.get('category')) & Q(brand__icontains=self.kwargs.get('brand')))) 
         random.Random(4).shuffle(results)
         return results
 
