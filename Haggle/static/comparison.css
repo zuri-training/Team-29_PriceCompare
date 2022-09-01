@@ -20,7 +20,9 @@
     height:fit-content;
     text-decoration: none;
 }
-
+.comparisonCard img{
+    max-width: 100px;
+}
 .comparisonImage{
     max-width: 80%;
     max-height: 500px;
