@@ -124,7 +124,7 @@ class SearchResultView(ListView):
     def get_context_data(self, **kwargs):
         product_list = self.get_queryset()
         page = self.request.GET.get('page', 1)
-        paginator = Paginator(product_list, 100)
+        paginator = Paginator(product_list, 20)
         try:
             product = paginator.page(page)
         except PageNotAnInteger:

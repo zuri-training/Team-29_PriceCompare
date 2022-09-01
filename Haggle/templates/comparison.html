@@ -24,7 +24,7 @@
             {% for products in comparisons %}
             <a href="{{products.productLink}}" class = 'comparisonCard'>   
                 <p> &#8358;{{products.price|intcomma}}</p> 
-                <h4>{{products.merchantName}}</h4>
+                <span>{{products.merchantLogo}}</span>
             </a>
             {% endfor %}
         </aside>
