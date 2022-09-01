@@ -41,7 +41,8 @@ import random
 #         return redirect('home')
 #     else:
 #         return render(request, 'users/landing.html')
-b3f1e63
+def landing_page(request):
+    return render(request,'index.html' )
 
 @login_required(login_url='login')
 def home(request):
@@ -125,7 +126,7 @@ class SearchResultView(ListView):
     def get_context_data(self, **kwargs):
         product_list = self.get_queryset()
         page = self.request.GET.get('page', 1)
-        paginator = Paginator(product_list, 20)
+        paginator = Paginator(product_list, 100)
         try:
             product = paginator.page(page)
         except PageNotAnInteger:
