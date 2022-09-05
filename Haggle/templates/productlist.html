@@ -1,99 +1,59 @@
 {% extends 'base.html' %}
 
-{% block content %}
 
-{%load humanize %}
-    <!--product section-->
+{% block stylesheeet %}
+  {% load static %}
+  <link rel="stylesheet" href= "{% static 'product.css' %}">
+{% endblock stylesheeet %}
 
-<style>
-.pagination{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 1rem;
-    gap: 1rem;
-}
-.pagination a{
-    color: black;
-    float: left;
-    padding: 4px 8px;
-    text-decoration: none;
-    border: 1px solid #EEB729;
-    border-radius: 4px;
-    transition: background-color .3s;
-}
+  {% block content %}
+    {%load humanize %}
 
-.pagination a.active{
-    background-color: #EEB729;
-    color: black;
-    border-radius: 4px;
-}
+    {% for product in products %}
 
-.pagination a:hover:not(.active){
-    background-color: #EEB729;
-}
+      <div class="productCard">
+        <a    href="{{product.get_absolute_url}}">
+          <h3>{{ product.name }}</h3>
+          <figure>
+            <img src="{{ product.imageLink }}" alt="product image">
+          </figure>
 
-
-.pagination .iconify{
-    color: black;
-    font-size: 1.5rem;
-    padding-top: 0rem;
-}
-
-.previous-and-next-page-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-  </style>
-    <!--product section-->
-        <H2 id="heading">{{ product.brand }} {{ product.category }} {{product.merchantName}}</H2>
-      <div class="container">
-        {% for product in products %}
-
-        <div class="card" style="display: inline-flex; width : 18rem">
-         <a href="{{product.get_absolute_url}}">
-           <figure>
-            <img src="{{ product.imageLink }}" width="304" height="368" alt="new-cashmere-sweater-2022";>
-          </figure><br>
-          <h3 id="price">&#8358;{{ product.price|intcomma }}</h3><br>
-          <p>
-            <h3 id="desc">{{ product.name }}</h3><br>
-         </a>
-        </div>
-          {% endfor %}
+          <h3> &#8358;{{ product.price|intcomma }}</h3>
+          <img src = '{{product.merchantLogo}}'/>
+          
+        </a>
       </div>
-      
-      {% if products.has_other_pages %}
-  <div class="pagination">
-    {% if products.has_previous %}
-      <a href="?page={{ products.previous_page_number }}" class="previous-and-next-page-button">
-                        <span class="iconify" data-icon="wi:direction-left"></span>
-                        <p>Previous</p>
-    {% else %}
-      <div class="page-item disabled"><span>&laquo;</span></div>
-    {% endif %}
-    {% for i in products.paginator.page_range %}
-      {% if products.number == i %}
-        <p class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></p>
-      {% else %}
-        <a href="?page={{ i }}" class="active">{{ i }}</a>
-      {% endif %}
     {% endfor %}
-    {% if products.has_next %}
       
-      <a href="?page={{ products.next_page_number }}" class="previous-and-next-page-button">
-                        <p>Next</p> <span class="iconify" data-icon="wi:direction-left" data-rotate="180deg"></span>
-                    </a>
-    {% else %}
-      <p class="page-item disabled"><span>&raquo;</span></p>
-    {% endif %}
-  </div>
-{% endif %}
+      
 
-    </main>
 
-{% endblock %}
+    {% comment %} whoever  structured this page needs to work on writing clearner codes. {% endcomment %}
+    {% if products.has_other_pages %}
+        <div class="pagination">
+          {% if products.has_previous %}
+            <a href="?page={{ products.previous_page_number }}" class="previous-and-next-page-button">
+                              <span class="iconify" data-icon="wi:direction-left"></span>
+                              <p>Previous</p>
+          {% else %}
+            <div class="page-item disabled"><span>&laquo;</span></div>
+          {% endif %}
+          {% for i in products.paginator.page_range %}
+            {% if products.number == i %}
+              <p class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></p>
+            {% else %}
+              <a href="?page={{ i }}" class="active">{{ i }}</a>
+            {% endif %}
+          {% endfor %}
+          {% if products.has_next %}
+            
+            <a href="?page={{ products.next_page_number }}" class="previous-and-next-page-button">
+                              <p>Next</p> <span class="iconify" data-icon="wi:direction-left" data-rotate="180deg"></span>
+                          </a>
+          {% else %}
+            <p class="page-item disabled"><span>&raquo;</span></p>
+          {% endif %}
+        </div>
+        {% endif %}
+
+  {% endblock %}

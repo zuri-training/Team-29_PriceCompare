@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
+
+{% block stylesheeet %}
+  {% load static %}
+  <link rel="stylesheet" href= "{% static 'product.css' %}">
+{% endblock stylesheeet %}
+
 {% block content %}
 <style>
 .pagination{

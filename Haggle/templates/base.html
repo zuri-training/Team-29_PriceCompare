@@ -15,39 +15,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="https://i.postimg.cc/kM10QcSD/hagglefavicon.png" type="">
 
-
+      
         {% load static %}
-        {% comment %} for the numbers in the pages to have the comma sign {% endcomment %}
-        {%load humanize %}
+        {% block stylesheeet %}
+        
+        {% endblock stylesheeet %}
         
 
         {% comment %} js and css scripts for the header {% endcomment %}
         <link rel="stylesheet" href= "{% static 'header-footer.css' %}">
         <script defer src= "{% static 'header-footer.js' %}"></script>
 
-        {% comment %}  for the landing page {% endcomment %}
-        <link rel="stylesheet" href="{% static 'landingPage.css' %}">
-
-        {% comment %} for comparison page {% endcomment %}
-        <link rel="stylesheet" href= "{% static 'comparison.css' %}">
-        <link rel="stylesheet" href= "{% static 'accordion.css' %}">
-        <script defer src= "{% static 'comparison.js' %}"></script>
-
-        {% comment %} for faq pages {% endcomment %}
-        <link rel="stylesheet" href= "{% static 'faq.css' %}" >
-        <script defer src= "{% static 'faq.js' %}" ></script>
-
-        {% comment %} for profilecard pages {% endcomment %}
-        <link rel="stylesheet" href="{% static 'profilecard.css' %}" >
+        {% comment %} for profilecard pages 
+        
     
-        {% comment %} for contact page {% endcomment %}
-        <link rel="stylesheet" href="{% static 'contact.css' %}">
+        {% comment %} for contact page 
+        
 
-        {% comment %} for product/search page {% endcomment %}
-        <link rel="stylesheet" href= "{% static 'product.css' %}">
+        {% comment %} for product/search page 
+        
 
-        {% comment %} for privacy policy page {% endcomment %}
-        <link rel="stylesheet" href="{% static 'privacy.css' %}">
+        {% comment %} for privacy policy page 
+        {% endcomment %}
 
         
     </head>

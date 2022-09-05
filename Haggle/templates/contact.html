@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
   
-{% block title %} About {% endblock title %}
+{% block title %} Contact {% endblock title %}
+
+
+{% block stylesheeet %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+{% endblock stylesheeet %}
 
 {% block content %}
 <div class="main">
