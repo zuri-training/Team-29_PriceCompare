@@ -1,17 +1,25 @@
-*{
-    margin: 0; padding: 0; box-sizing: border-box;
+
+
+.productCardContainer{
+    max-width: 90%;
+    margin: 5px auto;
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+}
+.productCardContainer a{
+    background-color:  rgba(0, 0, 255, 0.137);
+    box-shadow: 5px 5px 2px 2px #c4c2c2;
 }
 
-
-.productCard{
-    margin-top: 100px;
-    text-align: center;
-    background-color: rgb(116, 116, 199);
-    box-shadow: 1px 1px 1px 1px black;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
+.productCardContainer figure{
+    padding: 10px;
+    margin: 0 auto;
     
-
+}
+.productCardContainer img{
+    max-width: 100%;
 }
 
 
