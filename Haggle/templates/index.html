@@ -2,7 +2,13 @@
 
 {% block title %}Home{% endblock title %}
 
-{%  load static %}
+{% block stylesheeet %}
+
+  {% load static %}
+  {% comment %}  for the landing page {% endcomment %}
+  <link rel="stylesheet" href="{% static 'landingPage.css' %}">
+        
+{% endblock stylesheeet %}
 {% block content %}
   
             <div class="flex-container">

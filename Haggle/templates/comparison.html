@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 {% block title %} Comparison {% endblock title %}
 
+
+{% block stylesheeet %}
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'comparison.css' %}">
+    <link rel="stylesheet" href= "{% static 'accordion.css' %}">
+    <script defer src= "{% static 'comparison.js' %}"></script>
+
+{% endblock stylesheeet %}
+
 {% block content %}
+  
 {%load humanize %}
+
 <main class = "comparePage">  
     <section id="comparePageView">
         

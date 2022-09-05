@@ -1,49 +1,12 @@
 {% extends 'base.html' %}
 
+
+{% block stylesheeet %}
+  {% load static %}
+  <link rel="stylesheet" href= "{% static 'product.css' %}">
+{% endblock stylesheeet %}
+
 {% block content %}
-<style>
-.pagination{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 1rem;
-    gap: 1rem;
-}
-.pagination a{
-    color: black;
-    float: left;
-    padding: 4px 8px;
-    text-decoration: none;
-    border: 1px solid #EEB729;
-    border-radius: 4px;
-    transition: background-color .3s;
-}
-
-.pagination a.active{
-    background-color: #EEB729;
-    color: black;
-    border-radius: 4px;
-}
-
-.pagination a:hover:not(.active){
-    background-color: #EEB729;
-}
-
-.pagination .iconify{
-  color: black;
-    font-size: 1.5rem;
-    padding-top: 0rem;
-}
-
-.previous-and-next-page-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-  </style>
     <!--product section-->
     <H2 id="heading">Search Result</H2>
     <main>

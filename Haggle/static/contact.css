@@ -1,11 +1,11 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-/* DESKTOP VIEW(760PX-1440PX) */
+/* *{margin: 0; padding: 0; box-sizing: border-box;}
+ DESKTOP VIEW(760PX-1440PX) 
 body{
     background-color:#fff;
     font-family: 'Inter', sans-serif;
     
 }
-/* main section */
+ main section 
 
 main{
     background-color: #fff;
@@ -107,10 +107,10 @@ form input{
 
 
 
-/* MEDIA RESPONSIVE CSS */
+ MEDIA RESPONSIVE CSS 
 
 
-/* LAPTOP SMALL TO MOBILE LARGE */
+ LAPTOP SMALL TO MOBILE LARGE 
 
 @media screen and (max-width:570px ){
 
@@ -171,4 +171,4 @@ form input{
     }
 
 
-}
+} */

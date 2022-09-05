@@ -2,6 +2,18 @@
   
 {% block title %} FAQ {% endblock title %}
 
+
+{% block stylesheeet %}
+  {% load static %}
+  {% comment %} for faq pages {% endcomment %}
+  <link rel="stylesheet" href= "{% static 'faq.css' %}" >
+  <script defer src= "{% static 'faq.js' %}" ></script>
+{% endblock stylesheeet %}
+
+
+  
+
+
 {% block content %}
 <div class="faqContainer"> 
   <h1>Frequently Asked Questions</h1>
